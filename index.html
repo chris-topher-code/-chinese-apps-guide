@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chinese Apps Guide - 常见中文应用指南</title>
+    <title>Guide des Apps Chinoises - Chinese Apps Guide</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -143,24 +143,24 @@
                 <span class="text-3xl">🇨🇳</span>
                 <div>
                     <span class="font-bold text-xl block">Chinese Apps Guide</span>
-                    <span class="text-xs text-white/70">常见中文应用指南</span>
+                    <span class="text-xs text-white/70">Guide des Apps Chinoises</span>
                 </div>
             </div>
             <div class="hidden md:flex items-center gap-6 text-sm">
                 <a href="#apps" class="hover:underline">Apps</a>
                 <a href="#ranking" class="hover:underline">Top 6</a>
-                <a href="#about" class="hover:underline">About</a>
+                <a href="#about" class="hover:underline">About / À propos</a>
             </div>
             <button id="langToggle" class="glass px-4 py-2 rounded-full text-sm font-medium hover:bg-white/20 transition flex items-center gap-2">
                 <span id="langIcon">🌐</span>
-                <span id="langText">中文</span>
+                <span id="langText">Français</span>
             </button>
         </nav>
         <div class="max-w-7xl mx-auto px-4 py-16 md:py-24 text-center relative z-10">
-            <div class="inline-block mb-4 px-4 py-1 rounded-full glass text-sm">📱 Essential Apps for China</div>
+            <div class="inline-block mb-4 px-4 py-1 rounded-full glass text-sm">📱 Essential Apps for China / Apps essentielles pour la Chine</div>
             <h1 class="text-4xl md:text-6xl font-extrabold mb-4">🇨🇳 Chinese Apps Guide</h1>
             <p class="text-xl md:text-2xl opacity-90 mb-2">Discover the most popular apps in China</p>
-            <p class="text-lg opacity-80 mb-8">了解中国人最常用的应用</p>
+            <p class="text-lg opacity-80 mb-8">Découvrez les applications les plus populaires en Chine</p>
             <div class="flex justify-center gap-4 flex-wrap">
                 <div class="glass rounded-full px-6 py-2 text-sm font-medium">WeChat • 微信</div>
                 <div class="glass rounded-full px-6 py-2 text-sm font-medium">Alipay • 支付宝</div>
@@ -174,7 +174,7 @@
         <div id="ranking" class="mb-8">
             <h2 class="text-2xl font-bold mb-4 flex items-center gap-2">
                 <span class="bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-3 py-1 rounded-lg text-sm">🔥 Top 6</span>
-                Most Popular Apps
+                <span id="rankingTitle">Most Popular Apps / Apps les plus populaires</span>
             </h2>
             <div class="grid grid-cols-1 md:grid-cols-6 gap-4" id="topAppsGrid">
             </div>
@@ -182,30 +182,29 @@
 
         <div class="flex flex-col md:flex-row gap-4 mb-8 items-stretch">
             <div class="relative flex-1">
-                <input type="text" id="searchInput" placeholder="Search apps... / 搜索应用..." class="w-full pl-12 pr-4 py-3.5 rounded-xl border border-gray-200 focus:border-red-400 focus:ring-4 focus:ring-red-100 outline-none transition shadow-sm" autocomplete="off">
+                <input type="text" id="searchInput" placeholder="Search apps... / Rechercher..." class="w-full pl-12 pr-4 py-3.5 rounded-xl border border-gray-200 focus:border-red-400 focus:ring-4 focus:ring-red-100 outline-none transition shadow-sm" autocomplete="off">
                 <span class="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 text-xl">🔍</span>
                 <div id="searchSuggestions" class="search-suggestions hidden absolute top-full left-0 right-0 mt-2 rounded-xl shadow-xl border border-gray-100 overflow-hidden z-50">
                 </div>
             </div>
-            <button id="resetBtn" class="px-6 py-3 bg-gray-900 hover:bg-gray-800 text-white rounded-xl font-medium transition shadow-sm">Reset / 重置</button>
+            <button id="resetBtn" class="px-6 py-3 bg-gray-900 hover:bg-gray-800 text-white rounded-xl font-medium transition shadow-sm">Reset / Réinitialiser</button>
         </div>
 
         <div class="sticky-filters py-4 -mx-4 px-4 md:static md:py-0 md:bg-transparent md:backdrop-filter-none md:border-0 md:shadow-none border-b border-gray-200 mb-6 md:mb-8">
             <div class="flex flex-wrap gap-2 justify-center md:justify-start" id="categoryFilters">
-                <button class="category-btn active px-4 py-2 rounded-full bg-gray-100 hover:bg-gray-200 font-medium transition text-sm" data-category="all">All 全部</button>
-                <button class="category-btn px-4 py-2 rounded-full bg-gray-100 hover:bg-gray-200 font-medium transition text-sm" data-category="social">Social 社交</button>
-                <button class="category-btn px-4 py-2 rounded-full bg-gray-100 hover:bg-gray-200 font-medium transition text-sm" data-category="payment">Payment 支付</button>
-                <button class="category-btn px-4 py-2 rounded-full bg-gray-100 hover:bg-gray-200 font-medium transition text-sm" data-category="shopping">Shopping 购物</button>
-                <button class="category-btn px-4 py-2 rounded-full bg-gray-100 hover:bg-gray-200 font-medium transition text-sm" data-category="food">Food 美食</button>
-                <button class="category-btn px-4 py-2 rounded-full bg-gray-100 hover:bg-gray-200 font-medium transition text-sm" data-category="travel">Travel 旅游</button>
-                <button class="category-btn px-4 py-2 rounded-full bg-gray-100 hover:bg-gray-200 font-medium transition text-sm" data-category="fitness">Fitness 运动</button>
-                <button class="category-btn px-4 py-2 rounded-full bg-gray-100 hover:bg-gray-200 font-medium transition text-sm" data-category="education">Education 教育</button>
-                <button class="category-btn px-4 py-2 rounded-full bg-gray-100 hover:bg-gray-200 font-medium transition text-sm" data-category="realestate">Real Estate 房产</button>
-                <button class="category-btn px-4 py-2 rounded-full bg-gray-100 hover:bg-gray-200 font-medium transition text-sm" data-category="transport">Transport 出行</button>
-                <button class="category-btn px-4 py-2 rounded-full bg-gray-100 hover:bg-gray-200 font-medium transition text-sm" data-category="video">Video 视频</button>
-                <button class="category-btn px-4 py-2 rounded-full bg-gray-100 hover:bg-gray-200 font-medium transition text-sm" data-category="music">Music 音乐</button>
-                <button class="category-btn px-4 py-2 rounded-full bg-gray-100 hover:bg-gray-200 font-medium transition text-sm" data-category="news">News 新闻</button>
-                <button class="category-btn px-4 py-2 rounded-full bg-gray-100 hover:bg-gray-200 font-medium transition text-sm" data-category="fitness">Fitness 运动</button>
+                <button class="category-btn active px-4 py-2 rounded-full bg-gray-100 hover:bg-gray-200 font-medium transition text-sm" data-category="all">All / Tous</button>
+                <button class="category-btn px-4 py-2 rounded-full bg-gray-100 hover:bg-gray-200 font-medium transition text-sm" data-category="social">Social Media / Réseaux sociaux</button>
+                <button class="category-btn px-4 py-2 rounded-full bg-gray-100 hover:bg-gray-200 font-medium transition text-sm" data-category="payment">Payment / Paiement</button>
+                <button class="category-btn px-4 py-2 rounded-full bg-gray-100 hover:bg-gray-200 font-medium transition text-sm" data-category="shopping">Shopping</button>
+                <button class="category-btn px-4 py-2 rounded-full bg-gray-100 hover:bg-gray-200 font-medium transition text-sm" data-category="food">Food / Restauration</button>
+                <button class="category-btn px-4 py-2 rounded-full bg-gray-100 hover:bg-gray-200 font-medium transition text-sm" data-category="travel">Travel / Voyages</button>
+                <button class="category-btn px-4 py-2 rounded-full bg-gray-100 hover:bg-gray-200 font-medium transition text-sm" data-category="fitness">Fitness</button>
+                <button class="category-btn px-4 py-2 rounded-full bg-gray-100 hover:bg-gray-200 font-medium transition text-sm" data-category="education">Education / Éducation</button>
+                <button class="category-btn px-4 py-2 rounded-full bg-gray-100 hover:bg-gray-200 font-medium transition text-sm" data-category="realestate">Real Estate / Immobilier</button>
+                <button class="category-btn px-4 py-2 rounded-full bg-gray-100 hover:bg-gray-200 font-medium transition text-sm" data-category="transport">Transport</button>
+                <button class="category-btn px-4 py-2 rounded-full bg-gray-100 hover:bg-gray-200 font-medium transition text-sm" data-category="video">Video / Vidéo</button>
+                <button class="category-btn px-4 py-2 rounded-full bg-gray-100 hover:bg-gray-200 font-medium transition text-sm" data-category="music">Music / Musique</button>
+                <button class="category-btn px-4 py-2 rounded-full bg-gray-100 hover:bg-gray-200 font-medium transition text-sm" data-category="news">News / Actualités</button>
             </div>
         </div>
 
@@ -214,21 +213,21 @@
 
         <div id="noResults" class="hidden text-center py-16">
             <p class="text-6xl mb-4">🔍</p>
-            <p class="text-gray-500 text-lg">No apps found / 未找到应用</p>
-            <p class="text-gray-400 text-sm mt-2">Try different keywords / 尝试其他关键词</p>
+            <p class="text-gray-500 text-lg">Aucune application trouvée / No apps found</p>
+            <p class="text-gray-400 text-sm mt-2">Essayez d'autres mots-clés / Try different keywords</p>
         </div>
     </main>
 
     <footer class="bg-gray-900 text-white py-12 mt-16" id="about">
         <div class="max-w-7xl mx-auto px-4 text-center">
             <h2 class="text-2xl font-bold mb-4">About This Project</h2>
-            <p class="text-gray-400 max-w-2xl mx-auto mb-6">This guide helps foreigners quickly understand the most popular Chinese apps. Whether you're traveling to China, making business connections, or exploring Chinese tech culture, this resource will help you navigate the digital landscape.</p>
+            <p class="text-gray-400 max-w-2xl mx-auto mb-6">This guide helps foreigners quickly understand the most popular Chinese apps. Whether you're traveling to China, doing business, or exploring Chinese tech culture, this resource will help you navigate the digital landscape. / Ce guide aide les étrangers à comprendre rapidement les applications chinoises les plus populaires.</p>
             <div class="flex justify-center gap-4 flex-wrap">
                 <span class="bg-red-600 px-4 py-2 rounded-full text-sm">🇨🇳 Made for the World</span>
                 <span class="bg-orange-500 px-4 py-2 rounded-full text-sm">📱 Mobile First</span>
-                <span class="bg-yellow-500 text-gray-900 px-4 py-2 rounded-full text-sm">🆓 Free to Use</span>
+                <span class="bg-yellow-500 text-gray-900 px-4 py-2 rounded-full text-sm">🆓 Free</span>
             </div>
-            <p class="text-gray-500 mt-8 text-sm">© 2026 Chinese Apps Guide</p>
+            <p class="text-gray-500 mt-8 text-sm">© 2026 Chinese Apps Guide / Guide des Apps Chinoises</p>
         </div>
     </footer>
 
@@ -242,11 +241,11 @@
                     </button>
                     <div class="p-6 pb-0" id="modalHeader"></div>
                     <div class="flex gap-1 px-6 mt-4" id="modalTabs">
-                        <button class="tab-btn active px-4 py-2 text-sm font-medium transition" data-tab="overview">Overview</button>
-                        <button class="tab-btn px-4 py-2 text-sm font-medium text-gray-500 transition" data-tab="features">Features</button>
-                        <button class="tab-btn px-4 py-2 text-sm font-medium text-gray-500 transition" data-tab="howto">How to Use</button>
-                        <button class="tab-btn px-4 py-2 text-sm font-medium text-gray-500 transition" data-tab="tips">Tips</button>
-                        <button class="tab-btn px-4 py-2 text-sm font-medium text-gray-500 transition" data-tab="similar">Similar Apps</button>
+                        <button class="tab-btn active px-4 py-2 text-sm font-medium transition" data-tab="overview">Overview / Aperçu</button>
+                        <button class="tab-btn px-4 py-2 text-sm font-medium text-gray-500 transition" data-tab="features">Features / Caractéristiques</button>
+                        <button class="tab-btn px-4 py-2 text-sm font-medium text-gray-500 transition" data-tab="howto">How to Use / Utiliser</button>
+                        <button class="tab-btn px-4 py-2 text-sm font-medium text-gray-500 transition" data-tab="tips">Tips / Conseils</button>
+                        <button class="tab-btn px-4 py-2 text-sm font-medium text-gray-500 transition" data-tab="similar">Similar / Similaires</button>
                     </div>
                 </div>
                 <div class="p-6 overflow-y-auto max-h-[calc(90vh-200px)]" id="modalContent"></div>
@@ -256,228 +255,450 @@
 
     <script>
         const apps = [
-            { cn: "微信", en: "WeChat", emoji: "💬", desc: "China's dominant messaging app with chat, social media, payments, and mini-programs", descCn: "中国主要的即时通讯应用，集成聊天、社交、支付和小程序功能", category: "social", essential: true, similar: ["WhatsApp", "Instagram", "PayPal"], tip: "Tip: Use in-app scanner for QR codes / 技巧：使用内置扫描功能", stores: ["both"], 
-              detail: "WeChat is China's quintessential super-app, serving as the primary communication platform for over 1.3 billion users. It combines messaging, social networking, mobile payments, and a mini-program ecosystem that replaces many standalone apps. From hailing taxis to paying bills, WeChat has become an indispensable part of daily life in China.",
+            { cn: "微信", en: "WeChat", emoji: "💬", desc: "China's dominant messaging app with chat, social media, payments, and mini-programs", descFr: "L'application de messagerie dominante en Chine avec chat, réseaux sociaux, paiements et mini-programmes", descCn: "中国主要的即时通讯应用，集成聊天、社交、支付和小程序功能", category: "social", essential: true, similar: ["WhatsApp", "Telegram", "Instagram"], tip: "Tip: Use in-app scanner for QR codes", tipFr: "Conseil : utilisez le scanner intégré pour les codes QR", stores: ["both"], 
+              detail: "WeChat is China's quintessential super-app, serving as the primary communication platform for over 1.3 billion users. It combines messaging, social networking, mobile payments, and a mini-program ecosystem that replaces many standalone apps.",
+              detailFr: "WeChat est l'application super-multiplateforme par excellence en Chine, servant de plateforme de communication principale pour plus de 1,3 milliard d'utilisateurs. Elle combine messagerie, réseaux sociaux, paiements mobiles et un écosystème de mini-programmes.",
               features: ["💬 Instant messaging with text, voice, video calls", "👥 Moments feed for sharing updates and photos", "💳 WeChat Pay for seamless mobile payments", "📱 Mini-programs for third-party services", "🔍 Built-in QR code scanner and payments", "📞 Video conferencing for work meetings"],
+              featuresFr: ["💬 Messagerie instantanée avec texte, voix, appels vidéo", "👥 Fil Moments pour partager des nouvelles et photos", "💳 WeChat Pay pour des paiements mobiles fluides", "📱 Mini-programmes pour services tiers", "🔍 Scanner de code QR intégré et paiements", "📞 Visioconférence pour réunions de travail"],
               steps: ["Download WeChat from App Store or Play Store", "Sign up with your phone number using +86 or your country code", "Add contacts by phone number, QQ, or scanning QR codes", "Enable WeChat Pay by linking your bank card in Settings"],
+              stepsFr: ["Téléchargez WeChat depuis l'App Store ou Play Store", "Inscrivez-vous avec votre numéro de téléphone (+86 ou code pays)", "Ajoutez des contacts par numéro, QQ ou scan de codes QR", "Activez WeChat Pay en liant votre carte bancaire dans Paramètres"],
               tips: ["Use the \"Starred Messages\" feature to save important conversations", "Enable dark mode in Settings > General > Dark Mode", "Join group chats through invite links shared by friends", "Use WeChat Translate feature when chatting in Chinese"],
+              tipsFr: ["Utilisez la fonction \"Messages étoilés\" pour sauvegarder les conversations importantes", "Activez le mode sombre dans Paramètres > Général > Mode sombre", "Rejoignez des groupes via des liens d'invitation partagés par des amis", "Utilisez la fonction de traduction de WeChat pour discuter en chinois"],
               stats: "1.3+ billion monthly active users",
+              statsFr: "Plus de 1,3 milliard d'utilisateurs mensuels actifs",
               availability: ["iOS", "Android", "Web"] },
-            { cn: "支付宝", en: "Alipay", emoji: "💳", desc: "Super-app for payments, banking, and daily services", descCn: "超级应用，提供支付、银行和日常生活服务", category: "payment", essential: true, similar: ["PayPal", "Apple Pay", "Venmo"], tip: "Tip: Link your bank card for seamless payments / 技巧：绑定银行卡实现便捷支付", stores: ["both"],
+            { cn: "支付宝", en: "Alipay", emoji: "💳", desc: "Super-app for payments, banking, and daily services", descFr: "Super-application pour paiements, banque et services quotidiens", descCn: "超级应用，提供支付、银行和日常生活服务", category: "payment", essential: true, similar: ["Lydia", "PayLib", "Apple Pay"], tip: "Tip: Link your bank card for seamless payments", tipFr: "Conseil : liez votre carte bancaire pour des paiements fluides", stores: ["both"],
               detail: "Alipay is the dominant mobile payment platform in China, with over 1 billion users. Originally designed as an escrow service for Taobao, it has evolved into a comprehensive super-app offering payments, investments, insurance, government services, and access to dozens of mini-programs for daily needs.",
+              detailFr: "Alipay est la plateforme de paiement mobile dominante en Chine, avec plus d'un milliard d'utilisateurs. Initialement conçu comme service d'entiercement pour Taobao, il est devenu une super-application complète offrant paiements, investissements, assurances, services gouvernementaux et accès à des dizaines de mini-programmes.",
               features: ["💳 QR code payments at any merchant", "💰 Digital wallet with balance and cards", "📈 Investment and wealth management products", "🏥 Medical appointments and insurance", "🚇 Metro and bus card integration", "🎁 Loyalty points and promotions system"],
+              featuresFr: ["💳 Paiements par code QR chez n'importe quel commerçant", "💰 Portefeuille numérique avec solde et cartes", "📈 Produits d'investissement et de gestion de patrimoine", "🏥 Rendez-vous médicaux et assurances", "🚇 Intégration carte métro et bus", "🎁 Système de points de fidélité et promotions"],
               steps: ["Download Alipay and sign up with phone number", "Add your bank card and verify identity", "Set up payment password and biometrics", "Start scanning QR codes to pay"],
+              stepsFr: ["Téléchargez Alipay et inscrivez-vous avec votre numéro", "Ajoutez votre carte bancaire et vérifiez votre identité", "Configurez un mot de passe de paiement et biométrie", "Commencez à scanner les codes QR pour payer"],
               tips: ["Keep payment password different from login password", "Check the \"Smart Insurance\" for affordable coverage", "Use Alipay for government services and bill payments", "Link your frequent flyer miles for additional benefits"],
+              tipsFr: ["Gardez un mot de passe différent pour les paiements", "Consultez les \"Assurances intelligentes\" pour une couverture abordable", "Utilisez Alipay pour les services gouvernementaux et factures", "Liez vos miles de voyage fréquente pour des avantages"],
               stats: "1+ billion monthly active users",
+              statsFr: "Plus d'un milliard d'utilisateurs mensuels actifs",
               availability: ["iOS", "Android", "Web"] },
-            { cn: "微信支付", en: "WeChat Pay", emoji: "💰", desc: "Integrated payment system within WeChat", descCn: "微信内置的集成支付系统", category: "payment", essential: true, similar: ["Apple Pay", "Samsung Pay"], tip: "Tip: Most merchants accept both Alipay and WeChat Pay / 技巧：大多数商户同时支持支付宝和微信支付", stores: ["both"],
-              detail: "WeChat Pay is the payment functionality embedded within WeChat, leveraging the app's massive user base to enable seamless mobile transactions. From street vendors to luxury stores, WeChat Pay is accepted virtually everywhere in China, often preferred for its convenience within the WeChat ecosystem.",
+            { cn: "微信支付", en: "WeChat Pay", emoji: "💰", desc: "Integrated payment system within WeChat", descFr: "Système de paiement intégré dans WeChat", descCn: "微信内置的集成支付系统", category: "payment", essential: true, similar: ["Apple Pay", "Google Pay"], tip: "Tip: Most merchants accept both Alipay and WeChat Pay", tipFr: "Conseil : la plupart des commerçants acceptent Alipay et WeChat Pay", stores: ["both"],
+              detail: "WeChat Pay is the payment functionality embedded within WeChat, leveraging the app's massive user base to enable seamless mobile transactions. From street vendors to luxury stores, WeChat Pay is accepted virtually everywhere in China.",
+              detailFr: "WeChat Pay est la fonctionnalité de paiement intégrée dans WeChat, exploitant la base d'utilisateurs massive de l'application pour permettre des transactions mobiles transparentes. Des vendeurs de rue aux magasins de luxe, WeChat Pay est accepté presque partout en Chine.",
               features: ["📱 Seamless integration with WeChat messaging", "💵 Quick payments via QR codes", "🎁 Red envelopes for gifting money digitally", "🏪 Mini program payments for services", "💳 Bank card linking and management", "📊 Transaction history and spending insights"],
+              featuresFr: ["📱 Intégration transparente avec la messagerie WeChat", "💵 Paiements rapides via codes QR", "🎁 Red envelopes pour offrir de l'argent numériquement", "🏪 Paiements mini-programmes pour services", "💳 Liaison et gestion de cartes bancaires", "📊 Historique des transactions et analyses des dépenses"],
               steps: ["Open WeChat and go to Me > Pay", "Add a bank card and verify", "Set payment password and enable biometrics", "Scan merchant QR codes to pay"],
+              stepsFr: ["Ouvrez WeChat et allez dans Moi > Pay", "Ajoutez une carte bancaire et vérifiez", "Définissez un mot de passe et activez la biométrie", "Scannez les codes QR des commerçants pour payer"],
               tips: ["Use \"Collect Money\" feature to receive payments from friends", "Enable notification reminders for transactions", "Try lucky red envelopes during festivals", "Use WeChat Pay for in-app purchases and games"],
+              tipsFr: ["Utilisez la fonction \"Collecter l'argent\" pour recevoir des paiements", "Activez les notifications pour les transactions", "Essayez les red envelopes chanceux pendant les festivals", "Utilisez WeChat Pay pour les achats in-app et jeux"],
               stats: "900+ million users",
+              statsFr: "Plus de 900 millions d'utilisateurs",
               availability: ["iOS", "Android"] },
             
-            { cn: "淘宝", en: "Taobao", emoji: "🛒", desc: "Massive e-commerce marketplace with individual sellers", descCn: "大型电商市场，众多个人卖家和特色商品", category: "shopping", essential: true, similar: ["eBay", "Amazon"], tip: "Tip: Use image search to find similar products / 技巧：用图片搜索找相似商品", stores: ["both"],
-              detail: "Taobao is Alibaba's C2C marketplace, the largest online shopping platform in China with over 900 million active users. It offers an impossibly vast selection of products from individual sellers, often at competitive prices. The platform is particularly known for unique finds, direct-from-factory items, and aggressive discounts.",
+            { cn: "淘宝", en: "Taobao", emoji: "🛒", desc: "Massive e-commerce marketplace with individual sellers", descFr: "Place de marché e-commerce géante avec vendeurs individuels", descCn: "大型电商市场，众多个人卖家和特色商品", category: "shopping", essential: true, similar: ["Vinted", "Leboncoin", "Amazon"], tip: "Tip: Use image search to find similar products", tipFr: "Conseil : utilisez la recherche d'images pour trouver des produits similaires", stores: ["both"],
+              detail: "Taobao is Alibaba's C2C marketplace, the largest online shopping platform in China with over 900 million active users. It offers an impossibly vast selection of products from individual sellers, often at competitive prices.",
+              detailFr: "Taobao est la marketplace C2C d'Alibaba, la plus grande plateforme d'achat en ligne en Chine avec plus de 900 millions d'utilisateurs actifs. Elle offre une sélection immense de produits de vendeurs individuels, souvent à des prix compétitifs.",
               features: ["🛍️ 10+ billion product listings", "🔍 Image search to find similar products", "🏬 Individual seller marketplace with negotiations", "🎁 Frequent promotions and festival sales", "📦 Bundle shipping options for savings", "⭐ Detailed seller ratings and reviews"],
+              featuresFr: ["🛍️ Plus de 10 milliards d'annonces produits", "🔍 Recherche d'images pour trouver des produits similaires", "🏬 Marketplace avec vendeurs individuels et négociations", "🎁 Promotions fréquentes et ventes de festival", "📦 Options d'expédition groupée pour économies", "⭐ Évaluations détaillées des vendeurs et avis"],
               steps: ["Create Taobao account or use Alipay login", "Search by text, image, or scan physical items", "Compare sellers based on ratings and reviews", "Complete purchase via Alipay payment"],
+              stepsFr: ["Créez un compte Taobao ou utilisez Connexion Alipay", "Recherchez par texte, image ou scan d'articles physiques", "Comparez les vendeurs selon leurs évaluations et avis", "Finalisez l'achat via le paiement Alipay"],
               tips: ["Use image search to find cheaper alternatives", "Check seller ratings before purchasing", "Wait for Double 11 (Nov 11) for massive sales", "Read reviews carefully as quality varies"],
+              tipsFr: ["Utilisez la recherche d'images pour trouver des alternatives moins chères", "Vérifiez les évaluations des vendeurs avant d'acheter", "Attendez le Double 11 (11 nov) pour les grosses ventes", "Lisez attentivement les avis car la qualité varie"],
               stats: "900+ million monthly active users",
+              statsFr: "Plus de 900 millions d'utilisateurs mensuels actifs",
               availability: ["iOS", "Android", "Web"] },
-            { cn: "京东", en: "JD.com", emoji: "📦", desc: "Premium e-commerce with fast delivery and authentic products", descCn: "高端电商，快速配送，正品保证", category: "shopping", essential: true, similar: ["Amazon"], tip: "Tip: Same-day delivery in major cities / 技巧：大城市支持当日达", stores: ["both"],
-              detail: "JD.com (Jingdong) is China's largest retailer, known for its reliable delivery network and authentic products. Unlike Taobao's marketplace model, JD operates more like Amazon with its own inventory and fulfillment system, ensuring faster delivery and better quality control.",
+            { cn: "京东", en: "JD.com", emoji: "📦", desc: "Premium e-commerce with fast delivery and authentic products", descFr: "E-commerce premium avec livraison rapide et produits authentiques", descCn: "高端电商，快速配送，正品保证", category: "shopping", essential: true, similar: ["Amazon", "Cdiscount"], tip: "Tip: Same-day delivery in major cities", tipFr: "Conseil : livraison le jour même dans les grandes villes", stores: ["both"],
+              detail: "JD.com (Jingdong) is China's largest retailer, known for its reliable delivery network and authentic products. Unlike Taobao's marketplace model, JD operates more like Amazon with its own inventory and fulfillment system.",
+              detailFr: "JD.com (Jingdong) est le plus grand détaillant en Chine, connu pour son réseau de livraison fiable et ses produits authentiques. Contrairement au modèle marketplace de Taobao, JD fonctionne comme Amazon avec son propre inventaire et système d'exécution.",
               features: ["🚀 Same-day and next-day delivery in major cities", "✅ Authenticity guarantee on all products", "📱 JD Logistics for superior delivery tracking", "🏬 Direct partnerships with brands", "💳 Multiple payment options including credit cards", "📞 24/7 customer service"],
+              featuresFr: ["🚀 Livraison le jour même et lendemain dans les grandes villes", "✅ Garantie d'authenticité sur tous les produits", "📱 JD Logistics pour un suivi de livraison supérieur", "🏬 Partenariats directs avec les marques", "💳 Options de paiement multiples incluant cartes de crédit", "📞 Service client 24/7"],
               steps: ["Download JD app or visit website", "Sign up with phone number", "Browse or search for products", "Select delivery speed and complete payment"],
+              stepsFr: ["Téléchargez l'app JD ou visit le site web", "Inscrivez-vous avec votre numéro de téléphone", "Parcourez ou recherchez des produits", "Sélectionnez la vitesse de livraison et finalisez le paiement"],
               tips: ["Use JD Fresh for grocery delivery", "Take advantage of JD Prime membership benefits", "Check JD Logistics tracking for precise delivery times", "Compare prices with Taobao before purchasing"],
+              tipsFr: ["Utilisez JD Fresh pour la livraison d'épicerie", "Profitez des avantages de l'adhésion JD Prime", "Vérifiez le suivi JD Logistics pour des heures précises", "Comparez les prix avec Taobao avant d'acheter"],
               stats: "500+ million monthly active users",
+              statsFr: "Plus de 500 millions d'utilisateurs mensuels actifs",
               availability: ["iOS", "Android", "Web"] },
-            { cn: "拼多多", en: "Pinduoduo", emoji: "🔥", desc: "Group-buying platform with heavily discounted prices", descCn: "团购平台，超低折扣，拼团购买", category: "shopping", essential: true, similar: ["Amazon", "Groupon"], tip: "Tip: Team up with friends for bigger discounts / 技巧：邀请好友拼团获取更大折扣", stores: ["both"],
-              detail: "Pinduoduo revolutionized Chinese e-commerce with its social commerce model centered around group buying. Users team up with friends, family, or even strangers to unlock deep discounts on products ranging from electronics to fresh produce. The platform's explosive growth has made it China's second-largest e-commerce player.",
+            { cn: "拼多多", en: "Pinduoduo", emoji: "🔥", desc: "Group-buying platform with heavily discounted prices", descFr: "Plateforme d'achat groupé avec prix fortement réduits", descCn: "团购平台，超低折扣，拼团购买", category: "shopping", essential: true, similar: ["Vinted", "Groupon"], tip: "Tip: Team up with friends for bigger discounts", tipFr: "Conseil : équipez-vous avec des amis pour de plus grandes remises", stores: ["both"],
+              detail: "Pinduoduo revolutionized Chinese e-commerce with its social commerce model centered around group buying. Users team up with friends, family, or even strangers to unlock deep discounts on products.",
+              detailFr: "Pinduoduo a révolutionné l'e-commerce chinois avec son modèle de commerce social centré sur l'achat groupé. Les utilisateurs s'associent avec des amis, la famille ou même des inconnus pour débloquer des remises importantes.",
               features: ["👥 Team purchase model for maximum discounts", "🎮 Gamified shopping with deals and rewards", "🍎 Fresh produce and groceries at low prices", "🎁 Frequent free product giveaways", "📱 Social sharing to unlock better prices", "🏷️ Direct-from-factory products at cost"],
+              featuresFr: ["👥 Modèle d'achat groupé pour maximum de remises", "🎮 Shopping gamifié avec offres et récompenses", "🍎 Produits frais et épicerie à bas prix", "🎁 Cadeaux gratuits fréquents de produits", "📱 Partage social pour débloquer de meilleurs prix", "🏷️ Produits directs d'usine au coût"],
               steps: ["Download Pinduoduo app", "Browse deals or search for products", "Join existing teams or create new ones", "Wait for team to complete and receive discounted price"],
+              stepsFr: ["Téléchargez l'app Pinduoduo", "Parcourez les offres ou recherchez des produits", "Rejoignez des équipes existantes ou créez-en de nouvelles", "Attendez que l'équipe se complète et recevez le prix réduit"],
               tips: ["Share deals on WeChat to recruit team members quickly", "Check \"Free Products\" section for giveaways", "Be patient as delivery can take longer", "Read product details carefully as brands may differ"],
+              tipsFr: ["Partagez les offres sur WeChat pour recruter des membres rapidement", "Consultez la section \"Produits gratuits\" pour les cadeaux", "Soyez patient car la livraison peut prendre plus de temps", "Lisez attentivement les détails car les marques peuvent différer"],
               stats: "900+ million monthly active users",
+              statsFr: "Plus de 900 millions d'utilisateurs mensuels actifs",
               availability: ["iOS", "Android"] },
-            { cn: "闲鱼", en: "Xianyu", emoji: "🐟", desc: "Alibaba's peer-to-peer secondhand marketplace for buying and selling used goods", descCn: "阿里巴巴旗下二手交易平台，买卖闲置物品", category: "shopping", essential: false, similar: ["eBay", "Facebook Marketplace"], tip: "Tip: Great for finding deals on used items / 技巧：淘二手好物的绝佳平台", stores: ["both"],
-              detail: "Xianyu is Alibaba's peer-to-peer secondhand marketplace, perfect for buying and selling used goods in China. Whether you're looking for second-hand electronics, vintage clothing, furniture, or collectibles, Xianyu connects individual sellers directly with buyers. It's especially popular among young Chinese for its vast selection, affordable prices, and social shopping experience.",
+            { cn: "闲鱼", en: "Xianyu", emoji: "🐟", desc: "Alibaba's peer-to-peer secondhand marketplace", descFr: "Place de marché peer-to-peer d'occasion d'Alibaba", descCn: "阿里巴巴旗下二手交易平台，买卖闲置物品", category: "shopping", essential: false, similar: ["Vinted", "Leboncoin", "Facebook Marketplace"], tip: "Tip: Great for finding deals on used items", tipFr: "Conseil : idéal pour trouver des bonnes affaires en occasion", stores: ["both"],
+              detail: "Xianyu is Alibaba's peer-to-peer secondhand marketplace, perfect for buying and selling used goods in China. Whether you're looking for second-hand electronics, vintage clothing, furniture, or collectibles.",
+              detailFr: "Xianyu est la place de marché peer-to-peer d'occasion d'Alibaba, parfaite pour acheter et vendre des biens d'occasion en Chine. Que vous cherchiez des électroniques, vêtements vintage, meubles ou objets de collection.",
               features: ["🐟 Peer-to-peer marketplace for used goods", "💰 Competitive prices on second-hand items", "📱 Integrated with Alipay for secure transactions", "🏷️ Wide categories from electronics to fashion", "⭐ User ratings and reviews for trust", "📸 Photo-based search for finding items"],
+              featuresFr: ["🐟 Marketplace peer-to-peer pour biens d'occasion", "💰 Prix compétitifs sur articles d'occasion", "📱 Intégré avec Alipay pour transactions sécurisées", "🏷️ Large gamme de catégories, électronique à mode", "⭐ Évaluations et avis utilisateurs pour confiance", "📸 Recherche par photo pour trouver des articles"],
               steps: ["Download Xianyu app and sign in with Alipay", "Browse categories or use image search", "Contact sellers to negotiate price", "Complete transaction through Alipay escrow"],
-              tips: ["Check seller ratings before purchasing", "Use image search to find similar items", "Negotiate prices - haggling is common", "Verify product condition with detailed photos", "Report suspicious listings to protect yourself"],
+              stepsFr: ["Téléchargez l'app Xianyu et connectez-vous avec Alipay", "Parcourez les catégories ou utilisez la recherche d'images", "Contactez les vendeurs pour négocier le prix", "Finalisez la transaction via l'entiercement Alipay"],
+              tips: ["Check seller ratings before purchasing", "Use image search to find similar items", "Negotiate prices - haggling is common", "Verify product condition with detailed photos"],
+              tipsFr: ["Vérifiez les évaluations du vendeur avant d'acheter", "Utilisez la recherche d'images pour trouver des articles similaires", "Négociez les prix - le marchandage est courant", "Vérifiez l'état du produit avec des photos détaillées"],
               stats: "100+ million monthly active users",
+              statsFr: "Plus de 100 millions d'utilisateurs mensuels actifs",
               availability: ["iOS", "Android"] },
 
-            { cn: "贝壳", en: "Beike", emoji: "🏠", desc: "Real estate platform for buying, selling, and renting homes", descCn: "房产平台，买房、卖房、租房服务", category: "realestate", essential: false, similar: ["Zillow", "Realtor.com"], tip: "Tip: Verified listings with detailed info / 技巧：真实房源信息，详细数据", stores: ["both"],
-              detail: "Beike (Ke Holdings) is China's largest real estate platform, combining online listings with线下经纪人的线下经纪人 services. The platform covers new homes, secondhand properties, and rentals across hundreds of cities, providing transparency and professional services for all real estate needs.",
+            { cn: "贝壳", en: "Beike", emoji: "🏠", desc: "Real estate platform for buying, selling, and renting homes", descFr: "Plateforme immobilière pour acheter, vendre et louer des maisons", descCn: "房产平台，买房、卖房、租房服务", category: "realestate", essential: false, similar: ["SeLoger", "Bien'ici", "Leboncoin Immobilier"], tip: "Tip: Verified listings with detailed info", tipFr: "Conseil : annonces vérifiées avec informations détaillées", stores: ["both"],
+              detail: "Beike (Ke Holdings) is China's largest real estate platform, combining online listings with professional agent services across hundreds of cities.",
+              detailFr: "Beike (Ke Holdings) est la plus grande plateforme immobilière de Chine, combinant annonces en ligne et services d'agents professionnels dans des centaines de villes.",
               features: ["🏘️ Comprehensive property listings across China", "✅ Verified listings with authentic information", "🏠 New homes, secondhand, and rental options", "📊 Real-time market data and trends", "🤝 Professional agent matching service", "💰 Mortgage calculator and financial tools"],
+              featuresFr: ["🏘️ Annonces immobilières complètes à travers la Chine", "✅ Annonces vérifiées avec informations authentiques", "🏠 Neufs, occasion et options de location", "📊 Données de marché en temps réel et tendances", "🤝 Service de matching d'agents professionnels", "💰 Calculateur de prêt immobilier et outils financiers"],
               steps: ["Download Beike app and set city", "Browse listings with detailed filters", "Save favorites and compare properties", "Contact verified agents through the app"],
+              stepsFr: ["Téléchargez l'app Beike et définissez la ville", "Parcourez les annonces avec filtres détaillés", "Sauvegardez les favoris et comparez les biens", "Contactez les agents vérifiés via l'app"],
               tips: ["Use the map view to check neighborhood details", "Verify property ownership before negotiations", "Compare prices with Lianjia for reference", "Check the agent's ratings and reviews"],
+              tipsFr: ["Utilisez la vue carte pour vérifier les détails du quartier", "Vérifiez la propriété avant les négociations", "Comparez les prix avec Lianjia comme référence", "Vérifiez les évaluations et avis de l'agent"],
               stats: "50+ million monthly active users",
+              statsFr: "Plus de 50 millions d'utilisateurs mensuels actifs",
               availability: ["iOS", "Android"] },
-            { cn: "链家", en: "Lianjia", emoji: "🔑", desc: "Real estate agency platform with comprehensive property listings", descCn: "房产中介平台，全面房源信息", category: "realestate", essential: false, similar: ["Zillow", "Redfin"], tip: "Tip: Agents provide free consultation / 技巧：经纪人提供免费咨询", stores: ["both"],
-              detail: "Lianjia is a leading real estate brokerage with a strong online platform and extensive线下经纪人 network. Known for its green and gold storefronts, Lianjia offers comprehensive property services with transparent fees and well-trained agents across major Chinese cities.",
+            { cn: "链家", en: "Lianjia", emoji: "🔑", desc: "Real estate agency platform with comprehensive property listings", descFr: "Plateforme d'agence immobilière avec annonces complètes", descCn: "房产中介平台，全面房源信息", category: "realestate", essential: false, similar: ["SeLoger", "Immobilier.com"], tip: "Tip: Agents provide free consultation", tipFr: "Conseil : les agents offrent une consultation gratuite", stores: ["both"],
+              detail: "Lianjia is a leading real estate brokerage with a strong online platform and extensive professional agent network. Known for its green and gold storefronts.",
+              detailFr: "Lianjia est une agence immobilière de premier plan avec une forte plateforme en ligne et un réseau étendu d'agents professionnels. Connue pour ses façades vertes et or.",
               features: ["🏠 Comprehensive property database", "👔 Professional trained agents", "💵 Transparent commission rates", "🔍 Detailed property information and history", "📊 Neighborhood and school district data", "🛠️ Home services and moving assistance"],
+              featuresFr: ["🏠 Base de données immobilière complète", "👔 Agents professionnels formés", "💵 Taux de commission transparents", "🔍 Informations et historique détaillés du bien", "📊 Données du quartier et du district scolaire", "🛠️ Services à domicile et assistance déménagement"],
               steps: ["Download Lianjia app and select city", "Search with detailed filters", "Schedule viewings with agents", "Get consultation on pricing and negotiations"],
+              stepsFr: ["Téléchargez l'app Lianjia et sélectionnez la ville", "Recherchez avec filtres détaillés", "Planifiez des visites avec les agents", "Obtenez une consultation sur les prix et négociations"],
               tips: ["Use Lianjia as a price reference even if using other agents", "Check school district boundaries for families", "Verify agent credentials before engaging", "Compare multiple properties before deciding"],
+              tipsFr: ["Utilisez Lianjia comme référence de prix même en utilisant d'autres agents", "Vérifiez les limites du district scolaire pour les familles", "Vérifiez les credentials de l'agent avant de vous engager", "Comparez plusieurs biens avant de décider"],
               stats: "100+ million monthly active users",
+              statsFr: "Plus de 100 millions d'utilisateurs mensuels actifs",
               availability: ["iOS", "Android", "Web"] },
-            { cn: "美团", en: "Meituan", emoji: "🍔", desc: "Super-app for food delivery, travel, and local services", descCn: "超级应用，外卖、旅行和本地服务", category: "food", essential: true, similar: ["Uber Eats", "Grubhub"], tip: "Tip: Compare prices across restaurants / 技巧：对比不同餐厅价格", stores: ["both"],
-              detail: "Meituan is China's largest services platform, beginning with group buying and evolving into a super-app covering food delivery, hotel booking, movie tickets, and local services. With the integration of Ele.me, Meituan dominates the food delivery market while expanding into every aspect of daily services.",
+            { cn: "美团", en: "Meituan", emoji: "🍔", desc: "Super-app for food delivery, travel, and local services", descFr: "Super-application pour livraison de repas, voyages et services locaux", descCn: "超级应用，外卖、旅行和本地服务", category: "food", essential: true, similar: ["Deliveroo", "Uber Eats", "Just Eat"], tip: "Tip: Compare prices across restaurants / Conseil : comparez les prix entre restaurants", stores: ["both"],
+              detail: "Meituan is China's largest services platform, beginning with group buying and evolving into a super-app covering food delivery, hotel booking, movie tickets, and local services.",
+              detailFr: "Meituan est la plus grande plateforme de services en Chine, commençant par l'achat groupé et évoluant en super-application couvrant livraison de repas, réservations d'hôtels, billets de cinéma et services locaux.",
               features: ["🍜 Food delivery from hundreds of thousands of restaurants", "🏨 Hotel booking with competitive prices", "🎬 Movie ticket booking and reservations", "🚗 Bike sharing and car rental services", "💆 Salon, spa, and beauty service bookings", "📍 Local merchant reviews and recommendations"],
+              featuresFr: ["🍜 Livraison de nourriture de centaines de milliers de restaurants", "🏨 Réservation d'hôtels à prix compétitifs", "🎬 Réservation de billets de cinéma", "🚗 Services de partage de vélos et location de voitures", "💆 Réservations salon, spa et beauté", "📍 Avis et recommandations de commerçants locaux"],
               steps: ["Download Meituan app and enable location", "Browse food delivery or book services", "Apply discount coupons before ordering", "Track delivery in real-time"],
+              stepsFr: ["Téléchargez l'app Meituan et activez la localisation", "Parcourez la livraison ou réservez des services", "Appliquez les coupons de réduction avant de commander", "Suivez la livraison en temps réel"],
               tips: ["Compare prices between Meituan and Ele.me", "Use the membership for free delivery benefits", "Check restaurant reviews and ratings carefully", "Apply for the Meituan Co-branded credit card for cashback"],
+              tipsFr: ["Comparez les prix entre Meituan et Ele.me", "Utilisez l'adhésion pour les bénéfices livraison gratuite", "Vérifiez attentivement les avis et évaluations des restaurants", "Demandez la carte de crédit Meituan pour le cashback"],
               stats: "700+ million monthly active users",
+              statsFr: "Plus de 700 millions d'utilisateurs mensuels actifs",
               availability: ["iOS", "Android", "Web"] },
-            { cn: "饿了么", en: "Ele.me", emoji: "🍜", desc: "Food delivery with wide restaurant selection", descCn: "外卖平台，餐厅选择丰富", category: "food", essential: false, similar: ["Uber Eats", "DoorDash"], tip: "Tip: Check delivery time estimates / 技巧：查看预计送达时间", stores: ["both"],
-              detail: "Ele.me (What do you want to eat?) is one of China's largest food delivery platforms, now integrated with Meituan. Known for its distinctive blue delivery riders, the platform offers extensive restaurant coverage with various delivery speed options to suit different needs.",
+            { cn: "饿了么", en: "Ele.me", emoji: "🍜", desc: "Food delivery with wide restaurant selection", descFr: "Livraison de repas avec large sélection de restaurants", descCn: "外卖平台，餐厅选择丰富", category: "food", essential: false, similar: ["Deliveroo", "Uber Eats", "Just Eat"], tip: "Tip: Check delivery time estimates / Conseil : consultez les estimations de délai de livraison", stores: ["both"],
+              detail: "Ele.me (What do you want to eat?) is one of China's largest food delivery platforms, now integrated with Meituan. Known for its distinctive blue delivery riders.",
+              detailFr: "Ele.me (Qu'est-ce que tu veux manger ?) est l'une des plus grandes plateformes de livraison de repas en Chine, maintenant intégrée avec Meituan. Connue pour ses livreurs en bleu distinctifs.",
               features: ["🍕 Wide selection of local and chain restaurants", "⚡ Multiple delivery speed options (regular, express)", "🎁 Regular discounts and red envelope promotions", "📍 Precise delivery time estimates", "👤 Order history and favorite restaurants", "🏷️ Flash deals on select items"],
+              featuresFr: ["🍕 Large sélection de restaurants locaux et chaines", "⚡ Options de vitesse de livraison multiples (régulier, express)", "🎁 Remises régulières et promotions red envelope", "📍 Estimations précises du temps de livraison", "👤 Historique de commandes et restaurants favoris", "🏷️ Offres flash sur articles sélectionnés"],
               steps: ["Open Ele.me and enable location", "Browse restaurants or search for specific foods", "Select items and apply available coupons", "Track your order in real-time"],
+              stepsFr: ["Ouvrez Ele.me et activez la localisation", "Parcourez les restaurants ou recherchez des aliments spécifiques", "Sélectionnez les articles et appliquez les coupons disponibles", "Suivez votre commande en temps réel"],
               tips: ["Use the delivery time feature to plan ahead", "Check the \"Tomorrow's Order\" for advance booking", "Follow restaurants for exclusive deals", "Opt for stores with \"Full Refund\" guarantee"],
+              tipsFr: ["Utilisez la fonction heure de livraison pour planifier", "Consultez \"Commande de demain\" pour la réservation à l'avance", "Suivez les restaurants pour des offres exclusives", "Optez pour les magasins avec garantie \"Remboursement complet\""],
               stats: "400+ million registered users",
+              statsFr: "Plus de 400 millions d'utilisateurs enregistrés",
               availability: ["iOS", "Android"] },
-            { cn: "瑞幸咖啡", en: "Luckin Coffee", emoji: "☕", desc: "Popular coffee chain with app ordering and delivery", descCn: "热门咖啡连锁，支持APP下单和外送", category: "food", essential: false, similar: ["Starbucks"], tip: "Tip: Heavily discounted coupons available / 技巧：经常有大幅折扣优惠券", stores: ["both"],
-              detail: "Luckin Coffee disrupted China's coffee market with its technology-driven, low-price model. The app-only format enables efficient ordering and delivery, while aggressive coupon distribution made premium coffee accessible to millions. Known for its rapid expansion and quality beverages at competitive prices.",
+            { cn: "瑞幸咖啡", en: "Luckin Coffee", emoji: "☕", desc: "Popular coffee chain with app ordering and delivery", descFr: "Chaîne de café populaire avec commande via app et livraison", descCn: "热门咖啡连锁，支持APP下单和外送", category: "food", essential: false, similar: ["Starbucks", "McDonald's McCafé"], tip: "Tip: Heavily discounted coupons available", tipFr: "Conseil : des coupons très réduits sont disponibles", stores: ["both"],
+              detail: "Luckin Coffee disrupted China's coffee market with its technology-driven, low-price model. The app-only format enables efficient ordering and delivery.",
+              detailFr: "Luckin Coffee a perturbé le marché du café en Chine avec son modèle technologique et à bas prix. Le format app-seule permet une commande et livraison efficace.",
               features: ["☕ Quality coffee at low prices", "📱 App-only ordering for convenience", "🎁 Frequent coupon distribution", "🚀 Fast delivery or pickup options", "🥤 Seasonal specials and new flavors", "📊 Loyalty points and rewards system"],
+              featuresFr: ["☕ Café de qualité à bas prix", "📱 Commande via app-seule pour commodité", "🎁 Distribution fréquente de coupons", "🚀 Livraison rapide ou options de retrait", "🥤 Spéciaux saisonniers et nouvelles saveurs", "📊 Système de points de fidélité et récompenses"],
               steps: ["Download Luckin app and register", "Browse menu and select drinks", "Apply coupons for discounts", "Pick up in-store or get delivery"],
+              stepsFr: ["Téléchargez l'app Luckin et inscrivez-vous", "Parcourez le menu et sélectionnez les boissons", "Appliquez les coupons pour les remises", "Retirez en magasin ou faites-vous livrer"],
               tips: ["Check for coupons before every order", "Use the \"Luckin Team\" feature for free drinks", "Order ahead to skip the line", "Try their seasonal specials for variety"],
+              tipsFr: ["Vérifiez les coupons avant chaque commande", "Utilisez la fonction \"Équipe Luckin\" pour des boissons gratuites", "Commandez à l'avance pour éviter la file", "Essayez leurs spéciaux saisonniers pour la variété"],
               stats: "100+ million monthly active users",
+              statsFr: "Plus de 100 millions d'utilisateurs mensuels actifs",
               availability: ["iOS", "Android"] },
-            { cn: "蜜雪冰城", en: "Mixue", emoji: "🍦", desc: "Affordable ice cream and tea chain beloved by students", descCn: "平价冰淇淋和茶饮连锁，学生最爱", category: "food", essential: false, similar: ["McDonald's McCafe"], tip: "Tip: Extremely cheap prices / 技巧：价格非常实惠", stores: ["both"],
-              detail: "Mixue Bingcheng is China's largest and most affordable beverage and ice cream chain, with over 20,000 stores nationwide. Known for its incredibly low prices and decent quality, it has become a cult favorite among students and budget-conscious consumers who line up for their signature treats.",
+            { cn: "蜜雪冰城", en: "Mixue", emoji: "🍦", desc: "Affordable ice cream and tea chain beloved by students", descFr: "Chaîne de glace et thé abordable adorée par les étudiants", descCn: "平价冰淇淋和茶饮连锁，学生最爱", category: "food", essential: false, similar: ["Starbucks", "McDonald's McCafé"], tip: "Tip: Extremely cheap prices", tipFr: "Conseil : prix extrêmement abordables", stores: ["both"],
+              detail: "Mixue Bingcheng is China's largest and most affordable beverage and ice cream chain, with over 20,000 stores nationwide. Known for incredibly low prices and decent quality.",
+              detailFr: "Mixue Bingcheng est la plus grande chaîne de boissons et glaces abordable de Chine, avec plus de 20 000 magasins à travers le pays. Connue pour ses prix incroyablement bas et sa qualité correcte.",
               features: ["🍦 Affordable ice cream and beverages", "🧋 Extensive menu of tea and fruit drinks", "💰 Extremely low prices (from 2 yuan)", "🏃 Quick service and takeout", "❄️ Seasonal specials and limited editions", "🌍 Massive store network across China"],
+              featuresFr: ["🍦 Glaces et boissons abordables", "🧋 Menu étendu de thés et boissons aux fruits", "💰 Prix extrêmement bas (à partir de 2 yuans)", "🏃 Service rapide et à emporter", "❄️ Spéciaux saisonniers et éditions limitées", "🌍 Réseau massif de magasins à travers la Chine"],
               steps: ["Find nearest Mixue store via app", "Browse the simple menu", "Order and pay at counter", "Enjoy affordable treats immediately"],
+              stepsFr: ["Trouvez le magasin Mixue le plus proche via l'app", "Parcourez le menu simple", "Commandez et payez au comptoir", "Savourez les friandises abordables immédiatement"],
               tips: ["Try the signature Grape Crystal (葡萄晶球)", "Prices are lowest at physical stores", "Download app for occasional coupons", "Perfect for hot summer days"],
+              tipsFr: ["Essayez le raisin cristallisé signature (葡萄晶球)", "Les prix sont les plus bas en magasin physique", "Téléchargez l'app pour des coupons occasionnels", "Parfait pour les journées d'été chaudes"],
               stats: "20,000+ stores nationwide",
+              statsFr: "Plus de 20 000 magasins à travers le pays",
               availability: ["iOS", "Android"] },
-            { cn: "滴滴", en: "Didi", emoji: "🚗", desc: "Ride-hailing for cars, taxis, and shared transportation", descCn: "网约车平台，支持快车、出租车和拼车", category: "transport", essential: true, similar: ["Uber", "Lyft"], tip: "Tip: Set exact pickup location for faster service / 技巧：精确定位上车点加快接单", stores: ["both"],
-              detail: "Didi Chuxing is China's dominant ride-hailing platform, acquired Uber's China operations in 2016. It offers various transportation options from economy cars to luxury vehicles, as well as bike-sharing and public transit integration, making it the go-to app for getting around Chinese cities.",
+            { cn: "滴滴", en: "Didi", emoji: "🚗", desc: "Ride-hailing for cars, taxis, and shared transportation", descFr: "VTC pour voitures, taxis et transport partagé", descCn: "网约车平台，支持快车、出租车和拼车", category: "transport", essential: true, similar: ["Uber", "Bolt"], tip: "Tip: Set exact pickup location for faster service", tipFr: "Conseil : définissez le point d'enlèvement exact pour un service plus rapide", stores: ["both"],
+              detail: "Didi Chuxing is China's dominant ride-hailing platform, acquired Uber's China operations in 2016. It offers various transportation options from economy cars to luxury vehicles.",
+              detailFr: "Didi Chuxing est la plateforme de VTC dominante en Chine, ayant acquis les opérations Uber en Chine en 2016. Elle offre diverses options de transport des voitures économiques aux véhicules de luxe.",
               features: ["🚗 Multiple vehicle options (economy, comfort, luxury)", "🚕 Taxi booking within the platform", "👥 Carpooling for lower costs", "🚌 Bus and metro integration", "🚲 Bike and e-bike sharing", "📍 Real-time tracking and ETA predictions"],
+              featuresFr: ["🚗 Options de véhicules multiples (économique, confort, luxe)", "🚕 Réservation de taxis sur la plateforme", "👥 Covoiturage pour coûts réduits", "🚌 Intégration bus et métro", "🚲 Partage de vélos et vélos électriques", "📍 Suivi en temps réel et prédictions ETA"],
               steps: ["Download Didi and register with phone number", "Set your pickup and drop-off locations", "Select vehicle type and confirm booking", "Track driver arrival and pay via app"],
+              stepsFr: ["Téléchargez Didi et inscrivez-vous avec votre numéro", "Définissez vos points d'enlèvement et de dépose", "Sélectionnez le type de véhicule et confirmez la réservation", "Suivez l'arrivée du conducteur et payez via l'app"],
               tips: ["Set exact pickup point with landmark references", "Use the \"Schedule\" feature for airport trips", "Compare prices between car types before booking", "Keep your phone charged as drivers may call"],
+              tipsFr: ["Définissez un point d'enlèvement précis avec références land", "Utilisez la fonction \"Planifier\" pour les voyages aéroport", "Comparez les prix entre types de véhicules avant de réserver", "Gardez votre téléphone chargé car les conducteurs peuvent appeler"],
               stats: "500+ million monthly active users",
+              statsFr: "Plus de 500 millions d'utilisateurs mensuels actifs",
               availability: ["iOS", "Android", "Web"] },
-            { cn: "高德地图", en: "Amap", emoji: "🗺️", desc: "Navigation with real-time traffic and transit info", descCn: "导航服务，实时路况和公交信息", category: "transport", essential: true, similar: ["Google Maps", "Waze"], tip: "Tip: More accurate than Google Maps in China / 技巧：在华比谷歌地图更准确", stores: ["both"],
-              detail: "Amap (AutoNavi) is China's leading mapping and navigation service, now part of Alibaba's ecosystem. It provides highly accurate turn-by-turn navigation, real-time traffic updates, and comprehensive public transit information that works better than any international competitor within China.",
+            { cn: "高德地图", en: "Amap", emoji: "🗺️", desc: "Navigation with real-time traffic and transit info", descFr: "Navigation avec trafic en temps réel et info transit", descCn: "导航服务，实时路况和公交信息", category: "transport", essential: true, similar: ["Google Maps", "Waze", "Citymapper"], tip: "Tip: More accurate than Google Maps in China / Conseil : plus précis que Google Maps en Chine", stores: ["both"],
+              detail: "Amap (AutoNavi) is China's leading mapping and navigation service, now part of Alibaba's ecosystem. It provides highly accurate turn-by-turn navigation and real-time traffic updates.",
+              detailFr: "Amap (AutoNavi) est le service de cartographie et navigation leader en Chine, maintenant partie de l'écosystème Alibaba. Il fournit une navigation virage par virage très précise et des mises à jour du trafic en temps réel.",
               features: ["🗺️ High-precision navigation for driving and walking", "🚦 Real-time traffic and incident updates", "🚌 Comprehensive public transit directions", "🏪 Detailed points of interest information", "📍 Offline maps for areas with poor signal", "🚗 Didi integration for seamless ride booking"],
+              featuresFr: ["🗺️ Navigation haute précision pour conduite et marche", "🚦 Mises à jour trafic et incidents en temps réel", "🚌 Directions transit public complètes", "🏪 Informations détaillées sur les points d'intérêt", "📍 Cartes hors ligne pour zones à faible signal", "🚗 Intégration Didi pour réservation de VTC transparente"],
               steps: ["Download Amap and allow location access", "Enter your destination using voice or text", "Choose transportation mode (car, transit, walk)", "Follow real-time navigation guidance"],
+              stepsFr: ["Téléchargez Amap et autorisez l'accès à la localisation", "Entrez votre destination en utilisant voix ou texte", "Choisissez le mode de transport (voiture, transit, marche)", "Suivez les guidances de navigation en temps réel"],
               tips: ["Download offline maps before traveling to areas with poor coverage", "Use voice navigation to keep eyes on road", "Enable camera alerts for speed cameras", "Report map errors to help improve accuracy"],
+              tipsFr: ["Téléchargez des cartes hors ligne avant de voyager dans des zones à mauvaise couverture", "Utilisez la navigation vocale pour garder les yeux sur la route", "Activez les alertes caméra pour les radars", "Signalez les erreurs de carte pour améliorer la précision"],
               stats: "700+ million monthly active users",
+              statsFr: "Plus de 700 millions d'utilisateurs mensuels actifs",
               availability: ["iOS", "Android"] },
-            { cn: "百度地图", en: "Baidu Maps", emoji: "🧭", desc: "Baidu's navigation and location services", descCn: "百度导航和位置服务", category: "transport", essential: false, similar: ["Google Maps"], tip: "Tip: Good for finding local businesses / 技巧：查找本地商家很好用", stores: ["both"],
-              detail: "Baidu Maps is Baidu's mapping platform offering comprehensive navigation and location services. While slightly behind Amap in some areas, it excels in local business information and pedestrian navigation, making it a solid alternative for getting around Chinese cities.",
+            { cn: "百度地图", en: "Baidu Maps", emoji: "🧭", desc: "Baidu's navigation and location services", descFr: "Services de navigation et localisation de Baidu", descCn: "百度导航和位置服务", category: "transport", essential: false, similar: ["Google Maps", "Waze"], tip: "Tip: Good for finding local businesses", tipFr: "Conseil : idéal pour trouver des businesses locaux", stores: ["both"],
+              detail: "Baidu Maps is Baidu's mapping platform offering comprehensive navigation and location services. While slightly behind Amap in some areas, it excels in local business information.",
+              detailFr: "Baidu Maps est la plateforme de cartographie de Baidu offrant des services complets de navigation et localisation. Légèrement derrière Amap dans certains domaines, elle excelle dans l'information business locale.",
               features: ["🗺️ Turn-by-turn navigation for all transport modes", "🏨 Extensive local business database", "🚶 Indoor navigation for large malls", "📍 Real-time location sharing with friends", "🚌 Transit route planning with timing", "🔍 Voice search for destinations"],
+              featuresFr: ["🗺️ Navigation virage par virage pour tous modes de transport", "🏨 Base de données extensive de businesses locaux", "🚶 Navigation intérieure pour grands centres commerciaux", "📍 Partage de localisation en temps réel avec amis", "🚌 Planification d'itinéraire transit avec timing", "🔍 Recherche vocale pour destinations"],
               steps: ["Install Baidu Maps and grant permissions", "Search destination via voice or text", "Select appropriate transport mode", "Start navigation and follow directions"],
+              stepsFr: ["Installez Baidu Maps et accordez les permissions", "Recherchez destination par voix ou texte", "Sélectionnez le mode de transport approprié", "Démarrez la navigation et suivez les directions"],
               tips: ["Use panoramic view to preview your route", "Enable voice control for safer navigation", "Share your real-time location with family", "Check estimated arrival times for planning"],
+              tipsFr: ["Utilisez la vue panoramique pour prévisualiser votre itinéraire", "Activez le contrôle vocal pour une navigation plus sûre", "Partagez votre localisation en temps réel avec votre famille", "Vérifiez les heures d'arrivée estimées pour planifier"],
               stats: "100+ million monthly active users",
+              statsFr: "Plus de 100 millions d'utilisateurs mensuels actifs",
               availability: ["iOS", "Android"] },
-            { cn: "铁路12306", en: "12306", emoji: "🚄", desc: "Official train ticket booking app", descCn: "官方火车票预订应用", category: "travel", essential: true, similar: ["Amtrak app"], tip: "Tip: Book tickets early during holidays / 技巧：节假日提前订票", stores: ["both"],
-              detail: "12306 is the official train ticket booking platform operated by China Railway. It's the only official channel for booking tickets on China's extensive high-speed and conventional rail network, essential for traveling between cities especially during the busy holiday seasons.",
+            { cn: "铁路12306", en: "12306", emoji: "🚄", desc: "Official train ticket booking app", descFr: "Application officielle de réservation de billets de train", descCn: "官方火车票预订应用", category: "travel", essential: true, similar: ["Trainline", "Omio"], tip: "Tip: Book tickets early during holidays", tipFr: "Conseil : réservez les billets tôt pendant les vacances", stores: ["both"],
+              detail: "12306 is the official train ticket booking platform operated by China Railway. It's the only official channel for booking tickets on China's extensive high-speed and conventional rail network.",
+              detailFr: "12306 est la plateforme officielle de réservation de billets de train opérée par China Railway. C'est le seul canal officiel pour réserver des billets sur le réseau étendu de trains à grande vitesse et conventionnels de Chine.",
               features: ["🎫 Book high-speed and conventional rail tickets", "📅 Real-time seat availability", "💳 Integrated payment via multiple methods", "🎴 ID verification for ticket collection", "📱 Electronic tickets without physical collection", "🔄 Ticket changes and refunds"],
+              featuresFr: ["🎫 Réservez billets trains à grande vitesse et conventionnels", "📅 Disponibilité des places en temps réel", "💳 Paiement intégré via méthodes multiples", "🎴 Vérification d'ID pour retrait de billet", "📱 Billets électroniques sans collecte physique", "🔄 Changements et remboursements de billets"],
               steps: ["Register with real-name verification", "Search routes by date and departure city", "Select train and seat class", "Complete payment and receive e-ticket"],
+              stepsFr: ["Inscrivez-vous avec vérification nom réel", "Recherchez itinéraires par date et ville de départ", "Sélectionnez train et classe de place", "Finalisez le paiement et recevez le billet électronique"],
               tips: ["Book tickets immediately when they go on sale", "Use the 12306 app instead of third-party sites", "Enable automatic booking for popular routes", "Check ticket refunds policies before holidays"],
+              tipsFr: ["Réservez les billets immédiatement à leur mise en vente", "Utilisez l'app 12306 au lieu des sites tiers", "Activez la réservation automatique pour itinéraires populaires", "Vérifiez les politiques de remboursement avant les vacances"],
               stats: "100+ million daily active users",
+              statsFr: "Plus de 100 millions d'utilisateurs quotidiens actifs",
               availability: ["iOS", "Android", "Web"] },
-            { cn: "抖音", en: "Douyin", emoji: "🎵", desc: "Short-video platform for entertainment and viral content", descCn: "短视频平台，娱乐和热门内容", category: "video", essential: true, similar: ["TikTok", "Instagram Reels"], tip: "Tip: Discover trending products here / 技巧：发现热门商品的好地方", stores: ["both"],
-              detail: "Douyin is China's leading short-video platform, the domestic version of TikTok. It has become a cultural phenomenon influencing everything from music and fashion to e-commerce and tourism. The algorithm-driven feed keeps users engaged for hours, making it essential for understanding Chinese pop culture and trends.",
+            { cn: "抖音", en: "Douyin", emoji: "🎵", desc: "Short-video platform for entertainment and viral content", descFr: "Plateforme de vidéo courte pour divertissement et contenu viral", descCn: "短视频平台，娱乐和热门内容", category: "video", essential: true, similar: ["TikTok", "Instagram Reels", "YouTube Shorts"], tip: "Tip: Discover trending products here / Conseil : découvrez les produits tendance ici", stores: ["both"],
+              detail: "Douyin is China's leading short-video platform, the domestic version of TikTok. It has become a cultural phenomenon influencing everything from music and fashion to e-commerce and tourism.",
+              detailFr: "Douyin est la plateforme de vidéo courte leader en Chine, la version nationale de TikTok. Elle est devenue un phénomène culturel influençant tout, de la musique et la mode à l'e-commerce et le tourisme.",
               features: ["🎬 Short video creation with filters and effects", "🎵 Massive music library for video soundtracks", "📺 Algorithm-driven personalized feed", "🛍️ In-app shopping with product showcases", "🔴 Live streaming for fans and sales", "📍 Location-based content discovery"],
+              featuresFr: ["🎬 Création de vidéo courte avec filtres et effets", "🎵 Bibliothèque musicale massive pour bandes originales vidéo", "📺 Flux personnalisé guidé par algorithme", "🛍️ Shopping in-app avec showcases de produits", "🔴 Diffusion en direct pour fans et ventes", "📍 Découverte de contenu basée sur la localisation"],
               steps: ["Download Douyin and create account", "Browse the For You feed", "Start creating videos with music", "Follow creators and engage with content"],
+              stepsFr: ["Téléchargez Douyin et créez un compte", "Parcourez le flux Pour Toi", "Commencez à créer des vidéos avec de la musique", "Suivez les créateurs et interagissez avec le contenu"],
               tips: ["Use Douyin Search to find product reviews before buying", "Follow official brand accounts for exclusive content", "Watch LIVE streams for limited-time deals", "Use the translation feature for Chinese text"],
+              tipsFr: ["Utilisez la recherche Douyin pour trouver des avis produits avant d'acheter", "Suivez les comptes officiels des marques pour du contenu exclusif", "Regardez les diffusions en direct pour des offres limitées", "Utilisez la fonction de traduction pour le texte chinois"],
               stats: "700+ million daily active users",
+              statsFr: "Plus de 700 millions d'utilisateurs quotidiens actifs",
               availability: ["iOS", "Android"] },
-            { cn: "快手", en: "Kuaishou", emoji: "📹", desc: "Short-video popular in smaller cities with live streaming", descCn: "短视频平台，在小城市很受欢迎，有直播功能", category: "video", essential: false, similar: ["TikTok"], tip: "Tip: Great for seeing everyday life in China / 技巧：了解普通中国人的日常生活", stores: ["both"],
-              detail: "Kuaishou is a short-video platform particularly popular in China's smaller cities and rural areas. Known for its authentic, unfiltered content and powerful live streaming features, it provides a window into everyday Chinese life that differs from the more polished content on Douyin.",
+            { cn: "快手", en: "Kuaishou", emoji: "📹", desc: "Short-video popular in smaller cities with live streaming", descFr: "Vidéo courte populaire dans les petites villes avec live streaming", descCn: "短视频平台，在小城市很受欢迎，有直播功能", category: "video", essential: false, similar: ["TikTok", "Instagram"], tip: "Tip: Great for seeing everyday life in China", tipFr: "Conseil : idéal pour voir la vie quotidienne en Chine", stores: ["both"],
+              detail: "Kuaishou is a short-video platform particularly popular in China's smaller cities and rural areas. Known for its authentic, unfiltered content and powerful live streaming features.",
+              detailFr: "Kuaishou est une plateforme de vidéo courte particulièrement populaire dans les petites villes et zones rurales de Chine. Connue pour son contenu authentique, non filtré et ses puissantes fonctionnalités de live streaming.",
               features: ["📹 Short video creation and editing tools", "📺 Live streaming for viewer engagement", "👥 Strong sense of community and interaction", "💰 E-commerce through short videos", "🎮 Mini games within the platform", "🌐 Multi-language support for international users"],
+              featuresFr: ["📹 Outils de création et montage de vidéo courte", "📺 Diffusion en direct pour engagement des spectateurs", "👥 Fort sentiment de communauté et interaction", "💰 E-commerce à travers vidéos courtes", "🎮 Mini jeux sur la plateforme", "🌐 Support multilingue pour utilisateurs internationaux"],
               steps: ["Download Kuaishou and sign up", "Explore trending content in your interests", "Create short videos or go live", "Engage with the community through comments"],
+              stepsFr: ["Téléchargez Kuaishou et inscrivez-vous", "Explorez le contenu tendance dans vos intérêts", "Créez des vidéos courtes ou diffusez en direct", "Engagez avec la communauté à travers les commentaires"],
               tips: ["Use it to see authentic Chinese everyday life", "Watch live streams for real-time interaction", "Follow local creators for regional content", "Discover products sold through KOLs"],
+              tipsFr: ["Utilisez-la pour voir la vie quotidienne chinoise authentique", "Regardez les diffusions en direct pour interaction en temps réel", "Suivez les créateurs locaux pour du contenu régional", "Découvrez des produits vendus à travers les KOLs"],
               stats: "300+ million daily active users",
+              statsFr: "Plus de 300 millions d'utilisateurs quotidiens actifs",
               availability: ["iOS", "Android"] },
-            { cn: "哔哩哔哩", en: "Bilibili", emoji: "🎬", desc: "Video-sharing for anime, gaming, and creative content", descCn: "视频分享平台，动漫、游戏和创意内容", category: "video", essential: true, similar: ["YouTube", "Twitch"], tip: "Tip: Subtitles often available / 技巧：通常有字幕可用", stores: ["both"],
-              detail: "Bilibili (B站) is China's beloved video platform originally known for anime and gaming content but now covering virtually everything. Its defining feature is the bullet comments (弹幕) where viewers' comments scroll across the video, creating a shared viewing experience that has become a cultural phenomenon.",
+            { cn: "哔哩哔哩", en: "Bilibili", emoji: "🎬", desc: "Video-sharing for anime, gaming, and creative content", descFr: "Partage vidéo pour anime, gaming et contenu créatif", descCn: "视频分享平台，动漫、游戏和创意内容", category: "video", essential: true, similar: ["YouTube", "Twitch"], tip: "Tip: Subtitles often available / Conseil : sous-titres souvent disponibles", stores: ["both"],
+              detail: "Bilibili (B站) is China's beloved video platform originally known for anime and gaming content but now covering virtually everything. Its defining feature is the bullet comments (弹幕).",
+              detailFr: "Bilibili (B站) est la plateforme vidéo adorée de la Chine, originellement connue pour le contenu anime et gaming mais couvrant maintenant presque tout. Sa caractéristique définissante est les commentaires bullet (弹幕).",
               features: ["🎮 Gaming videos and live streaming", "🎌 Anime and manga content and community", "💬 Bullet comments (弹幕) for shared viewing", "📚 Educational content and documentaries", "🎵 Music and dance videos", "🖼️ Animation and creative content"],
+              featuresFr: ["🎮 Vidéos gaming et live streaming", "🎌 Contenu et communauté anime et manga", "💬 Commentaires bullet (弹幕) pour visionnage partagé", "📚 Contenu éducatif et documentaires", "🎵 Vidéos musique et danse", "🖼️ Animation et contenu créatif"],
               steps: ["Create Bilibili account with registration", "Explore different categories and interests", "Watch videos with bullet comments", "Engage through likes, coins, and comments"],
+              stepsFr: ["Créez un compte Bilibili avec inscription", "Explorez différentes catégories et intérêts", "Regardez des vidéos avec commentaires bullet", "Engagez à travers les likes, coins et commentaires"],
               tips: ["Turn on subtitles for non-Chinese speakers", "Use bullet comments to feel part of the community", "Earn coins by being active to support creators", "Join topic-specific communities for your interests"],
+              tipsFr: ["Activez les sous-titres pour non-locuteurs de chinois", "Utilisez les commentaires bullet pour vous sentir partie de la communauté", "Gagnez des coins en étant actif pour soutenir les créateurs", "Rejoignez des communautés spécifiques à vos intérêts"],
               stats: "200+ million monthly active users",
+              statsFr: "Plus de 200 millions d'utilisateurs mensuels actifs",
               availability: ["iOS", "Android", "Web"] },
-            { cn: "腾讯视频", en: "WeTV", emoji: "📺", desc: "Streaming for dramas, movies, and variety shows", descCn: "流媒体平台，电视剧、电影和综艺", category: "video", essential: false, similar: ["Netflix", "Hulu"], tip: "Tip: Many shows are exclusive to Chinese platforms / 技巧：很多节目是中国平台独家", stores: ["both"],
-              detail: "WeTV is Tencent's streaming platform offering a vast library of Chinese dramas, movies, variety shows, and sports content. As one of China's 'big three' streaming services, it provides both domestic content and international hits with subtitles for overseas audiences.",
+            { cn: "腾讯视频", en: "WeTV", emoji: "📺", desc: "Streaming for dramas, movies, and variety shows", descFr: "Streaming pour dramas, films et émissions de variété", descCn: "流媒体平台，电视剧、电影和综艺", category: "video", essential: false, similar: ["Netflix", "Disney+"], tip: "Tip: Many shows are exclusive to Chinese platforms", tipFr: "Conseil : de nombreuses émissions sont exclusives aux plateformes chinoises", stores: ["both"],
+              detail: "WeTV is Tencent's streaming platform offering a vast library of Chinese dramas, movies, variety shows, and sports content.",
+              detailFr: "WeTV est la plateforme de streaming de Tencent offrant une vaste bibliothèque de dramas chinois, films, émissions de variété et contenu sportif.",
               features: ["📺 Extensive Chinese drama library", "🎬 Blockbuster movies and series", "🎭 Popular variety shows and documentaries", "⚽ Sports content including NBA and football", "🌐 Subtitles in multiple languages", "📱 Offline viewing with VIP download"],
+              featuresFr: ["📺 Bibliothèque extensive de dramas chinois", "🎬 Films et séries blockbusters", "🎭 Émissions de variété et documentaires populaires", "⚽ Contenu sportif incluant NBA et football", "🌐 Sous-titres en langues multiples", "📱 Visionnage hors ligne avec téléchargement VIP"],
               steps: ["Download WeTV and sign up", "Browse by category or search for titles", "Enable subtitles if needed", "Subscribe to VIP for ad-free viewing"],
+              stepsFr: ["Téléchargez WeTV et inscrivez-vous", "Parcourez par catégorie ou recherchez des titres", "Activez les sous-titres si nécessaire", "Abonnez-vous à VIP pour visionnage sans pub"],
               tips: ["Look for dubbed versions of popular Chinese shows", "Check the 'For You' section for recommendations", "Use WeTV with VPN for wider content access", "Try the free tier with occasional ads"],
+              tipsFr: ["Cherchez les versions doublées des dramas chinois populaires", "Consultez la section 'Pour Toi' pour recommandations", "Utilisez WeTV avec VPN pour accès contenu plus large", "Essayez le tier gratuit avec pubs occasionnelles"],
               stats: "100+ million monthly active users",
+              statsFr: "Plus de 100 millions d'utilisateurs mensuels actifs",
               availability: ["iOS", "Android", "Web"] },
-            { cn: "爱奇艺", en: "iQIYI", emoji: "🎞️", desc: "Video streaming with large library of Chinese content", descCn: "视频流媒体，大量中文内容库", category: "video", essential: false, similar: ["Netflix"], tip: "Tip: VR membership for extra content / 技巧：VR会员可获取更多内容", stores: ["both"],
-              detail: "iQIYI is one of China's 'big three' streaming platforms known for its high-quality original productions and extensive content library. The platform invests heavily in original Chinese dramas and variety shows, making it essential for understanding contemporary Chinese entertainment.",
+            { cn: "爱奇艺", en: "iQIYI", emoji: "🎞️", desc: "Video streaming with large library of Chinese content", descFr: "Streaming vidéo avec large bibliothèque de contenu chinois", descCn: "视频流媒体，大量中文内容库", category: "video", essential: false, similar: ["Netflix", "Disney+"], tip: "Tip: VR membership for extra content", tipFr: "Conseil : adhésion VR pour contenu supplémentaire", stores: ["both"],
+              detail: "iQIYI is one of China's 'big three' streaming platforms known for its high-quality original productions and extensive content library.",
+              detailFr: "iQIYI est l'une des trois 'grandes' plateformes de streaming de Chine, connue pour ses productions originales de haute qualité et sa bibliothèque de contenu extensive.",
               features: ["🎬 High-quality original Chinese dramas", "📺 Extensive movie and series library", "🎭 Popular variety shows and idol content", "🎮 Gaming and entertainment integration", "👓 VR content for immersive experience", "📱 Multi-device synchronization"],
+              featuresFr: ["🎬 Dramas chinois originaux de haute qualité", "📺 Bibliothèque extensive de films et séries", "🎭 Émissions de variété populaires et contenu idol", "🎮 Intégration gaming et entertainment", "👓 Contenu VR pour expérience immersive", "📱 Synchronisation multi-appareils"],
               steps: ["Download iQIYI app and register", "Browse content by category or use search", "Enable subtitles or dubbing as needed", "Subscribe to VIP for full library access"],
+              stepsFr: ["Téléchargez l'app iQIYI et inscrivez-vous", "Parcourez le contenu par catégorie ou utilisez la recherche", "Activez sous-titres ou doublage si nécessaire", "Abonnez-vous à VIP pour accès bibliothèque complète"],
               tips: ["Watch exclusive originals that define Chinese pop culture", "Use the 'Night Mode' for comfortable viewing", "Check for promotional VIP offers periodically", "Explore the 'Reality Shows' section for current trends"],
+              tipsFr: ["Regardez les originaux exclusifs qui définissent la pop culture chinoise", "Utilisez le 'Mode Nuit' pour un visionnage confortable", "Vérifiez les offres VIP promotionnelles périodiquement", "Explorez la section 'Émissions de réalité' pour tendances actuelles"],
               stats: "100+ million monthly active users",
+              statsFr: "Plus de 100 millions d'utilisateurs mensuels actifs",
               availability: ["iOS", "Android", "Web"] },
-            { cn: "网易云音乐", en: "NetEase Cloud Music", emoji: "🎧", desc: "Music streaming with social features and playlists", descCn: "音乐流媒体，社交功能和用户歌单", category: "music", essential: false, similar: ["Spotify", "Apple Music"], tip: "Tip: Great for discovering Chinese music / 技巧：发现中国音乐的好渠道", stores: ["both"],
-              detail: "NetEase Cloud Music stands out for its strong social features and community-driven approach to music discovery. Users create and share playlists, write comments on songs, and connect with friends who have similar musical tastes, making it more than just a music player.",
+            { cn: "网易云音乐", en: "NetEase Cloud Music", emoji: "🎧", desc: "Music streaming with social features and playlists", descFr: "Streaming musical avec fonctionnalités sociales et playlists", descCn: "音乐流媒体，社交功能和用户歌单", category: "music", essential: false, similar: ["Spotify", "Deezer", "Apple Music"], tip: "Tip: Great for discovering Chinese music / Conseil : idéal pour découvrir la musique chinoise", stores: ["both"],
+              detail: "NetEase Cloud Music stands out for its strong social features and community-driven approach to music discovery. Users create and share playlists, write comments on songs.",
+              detailFr: "NetEase Cloud Music se distingue par ses fortes fonctionnalités sociales et son approche guidée par la communauté pour la découverte musicale. Les utilisateurs créent et partagent des playlists, écrivent des commentaires sur les chansons.",
               features: ["🎵 Extensive music library with Chinese and international tracks", "📝 Song comments and community discussions", "🎧 User-generated playlists and recommendations", "🎤 Live streaming concerts and sessions", "🎁 Personalized daily recommendations", "💬 Friends' activity and music sharing"],
+              featuresFr: ["🎵 Bibliothèque musicale extensive avec pistes chinoises et internationales", "📝 Commentaires de chansons et discussions communautaires", "🎧 Playlists générées par utilisateurs et recommandations", "🎤 Concerts et sessions en live streaming", "🎁 Recommandations quotidiennes personnalisées", "💬 Activité des amis et partage musical"],
               steps: ["Download and sign up for NetEase Cloud Music", "Search for songs or artists", "Create playlists or follow others", "Enable lyrics display for language learning"],
+              stepsFr: ["Téléchargez et inscrivez-vous sur NetEase Cloud Music", "Recherchez des chansons ou artistes", "Créez des playlists ou suivez d'autres", "Activez l'affichage des paroles pour l'apprentissage des langues"],
               tips: ["Use the 'Daily Recommendations' for music discovery", "Read song comments for insights and translations", "Create playlists to organize favorite songs", "Follow Chinese artists for localized content"],
+              tipsFr: ["Utilisez les 'Recommandations quotidiennes' pour découvrir de la musique", "Lisez les commentaires des chansons pour aperçus et traductions", "Créez des playlists pour organiser vos chansons préférées", "Suivez des artistes chinois pour du contenu localisé"],
               stats: "200+ million monthly active users",
+              statsFr: "Plus de 200 millions d'utilisateurs mensuels actifs",
               availability: ["iOS", "Android", "Web"] },
-            { cn: "QQ音乐", en: "QQ Music", emoji: "🎶", desc: "Music platform integrated with Tencent services", descCn: "音乐平台，与腾讯服务深度整合", category: "music", essential: false, similar: ["Spotify"], tip: "Tip: Huge library of both Chinese and Western music / 技巧：中西方音乐库都很庞大", stores: ["both"],
-              detail: "QQ Music is Tencent's music streaming platform with seamless integration into WeChat and QQ. It offers an enormous library covering both Chinese and international music, with various subscription tiers for ad-free listening and high-quality audio.",
+            { cn: "QQ音乐", en: "QQ Music", emoji: "🎶", desc: "Music platform integrated with Tencent services", descFr: "Plateforme musicale intégrée aux services Tencent", descCn: "音乐平台，与腾讯服务深度整合", category: "music", essential: false, similar: ["Spotify", "Apple Music"], tip: "Tip: Huge library of both Chinese and Western music / Conseil : bibliothèque immense de musique chinoise et occidentale", stores: ["both"],
+              detail: "QQ Music is Tencent's music streaming platform with seamless integration into WeChat and QQ. It offers an enormous library covering both Chinese and international music.",
+              detailFr: "QQ Music est la plateforme de streaming musical de Tencent avec intégration transparente dans WeChat et QQ. Elle offre une bibliothèque énorme couvrant musique chinoise et internationale.",
               features: ["🎵 Massive library of Chinese and international music", "🎧 Lossless audio quality options", "📱 Integration with WeChat and QQ sharing", "🎤 Live streaming and virtual concerts", "🏠 Smart device synchronization", "🎁 Regular promotions and free listening periods"],
+              featuresFr: ["🎵 Bibliothèque massive de musique chinoise et internationale", "🎧 Options de qualité audio lossless", "📱 Intégration avec partage WeChat et QQ", "🎤 Live streaming et concerts virtuels", "🏠 Synchronisation d'appareils intelligents", "🎁 Promotions régulières et périodes d'écoute gratuite"],
               steps: ["Sign up with WeChat, QQ, or phone number", "Search for songs or explore recommendations", "Create playlists and follow artists", "Subscribe for premium audio quality"],
+              stepsFr: ["Inscrivez-vous avec WeChat, QQ ou numéro de téléphone", "Recherchez des chansons ou explorez les recommandations", "Créez des playlists et suivez des artistes", "Abonnez-vous pour qualité audio premium"],
               tips: ["Use WeChat integration to share music easily", "Check the free songs section daily", "Take advantage of trial periods for premium", "Look for karaoke features for fun"],
+              tipsFr: ["Utilisez l'intégration WeChat pour partager de la musique facilement", "Consultez la section chansons gratuites quotidiennement", "Profitez des périodes d'essai pour premium", "Cherchez les fonctionnalités karaoké pour s'amuser"],
               stats: "300+ million monthly active users",
+              statsFr: "Plus de 300 millions d'utilisateurs mensuels actifs",
               availability: ["iOS", "Android", "Web"] },
             
-            { cn: "今日头条", en: "Toutiao", emoji: "📰", desc: "AI-powered personalized news aggregator", descCn: "AI驱动的个性化新闻聚合器", category: "news", essential: false, similar: ["Google News", "Flipboard"], tip: "Tip: News is highly personalized to your interests / 技巧：新闻高度个性化推荐", stores: ["both"],
-              detail: "Toutiao (Today's Headlines) uses sophisticated AI algorithms to personalize news delivery based on user behavior and preferences. This algorithm-first approach revolutionized how Chinese people consume news, delivering highly relevant content that keeps users engaged.",
+            { cn: "今日头条", en: "Toutiao", emoji: "📰", desc: "AI-powered personalized news aggregator", descFr: "Agrégateur de nouvelles personnalisé propulsé par IA", descCn: "AI驱动的个性化新闻聚合器", category: "news", essential: false, similar: ["Google News", "Flipboard"], tip: "Tip: News is highly personalized to your interests", tipFr: "Conseil : les nouvelles sont hautement personnalisées selon vos intérêts", stores: ["both"],
+              detail: "Toutiao (Today's Headlines) uses sophisticated AI algorithms to personalize news delivery based on user behavior and preferences.",
+              detailFr: "Toutiao (Today's Headlines) utilise des algorithmes IA sophistiqués pour personnaliser la livraison de nouvelles selon le comportement et préférences des utilisateurs.",
               features: ["🤖 AI-driven personalized content feed", "📰 Aggregated news from thousands of sources", "📺 Short videos integrated with news", "🎯 Interest-based topic subscriptions", "🔍 Search for specific topics and events", "📱 Micro-news for quick updates"],
+              featuresFr: ["🤖 Flux de contenu personnalisé guidé par IA", "📰 Nouvelles agrégées de milliers de sources", "📺 Vidéos courtes intégrées avec les nouvelles", "🎯 Abonnements à des sujets basés sur les intérêts", "🔍 Recherche pour sujets et événements spécifiques", "📱 Micro-nouvelles pour mises à jour rapides"],
               steps: ["Download Toutiao and sign up", "Select initial interests for personalization", "Browse the For You feed", "Follow specific topics for more content"],
+              stepsFr: ["Téléchargez Toutiao et inscrivez-vous", "Sélectionnez les intérêts initiaux pour personnalisation", "Parcourez le flux Pour Toi", "Suivez des sujets spécifiques pour plus de contenu"],
               tips: ["Be aware that content is algorithmically curated", "Cross-reference important news with other sources", "Use the search feature to find specific topics", "Adjust interests to refine your feed"],
+              tipsFr: ["Soyez conscient que le contenu est curaté algorithmiquement", "Croisez les nouvelles importantes avec d'autres sources", "Utilisez la fonctionnalité de recherche pour trouver des sujets spécifiques", "Ajustez les intérêts pour affiner votre flux"],
               stats: "300+ million daily active users",
+              statsFr: "Plus de 300 millions d'utilisateurs quotidiens actifs",
               availability: ["iOS", "Android"] },
-            { cn: "腾讯新闻", en: "Tencent News", emoji: "🗞️", desc: "News platform with reliable reporting", descCn: "新闻平台，可靠的新闻报道", category: "news", essential: false, similar: ["Apple News"], tip: "Tip: Good for breaking news alerts / 技巧：突发事件推送及时", stores: ["both"],
-              detail: "Tencent News is backed by Tencent's resources to deliver reliable and timely news coverage across China and the world. Known for its breaking news alerts and comprehensive coverage, it's a trusted source for staying informed about current events.",
+            { cn: "腾讯新闻", en: "Tencent News", emoji: "🗞️", desc: "News platform with reliable reporting", descFr: "Plateforme de nouvelles avec journalisme fiable", descCn: "新闻平台，可靠的新闻报道", category: "news", essential: false, similar: ["Le Figaro", "20 Minutes"], tip: "Tip: Good for breaking news alerts", tipFr: "Conseil : idéal pour les alertes de dernières nouvelles", stores: ["both"],
+              detail: "Tencent News is backed by Tencent's resources to deliver reliable and timely news coverage across China and the world.",
+              detailFr: "Tencent News est soutenue par les ressources de Tencent pour fournir une couverture de nouvelles fiable et rapide à travers la Chine et le monde.",
               features: ["📰 Comprehensive news coverage", "⚡ Fast breaking news notifications", "📺 Video news reports", "🎯 Customizable news categories", "💬 Interactive discussions on articles", "📱 Integration with WeChat for sharing"],
+              featuresFr: ["📰 Couverture de nouvelles complète", "⚡ Notifications rapides de dernières nouvelles", "📺 Reportages vidéo", "🎯 Catégories de nouvelles personnalisables", "💬 Discussions interactives sur articles", "📱 Intégration avec WeChat pour partage"],
               steps: ["Download Tencent News app", "Select preferred news categories", "Enable notifications for breaking news", "Share articles via WeChat"],
-              tips: ["Enable breaking news alerts for important events", "Use the video section for visual news coverage", "Follow specific topics for tailored content", "Read the \" perspective\" articles for deep dives"],
+              stepsFr: ["Téléchargez l'app Tencent News", "Sélectionnez les catégories de nouvelles préférées", "Activez les notifications pour dernières nouvelles", "Partagez des articles via WeChat"],
+              tips: ["Enable breaking news alerts for important events", "Use the video section for visual news coverage", "Follow specific topics for tailored content", "Read the \"perspective\" articles for deep dives"],
+              tipsFr: ["Activez les alertes de dernières nouvelles pour événements importants", "Utilisez la section vidéo pour couverture visuelle", "Suivez des sujets spécifiques pour contenu adapté", "Lisez les articles de \"perspective\" pour des approfondissements"],
               stats: "200+ million monthly active users",
+              statsFr: "Plus de 200 millions d'utilisateurs mensuels actifs",
               availability: ["iOS", "Android"] },
 
-            { cn: "百词斩", en: "BaiCiZhan", emoji: "✂️", desc: "English vocabulary learning app with flashcards", descCn: "英语词汇学习应用，使用记忆卡片", category: "education", essential: false, similar: ["Duolingo", "Anki"], tip: "Tip: Consistent daily practice builds vocabulary / 技巧：坚持每日练习积累词汇", stores: ["both"],
-              detail: "BaiCiZhan (Hundred Words to Battle) is a popular English vocabulary learning app that uses spaced repetition and visual flashcards to help Chinese learners build their English vocabulary efficiently. The app's gamified approach makes daily practice engaging and effective.",
+            { cn: "百词斩", en: "BaiCiZhan", emoji: "✂️", desc: "English vocabulary learning app with flashcards", descFr: "Application d'apprentissage de vocabulaire anglais avec flashcards", descCn: "英语词汇学习应用，使用记忆卡片", category: "education", essential: false, similar: ["Duolingo", "Babbel"], tip: "Tip: Consistent daily practice builds vocabulary", tipFr: "Conseil : la pratique quotidienne constante construit le vocabulaire", stores: ["both"],
+              detail: "BaiCiZhan (Hundred Words to Battle) is a popular English vocabulary learning app that uses spaced repetition and visual flashcards.",
+              detailFr: "BaiCiZhan (Cent Mots pour Combattre) est une application populaire d'apprentissage de vocabulaire anglais qui utilise la répétition espacée et les flashcards visuelles.",
               features: ["📇 Visual flashcards with images", "🔄 Spaced repetition algorithm", "📝 Vocabulary quizzes and tests", "🔊 Audio pronunciation by natives", "📊 Progress tracking and statistics", "🎮 Gamified learning with rewards"],
+              featuresFr: ["📇 Flashcards visuelles avec images", "🔄 Algorithme de répétition espacée", "📝 Quiz et tests de vocabulaire", "🔊 Prononciation audio par des natifs", "📊 Suivi de progression et statistiques", "🎮 Apprentissage gamifié avec récompenses"],
               steps: ["Download BaiCiZhan and select vocabulary plan", "Start daily word learning with flashcards", "Complete quizzes to reinforce memory", "Track progress and review missed words"],
+              stepsFr: ["Téléchargez BaiCiZhan et sélectionnez le plan de vocabulaire", "Commencez l'apprentissage quotidien de mots avec flashcards", "Complétez les quiz pour renforcer la mémoire", "Suivez la progression et révisez les mots manqués"],
               tips: ["Set a daily goal and stick to it", "Use the listening feature while commuting", "Review the 'wrong words' section regularly", "Try the 'word book' feature for specific topics"],
+              tipsFr: ["Définissez un objectif quotidien et tenez-y", "Utilisez la fonctionnalité d'écoute pendant les transports", "Révisez régulièrement la section 'mots erronés'", "Essayez la fonctionnalité 'livre de mots' pour des sujets spécifiques"],
               stats: "100+ million users",
+              statsFr: "Plus de 100 millions d'utilisateurs",
               availability: ["iOS", "Android"] },
 
             
-            { cn: "携程", en: "Trip.com", emoji: "✈️", desc: "Travel booking for flights, hotels, and vacation packages", descCn: "旅行预订，机票、酒店和度假套餐", category: "travel", essential: true, similar: ["Expedia", "Booking.com"], tip: "Tip: Bundle flights and hotels for savings / 技巧：机票酒店套餐更优惠", stores: ["both"],
-              detail: "Trip.com (formerly Ctrip) is China's largest online travel agency, offering comprehensive booking services for flights, hotels, trains, and vacation packages. With 24/7 customer support and price matching, it's the go-to platform for both domestic and international travel planning.",
-              features: ["✈️ Flight booking with price comparison", "🏨 Hotel reservations worldwide", "🚄 Train and bus ticket booking", "�-packages and guided tours", "📱 Trip management and itinerary", "💎 VIP membership for exclusive deals"],
+            { cn: "携程", en: "Trip.com", emoji: "✈️", desc: "Travel booking for flights, hotels, and vacation packages", descFr: "Réservation de voyages pour vols, hôtels et forfaits", descCn: "旅行预订，机票、酒店和度假套餐", category: "travel", essential: true, similar: ["Expedia", "Booking.com", "Kayak"], tip: "Tip: Bundle flights and hotels for savings / Conseil : regroupez vols et hôtels pour des économies", stores: ["both"],
+              detail: "Trip.com (formerly Ctrip) is China's largest online travel agency, offering comprehensive booking services for flights, hotels, trains, and vacation packages.",
+              detailFr: "Trip.com (anciennement Ctrip) est la plus grande agence de voyage en ligne de Chine, offrant des services complets de réservation pour vols, hôtels, trains et forfaits vacances.",
+              features: ["✈️ Flight booking with price comparison", "🏨 Hotel reservations worldwide", "🚄 Train and bus ticket booking", "🎫 Packages and guided tours", "📱 Trip management and itinerary", "💎 VIP membership for exclusive deals"],
+              featuresFr: ["✈️ Réservation de vols avec comparaison de prix", "🏨 Réservations d'hôtels mondiales", "🚄 Réservation de billets de train et bus", "🎫 Forfaits et visites guidées", "📱 Gestion de voyage et itinéraire", "💎 Adhésion VIP pour offres exclusives"],
               steps: ["Create Trip.com account", "Search flights or hotels for your destination", "Compare prices and read reviews", "Book and manage your itinerary"],
+              stepsFr: ["Créez un compte Trip.com", "Recherchez des vols ou hôtels pour votre destination", "Comparez les prix et lisez les avis", "Réservez et gérez votre itinéraire"],
               tips: ["Use the price calendar for cheapest flight dates", "Book domestic flights well in advance", "Check the app for exclusive mobile discounts", "Use the 24/7 customer service for changes"],
+              tipsFr: ["Utilisez le calendrier des prix pour les dates de vol les moins chères", "Réservez les vols intérieurs bien à l'avance", "Vérifiez l'app pour des remises mobiles exclusives", "Utilisez le service client 24/7 pour les changements"],
               stats: "100+ million monthly active users",
+              statsFr: "Plus de 100 millions d'utilisateurs mensuels actifs",
               availability: ["iOS", "Android", "Web"] },
-            { cn: "去哪儿", en: "Qunar", emoji: "🏨", desc: "Travel search comparing prices across providers", descCn: "旅行搜索，比价多家供应商", category: "travel", essential: false, similar: ["Kayak", "Skyscanner"], tip: "Tip: Compare prices before booking / 技巧：预订前先比价", stores: ["both"],
-              detail: "Qunar is a travel metasearch engine that aggregates prices from multiple travel providers, helping users find the best deals on flights, hotels, and other travel services. It's particularly useful for budget travelers comparing options across numerous suppliers.",
-              features: ["🔍 Metasearch across multiple providers", "💰 Price comparison and alerts", "🏨 Wide hotel selection with reviews", "✈️ Budget flight search", "🎁 Frequent promotions and discounts", "📱 Travel guides and destination info"],
-              steps: ["Enter your travel dates and destination", "Compare prices across different providers", "Read user reviews and check ratings", "Book through the platform or provider"],
-              tips: ["Set price alerts for specific routes", "Use the flexible date feature for savings", "Check both Qunar and Trip.com for best prices", "Read the fine print on refund policies"],
+{ cn: "去哪儿", en: "Qunar", emoji: "🏨", desc: "Travel search comparing prices across providers", descFr: "Recherche de voyages comparant les prix entre fournisseurs", descCn: "旅行搜索，比价多家供应商", category: "travel", essential: false, similar: ["Kayak", "Skyscanner"], tip: "Tip: Compare prices before booking", tipFr: "Conseil : comparez les prix avant de réserver", stores: ["both"],
               stats: "100+ million monthly active users",
+              statsFr: "Plus de 100 millions d'utilisateurs mensuels actifs",
               availability: ["iOS", "Android", "Web"] },
-            
-            
+            { cn: "微博", en: "Weibo", emoji: "📣", desc: "China's popular microblogging and social media platform", descFr: "Plateforme populaire de microblogging et réseaux sociaux en Chine", descCn: "中国流行的微博客和社交媒体平台", category: "social", essential: false, similar: ["Twitter (X)", "Threads"], tip: "Tip: Follow verified accounts for reliable information", tipFr: "Conseil : suivez les comptes vérifiés pour des informations fiables", stores: ["both"],
+              detail: "Weibo is China's leading microblogging platform with over 500 million users. It serves as a public square for news, entertainment, and social discussion.",
+              detailFr: "Weibo est la plateforme de microblogging leader en Chine avec plus de 500 millions d'utilisateurs. Elle sert de place publique pour les actualités, le divertissement et les discussions sociales.",
+              features: ["📣 Microblogging with text, images, and videos", "🔍 Trending topics and hot search rankings", "👥 Following and followers system", "💬 Comments and reposts for engagement", "🎬 Live streaming and short videos", "🌐 Multi-language support"],
+              featuresFr: ["📣 Microblogging avec texte, images et vidéos", "🔍 Sujets tendance et classements de recherche chaude", "👥 Système defollowing et followers", "💬 Commentaires et reposts pour engagement", "🎬 Diffusion en direct et vidéos courtes", "🌐 Support multilingue"],
+              steps: ["Download Weibo app and sign up", "Complete real-name verification", "Follow accounts of interest", "Engage through likes, comments, and reposts"],
+              stepsFr: ["Téléchargez l'app Weibo et inscrivez-vous", "Complétez la vérification nom réel", "Suivez les comptes qui vous intéressent", "Engagez via les likes, commentaires et reposts"],
+              tips: ["Use the search function to find specific topics", "Follow official news accounts for updates", "Enable translation for non-Chinese content", "Check trending topics for current events"],
+              tipsFr: ["Utilisez la fonction recherche pour trouver des sujets spécifiques", "Suivez les comptes officiels d'actualités", "Activez la traduction pour le contenu non chinois", "Consultez les sujets tendance pour les événements actuels"],
+              stats: "500+ million monthly active users",
+              statsFr: "Plus de 500 millions d'utilisateurs mensuels actifs",
+              availability: ["iOS", "Android", "Web"] },
+            { cn: "知乎", en: "Zhihu", emoji: "❓", desc: "China's leading Q&A platform for knowledge sharing", descFr: "Plateforme Q&A leader en Chine pour le partage de connaissances", descCn: "中国领先的问答知识分享平台", category: "social", essential: false, similar: ["Quora", "Reddit"], tip: "Tip: Search before asking - many topics already discussed", tipFr: "Conseil : recherchez avant de demander - beaucoup de sujets déjà discuss", stores: ["both"],
+              detail: "Zhihu (meaning 'Do you know?') is China's premier Q&A platform where users ask questions, share knowledge, and engage in thoughtful discussions on virtually any topic.",
+              detailFr: "Zhihu (signifiant 'Savez-vous ?') est la plateforme Q&A de premier plan en Chine où les utilisateurs posent des questions, partagent des connaissances et s'engagent dans des discussions approfondies sur pratiquement tout sujet.",
+              features: ["❓ Q&A format for knowledge questions", "📚 In-depth articles and analysis", "💬 Upvotes and downvotes for quality", "🏷️ Topics and categories for organization", "👤 Professional experts and verified accounts", "📱 Reading and listening modes"],
+              featuresFr: ["❓ Format Q&R pour questions de connaissances", "📚 Articles et analyses approfondis", "💬 Upvotes et downvotes pour qualité", "🏷️ Sujets et catégories pour organisation", "👤 Experts professionnels et comptes vérifiés", "📱 Modes lecture et écoute"],
+              steps: ["Download Zhihu and sign up with phone", "Browse topics of interest", "Ask questions or answer existing ones", "Follow topics and users for personalized feed"],
+              stepsFr: ["Téléchargez Zhihu et inscrivez-vous avec le téléphone", "Parcourez les sujets qui vous intéressent", "Posez des questions ou répondez aux existantes", "Suivez des sujets et utilisateurs pour flux personnalisé"],
+              tips: ["Search thoroughly before posting new questions", "Follow industry experts for professional insights", "Use the \"Zhihu Weekly\" for curated content", "Enable night mode for comfortable reading"],
+              tipsFr: ["Recherchez soigneusement avant de poster de nouvelles questions", "Suivez des experts de l'industrie pour des aperçus professionnels", "Utilisez \"Zhihu Weekly\" pour du contenu selectionné", "Activez le mode nuit pour une lecture confortable"],
+              stats: "100+ million monthly active users",
+              statsFr: "Plus de 100 millions d'utilisateurs mensuels actifs",
+              availability: ["iOS", "Android", "Web"] },
+            { cn: "小红书", en: "Xiaohongshu", emoji: "📕", desc: "Lifestyle platform combining social media and e-commerce", descFr: "Plateforme lifestyle combinant réseaux sociaux et e-commerce", descCn: "生活方式社交电商平台", category: "social", essential: false, similar: ["Instagram", "Pinterest"], tip: "Tip: Great for product reviews and lifestyle tips in China", tipFr: "Conseil : idéal pour les avis produits et conseils lifestyle en Chine", stores: ["both"],
+              detail: "Xiaohongshu (Little Red Book) is a unique lifestyle platform where users share authentic experiences about products, travel, beauty, and daily life through photos and notes.",
+              detailFr: "Xiaohongshu (Petit Livre Rouge) est une plateforme lifestyle unique où les utilisateurs partagent des expériences authentiques sur les produits, voyages, beauté et vie quotidienne via photos et notes.",
+              features: ["📕 Photo and video notes for sharing experiences", "🛍️ Integrated shopping with product recommendations", "🔍 Search function for reviews and tips", "👗 Beauty and fashion content focus", "✈️ Travel diaries and destination guides", "🏠 Home decor and lifestyle inspiration"],
+              featuresFr: ["📕 Notes photo et vidéo pour partager des expériences", "🛍️ Shopping intégré avec recommandations produits", "🔍 Fonction recherche pour avis et conseils", "👗 Contenu beauté et mode focalisé", "✈️ Carnets de voyage et guides destination", "🏠 Décoration et inspiration lifestyle"],
+              steps: ["Download Xiaohongshu and create account", "Browse the \"Discover\" page for content", "Search for specific products or topics", "Create your own notes to share experiences"],
+              stepsFr: ["Téléchargez Xiaohongshu et créez un compte", "Parcourez la page \"Découvrir\" pour le contenu", "Recherchez des produits ou sujets spécifiques", "Créez vos propres notes pour partager des expériences"],
+              tips: ["Search product names + \"测评\" (review) for honest reviews", "Use the QR code scanner to find specific users", "Follow trending topics for seasonal content", "Save posts to collections for future reference"],
+              tipsFr: ["Recherchez nom produit + \"测评\" (avis) pour des avis honnêtes", "Utilisez le scanner QR code pour trouver des utilisateurs spécifiques", "Suivez les sujets tendance pour du contenu saisonnier", "Sauvegardez les posts dans des collections pour référence future"],
+              stats: "200+ million monthly active users",
+              statsFr: "Plus de 200 millions d'utilisateurs mensuels actifs",
+              availability: ["iOS", "Android"] },
+            { cn: "钉钉", en: "DingTalk", emoji: "📎", desc: "Enterprise communication and collaboration platform", descFr: "Plateforme de communication et collaboration d'entreprise", descCn: "企业通讯协作平台", category: "social", essential: false, similar: ["Slack", "Microsoft Teams"], tip: "Tip: Essential for working with Chinese companies", tipFr: "Conseil : essentiel pour travailler avec des entreprises chinoises", stores: ["both"],
+              detail: "DingTalk is Alibaba's enterprise communication and collaboration platform, widely used by Chinese companies for messaging, video conferencing, task management, and HR workflows.",
+              detailFr: "DingTalk est la plateforme de communication et collaboration d'entreprise d'Alibaba, largement utilisée par les entreprises chinoises pour la messagerie, visioconférence, gestion des tâches et workflows RH.",
+              features: ["💬 Instant messaging and group chats", "📞 Video conferencing for remote teams", "📋 Task management and assignment tracking", "📄 Document collaboration and sharing", "🏢 Organization management features", "📊 Attendance and HR management tools"],
+              featuresFr: ["💬 Messagerie instantanée et groupes de discussion", "📞 Visioconférence pour équipes à distance", "📋 Gestion et attribution de tâches", "📄 Collaboration et partage de documents", "🏢 Fonctionnalités de gestion d'organisation", "📊 Outils de présence et gestion RH"],
+              steps: ["Download DingTalk and register with company", "Create or join organization workspace", "Add colleagues as contacts", "Start using messaging, calls, and collaboration tools"],
+              stepsFr: ["Téléchargez DingTalk et inscrivez-vous avec l'entreprise", "Créez ou rejoignez l'espace de travail organisation", "Ajoutez des collègues comme contacts", "Commencez à utiliser la messagerie, appels et outils de collaboration"],
+              tips: ["Enable \"Ding\" notifications for urgent messages", "Use the attendance feature for remote work tracking", "Explore templates for efficient workflows", "Connect with external partners via guest access"],
+              tipsFr: ["Activez les notifications \"Ding\" pour messages urgents", "Utilisez la fonction présence pour le suivi du travail à distance", "Explorez les modèles pour des workflows efficaces", "Connectez-vous avec des partenaires externes via accès invité"],
+              stats: "500+ million users",
+              statsFr: "Plus de 500 millions d'utilisateurs",
+              availability: ["iOS", "Android", "Web"] },
+            { cn: "企业微信", en: "WeCom", emoji: "🏢", desc: "Enterprise WeChat for business communication", descFr: "WeChat d'entreprise pour communication professionnelle", descCn: "企业微信，商业通讯工具", category: "social", essential: false, similar: ["Slack", "WhatsApp Business"], tip: "Tip: Perfect for managing customer relationships in China", tipFr: "Conseil : parfait pour gérer les relations clients en Chine", stores: ["both"],
+              detail: "WeCom is Tencent's enterprise communication solution designed for business use, offering advanced customer management tools that extend WeChat's ecosystem to the corporate world.",
+              detailFr: "WeCom est la solution de communication d'entreprise de Tencent, conçue pour un usage professionnel, offrant des outils avancés de gestion client qui étendent l'écosystème WeChat au monde corporatif.",
+              features: ["🏢 Corporate account management", "👥 Customer contact management with rich profiles", "💬 Mass messaging and automated responses", "📊 Sales and marketing tools", "🔐 Enhanced security and admin controls", "🔄 Seamless migration from WeChat groups"],
+              featuresFr: ["🏢 Gestion de compte corporate", "👥 Gestion de contacts client avec profils riches", "💬 Messagerie de masse et réponses automatisées", "📊 Outils de ventes et marketing", "🔐 Sécurité renforcée et contrôles admin", "🔄 Migration transparente depuis les groupes WeChat"],
+              steps: ["Apply for WeCom through your company", "Connect with colleagues via company verification", "Import existing WeChat contacts to CRM", "Use built-in tools for customer engagement"],
+              stepsFr: ["Postulez pour WeCom via votre entreprise", "Connectez-vous avec les collègues via vérification entreprise", "Importez les contacts WeChat existants vers le CRM", "Utilisez les outils intégrés pour l'engagement client"],
+              tips: ["Use \"Customer Moments\" for personalized marketing", "Enable \"Anti-Chat\" monitoring for compliance", "Leverage the \"Red Envelope\" feature for promotions", "Track customer interactions through the CRM dashboard"],
+              tipsFr: ["Utilisez \"Customer Moments\" pour marketing personnalisé", "Activez la surveillance \"Anti-Chat\" pour conformité", "Exploitez la fonction \"Red Envelope\" pour promotions", "Suivez les interactions client via le tableau de bord CRM"],
+              stats: "300+ million users",
+              statsFr: "Plus de 300 millions d'utilisateurs",
+              availability: ["iOS", "Android", "Web"] },
+            { cn: "飞书", en: "Feishu", emoji: "📨", desc: "ByteDance's all-in-one collaboration suite", descFr: "Suite de collaboration tout-en-un de ByteDance", descCn: "字节跳动的一站式协作平台", category: "social", essential: false, similar: ["Notion", "Slack", "Google Workspace"], tip: "Tip: Great alternative with modern design", tipFr: "Conseil : excellente alternative avec un design moderne", stores: ["both"],
+              detail: "Feishu is ByteDance's comprehensive collaboration platform that combines messaging, video conferencing, documents, and calendar into an integrated workspace.",
+              detailFr: "Feishu est la plateforme de collaboration complète de ByteDance qui combine messagerie, visioconférence, documents et calendrier dans un espace de travail intégré.",
+              features: ["📨 Messaging with channels and direct messages", "📞 Video conferencing with up to 1000 participants", "📄 Rich document creation and collaboration", "📅 Calendar integration for scheduling", "✅ Tasks and project management tools", "🔍 Powerful search across all content"],
+              featuresFr: ["📨 Messagerie avec canaux et messages directs", "📞 Visioconférence jusqu'à 1000 participants", "📄 Création et collaboration de documents riches", "📅 Intégration calendrier pour planification", "✅ Outils de gestion de tâches et projets", "🔍 Recherche puissante sur tout le contenu"],
+              steps: ["Download Feishu and sign up with email or phone", "Create or join a workspace", "Invite team members to join", "Start creating documents, holding meetings, and collaborating"],
+              stepsFr: ["Téléchargez Feishu et inscrivez-vous avec email ou téléphone", "Créez ou rejoignez un espace de travail", "Invitez des membres de l'équipe à rejoindre", "Commencez à créer des documents, tenir des réunions et collaborer"],
+              tips: ["Use \"Lark Docs\" for real-time document collaboration", "Enable \"Multi-language\" for international teams", "Explore \"Bitable\" for no-code apps within Feishu", "Use the meeting recording feature for documentation"],
+              tipsFr: ["Utilisez \"Lark Docs\" pour collaboration de documents en temps réel", "Activez \"Multi-langue\" pour les équipes internationales", "Explorez \"Bitable\" pour apps sans code dans Feishu", "Utilisez la fonction d'enregistrement de réunion pour documentation"],
+              stats: "50+ million monthly active users",
+              statsFr: "Plus de 50 millions d'utilisateurs mensuels actifs",
+              availability: ["iOS", "Android", "Web"] },
             
         ];
 
         const categoryNames = {
+            social: "Social Media / Réseaux sociaux",
+            payment: "Payment / Paiement",
+            shopping: "Shopping",
+            food: "Food / Restauration",
+            fitness: "Fitness",
+            education: "Education",
+            realestate: "Real Estate / Immobilier",
+            finance: "Finance",
+            transport: "Transport",
+            video: "Video / Vidéo",
+            music: "Music / Musique",
+            news: "News / Actualités",
+            travel: "Travel / Voyages"
+        };
+
+        const categoryNamesEn = {
             social: "Social Media",
             payment: "Payment",
             shopping: "Shopping",
             food: "Food Delivery",
             fitness: "Fitness",
             education: "Education",
-
             realestate: "Real Estate",
             finance: "Finance",
             transport: "Transportation",
@@ -485,6 +706,22 @@
             music: "Music",
             news: "News",
             travel: "Travel"
+        };
+
+        const categoryNamesFr = {
+            social: "Réseaux sociaux",
+            payment: "Paiement",
+            shopping: "Shopping",
+            food: "Restauration",
+            fitness: "Fitness",
+            education: "Éducation",
+            realestate: "Immobilier",
+            finance: "Finance",
+            transport: "Transport",
+            video: "Vidéo",
+            music: "Musique",
+            news: "Actualités",
+            travel: "Voyages"
         };
 
         const categoryColors = {
@@ -515,6 +752,7 @@
         function renderTopApps() {
             const grid = document.getElementById('topAppsGrid');
             const topApps = apps.filter(app => top6.includes(app.cn));
+            const catName = currentLang === 'fr' ? categoryNamesFr : categoryNamesEn;
             
             grid.innerHTML = topApps.map((app, i) => `
                 <div class="ranking-card rounded-2xl p-5 shadow-lg border-2 border-yellow-300 ${i === 0 ? 'ring-4 ring-yellow-400' : ''} cursor-pointer" onclick="openModal('${app.cn}')">
@@ -522,9 +760,9 @@
                         <span class="text-3xl">${i === 0 ? '🥇' : i === 1 ? '🥈' : i === 2 ? '🥉' : `${i+1}`}</span>
                         <span class="text-4xl">${app.emoji}</span>
                     </div>
-                    <h3 class="text-lg font-bold text-gray-800">${currentLang === 'en' ? app.cn : app.cn}</h3>
-                    <p class="text-gray-600 text-sm">${currentLang === 'en' ? app.en : app.cn}</p>
-                    <p class="text-xs text-gray-500 mt-1">${app.category === 'social' ? '👥' : app.category === 'payment' ? '💳' : app.category === 'shopping' ? '🛒' : app.category === 'food' ? '🍔' : '🎵'} ${categoryNames[app.category]}</p>
+                    <h3 class="text-lg font-bold text-gray-800">${app.cn}</h3>
+                    <p class="text-red-500 font-semibold text-sm">${app.en}</p>
+                    <p class="text-xs text-gray-500 mt-1">${app.category === 'social' ? '👥' : app.category === 'payment' ? '💳' : app.category === 'shopping' ? '🛒' : app.category === 'food' ? '🍔' : '🎵'} ${catName[app.category]}</p>
                 </div>
             `).join('');
         }
@@ -532,13 +770,15 @@
         function renderApps() {
             const grid = document.getElementById('appsGrid');
             const noResults = document.getElementById('noResults');
+            const catName = currentLang === 'fr' ? categoryNamesFr : categoryNamesEn;
             
             const filtered = apps.filter(app => {
                 const matchesCategory = currentCategory === 'all' || app.category === currentCategory;
+                const desc = currentLang === 'fr' ? (app.descFr || app.desc) : app.desc;
                 const matchesSearch = searchTerm === '' || 
                     app.cn.toLowerCase().includes(searchTerm.toLowerCase()) ||
                     app.en.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                    (currentLang === 'en' ? app.desc : app.descCn).toLowerCase().includes(searchTerm.toLowerCase());
+                    desc.toLowerCase().includes(searchTerm.toLowerCase());
                 return matchesCategory && matchesSearch;
             });
 
@@ -565,26 +805,26 @@
                     <div class="category-section">
                         <div class="flex items-center gap-3 mb-4">
                             <div class="h-px flex-1 bg-gradient-to-r from-transparent via-gray-300 to-transparent"></div>
-                            <h3 class="text-lg font-bold text-gray-700 px-4 py-1 rounded-full bg-gradient-to-r ${categoryColors[category]} text-white shadow-sm">${categoryNames[category]}</h3>
+                            <h3 class="text-lg font-bold text-gray-700 px-4 py-1 rounded-full bg-gradient-to-r ${categoryColors[category]} text-white shadow-sm">${catName[category]}</h3>
                             <div class="h-px flex-1 bg-gradient-to-r from-transparent via-gray-300 to-transparent"></div>
                         </div>
                         <div class="flex gap-4 overflow-x-auto pb-4 scrollbar-thin">
                             ${categoryApps.map(app => `
                                 <div class="app-card glass-card rounded-2xl p-5 shadow-sm hover:shadow-xl transition-all duration-300 relative overflow-hidden cursor-pointer flex-shrink-0 w-64" onclick="openModal('${app.cn}')">
-                                    ${app.essential ? '<div class="absolute top-0 right-0 bg-gradient-to-r from-red-500 to-pink-500 text-white text-xs px-3 py-1 rounded-bl-xl font-semibold essential-badge">⭐ Essential</div>' : ''}
+                                    ${app.essential ? '<div class="absolute top-0 right-0 bg-gradient-to-r from-red-500 to-pink-500 text-white text-xs px-3 py-1 rounded-bl-xl font-semibold essential-badge">' + (currentLang === 'fr' ? '⭐ Essentiel' : '⭐ Essential') + '</div>' : ''}
                                     <div class="flex items-start justify-between mb-4 mt-2">
                                         <span class="text-4xl">${app.emoji}</span>
                                     </div>
                                     <h3 class="text-xl font-bold text-gray-800 mb-0.5">${app.cn}</h3>
                                     <p class="text-red-500 font-semibold text-sm mb-3">${app.en}</p>
-                                    <p class="text-gray-500 text-sm leading-relaxed mb-4 line-clamp-2">${currentLang === 'en' ? app.desc : app.descCn}</p>
+                                    <p class="text-gray-500 text-sm leading-relaxed mb-4 line-clamp-2">${currentLang === 'fr' ? (app.descFr || app.desc) : app.desc}</p>
                                     
                                     <div class="border-t border-gray-100 pt-3 space-y-2">
                                         <div class="flex items-center gap-2 text-xs text-gray-500">
-                                            <span class="font-medium">Similar to:</span>
+                                            <span class="font-medium">${currentLang === 'fr' ? 'Similaire à :' : 'Similar to:'}</span>
                                             <span class="text-gray-600">${app.similar.join(', ')}</span>
                                         </div>
-                                        <div class="text-xs text-blue-600 bg-blue-50 rounded-lg p-2">${app.tip}</div>
+                                        <div class="text-xs text-blue-600 bg-blue-50 rounded-lg p-2">${currentLang === 'fr' ? (app.tipFr || app.tip) : app.tip}</div>
                                         <div class="flex gap-2">
                                             ${app.availability && (app.availability.includes('iOS') || app.availability.includes('Android')) ? '<img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_AR_RGB.svg" class="app-store-icon h-5 w-auto rounded" alt="App Store">' : ''}
                                             ${app.availability && (app.availability.includes('Android') || app.availability.includes('iOS')) && app.stores && app.stores.includes('android') ? '<img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" class="play-store-icon h-5 w-auto rounded" alt="Play Store">' : ''}
@@ -620,6 +860,7 @@
         function renderModalHeader() {
             const header = document.getElementById('modalHeader');
             const badgeColor = categoryColors[currentApp.category] || 'from-gray-500 to-gray-600';
+            const catName = currentLang === 'fr' ? categoryNamesFr : categoryNamesEn;
             
             header.innerHTML = `
                 <div class="flex items-center gap-4 mb-4">
@@ -628,13 +869,13 @@
                         <h1 class="text-2xl font-bold text-gray-800">${currentApp.cn}</h1>
                         <p class="text-lg text-red-500 font-medium">${currentApp.en}</p>
                         <div class="flex items-center gap-2 mt-2">
-                            <span class="px-3 py-1 rounded-full text-xs font-medium bg-gradient-to-r ${badgeColor} text-white">${categoryNames[currentApp.category]}</span>
-                            ${currentApp.essential ? '<span class="px-3 py-1 rounded-full text-xs font-medium bg-gradient-to-r from-yellow-400 to-orange-500 text-white">⭐ Essential</span>' : ''}
+                            <span class="px-3 py-1 rounded-full text-xs font-medium bg-gradient-to-r ${badgeColor} text-white">${catName[currentApp.category]}</span>
+                            ${currentApp.essential ? '<span class="px-3 py-1 rounded-full text-xs font-medium bg-gradient-to-r from-yellow-400 to-orange-500 text-white">' + (currentLang === 'fr' ? '⭐ Essentiel' : '⭐ Essential') + '</span>' : ''}
                         </div>
                     </div>
                 </div>
                 <div class="flex items-center gap-4 text-sm text-gray-500 pb-4">
-                    ${currentApp.stats ? `<span>📊 ${currentApp.stats}</span>` : ''}
+                    ${currentApp.stats ? `<span>📊 ${currentLang === 'fr' ? (currentApp.statsFr || currentApp.stats) : currentApp.stats}</span>` : ''}
                     ${currentApp.availability ? `
                         <div class="flex items-center gap-1">
                             ${currentApp.availability.includes('iOS') ? '<span class="text-xs">🍎 iOS</span>' : ''}
@@ -657,25 +898,26 @@
 
         function renderModalContent() {
             const content = document.getElementById('modalContent');
+            const isFr = currentLang === 'fr';
             
             switch(currentTab) {
                 case 'overview':
                     content.innerHTML = `
                         <div class="space-y-6">
                             <div>
-                                <h3 class="text-lg font-semibold text-gray-800 mb-2">📖 Overview</h3>
-                                <p class="text-gray-600 leading-relaxed">${currentApp.detail || currentApp.desc}</p>
+                                <h3 class="text-lg font-semibold text-gray-800 mb-2">📖 ${isFr ? 'Aperçu' : 'Overview'}</h3>
+                                <p class="text-gray-600 leading-relaxed">${isFr ? (currentApp.detailFr || currentApp.detail) : currentApp.detail}</p>
                             </div>
                             <div>
-                                <h3 class="text-lg font-semibold text-gray-800 mb-2">🌍 Market Position</h3>
-                                <p class="text-gray-600 leading-relaxed">${currentApp.stats || 'A leading app in its category with millions of users across China.'}</p>
+                                <h3 class="text-lg font-semibold text-gray-800 mb-2">🌍 ${isFr ? 'Position sur le marché' : 'Market Position'}</h3>
+                                <p class="text-gray-600 leading-relaxed">${isFr ? (currentApp.statsFr || currentApp.stats) : (currentApp.stats || 'A leading app in its category with millions of users across China.')}</p>
                             </div>
                             <div>
-                                <h3 class="text-lg font-semibold text-gray-800 mb-2">👥 User Base</h3>
-                                <p class="text-gray-600 leading-relaxed">${currentApp.stats || 'Popular among Chinese users across various demographics.'}</p>
+                                <h3 class="text-lg font-semibold text-gray-800 mb-2">👥 ${isFr ? 'Base d\'utilisateurs' : 'User Base'}</h3>
+                                <p class="text-gray-600 leading-relaxed">${isFr ? (currentApp.statsFr || currentApp.stats) : (currentApp.stats || 'Popular among Chinese users across various demographics.')}</p>
                             </div>
                             <div>
-                                <h3 class="text-lg font-semibold text-gray-800 mb-2">🔗 Similar Western Apps</h3>
+                                <h3 class="text-lg font-semibold text-gray-800 mb-2">🔗 ${isFr ? 'Alternatives occidentales similaires' : 'Similar Western Apps'}</h3>
                                 <div class="flex flex-wrap gap-2">
                                     ${(currentApp.similar || []).map(s => `<span class="px-3 py-1 bg-gray-100 rounded-full text-sm text-gray-700">${s}</span>`).join('')}
                                 </div>
@@ -686,9 +928,9 @@
                 case 'features':
                     content.innerHTML = `
                         <div>
-                            <h3 class="text-lg font-semibold text-gray-800 mb-4">✨ Key Features</h3>
+                            <h3 class="text-lg font-semibold text-gray-800 mb-4">✨ ${isFr ? 'Caractéristiques principales' : 'Key Features'}</h3>
                             <ul class="space-y-3">
-                                ${(currentApp.features || []).map((f, i) => `
+                                ${(isFr ? (currentApp.featuresFr || currentApp.features) : currentApp.features || []).map((f, i) => `
                                     <li class="flex items-start gap-3 p-3 bg-gray-50 rounded-xl">
                                         <span class="text-xl">${f.split(' ')[0]}</span>
                                         <span class="text-gray-700">${f.substring(f.indexOf(' ') + 1)}</span>
@@ -701,9 +943,9 @@
                 case 'howto':
                     content.innerHTML = `
                         <div>
-                            <h3 class="text-lg font-semibold text-gray-800 mb-4">🚀 Getting Started</h3>
+                            <h3 class="text-lg font-semibold text-gray-800 mb-4">🚀 ${isFr ? 'Pour commencer' : 'Getting Started'}</h3>
                             <div class="space-y-4">
-                                ${(currentApp.steps || []).map((step, i) => `
+                                ${(isFr ? (currentApp.stepsFr || currentApp.steps) : currentApp.steps || []).map((step, i) => `
                                     <div class="flex gap-4">
                                         <div class="flex-shrink-0 w-8 h-8 rounded-full bg-red-100 text-red-500 flex items-center justify-center font-semibold text-sm">${i + 1}</div>
                                         <div class="flex-1 pt-1">
@@ -718,9 +960,9 @@
                 case 'tips':
                     content.innerHTML = `
                         <div>
-                            <h3 class="text-lg font-semibold text-gray-800 mb-4">💡 Tips for Foreigners</h3>
+                            <h3 class="text-lg font-semibold text-gray-800 mb-4">💡 ${isFr ? 'Conseils pour les étrangers' : 'Tips for Foreigners'}</h3>
                             <ul class="space-y-3">
-                                ${(currentApp.tips || []).map(tip => `
+                                ${(isFr ? (currentApp.tipsFr || currentApp.tips) : currentApp.tips || []).map(tip => `
                                     <li class="flex items-start gap-3 p-4 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl border-l-4 border-blue-400">
                                         <span class="text-blue-400 text-lg">💡</span>
                                         <span class="text-gray-700">${tip}</span>
@@ -733,7 +975,7 @@
                 case 'similar':
                     content.innerHTML = `
                         <div>
-                            <h3 class="text-lg font-semibold text-gray-800 mb-4">🌍 Similar Western Alternatives</h3>
+                            <h3 class="text-lg font-semibold text-gray-800 mb-4">🌍 ${isFr ? 'Alternatives occidentales similaires' : 'Similar Western Alternatives'}</h3>
                             <div class="space-y-4">
                                 ${(currentApp.similar || []).map(s => `
                                     <div class="p-4 bg-gray-50 rounded-xl">
@@ -741,7 +983,7 @@
                                             <span class="text-2xl">🌐</span>
                                             <div>
                                                 <p class="font-medium text-gray-800">${s}</p>
-                                                <p class="text-sm text-gray-500">Western alternative to ${currentApp.en}</p>
+                                                <p class="text-sm text-gray-500">${isFr ? 'Alternative à ' + currentApp.en : 'Western alternative to ' + currentApp.en}</p>
                                             </div>
                                         </div>
                                     </div>
@@ -750,7 +992,7 @@
                             ${currentApp.similar && currentApp.similar.length > 0 ? `
                             <div class="mt-6 p-4 bg-gradient-to-r from-yellow-50 to-orange-50 rounded-xl border border-yellow-200">
                                 <p class="text-sm text-gray-700">
-                                    <span class="font-semibold">💡 Note:</span> ${currentApp.en} combines features from multiple Western apps into one seamless experience, making it a true super-app compared to its Western counterparts.
+                                    <span class="font-semibold">💡 ${isFr ? 'Note :' : 'Note:'}</span> ${isFr ? currentApp.en + ' combine des fonctionnalités de plusieurs applications occidentales en une expérience transparente, en faisant une vraie super-application comparée à ses homologues occidentaux.' : currentApp.en + ' combines features from multiple Western apps into one seamless experience, making it a true super-app compared to its Western counterparts.'}
                                 </p>
                             </div>
                             ` : ''}
@@ -809,11 +1051,12 @@
         }
 
         document.getElementById('langToggle').addEventListener('click', () => {
-            currentLang = currentLang === 'en' ? 'cn' : 'en';
-            document.getElementById('langText').textContent = currentLang === 'en' ? '中文' : 'EN';
+            currentLang = currentLang === 'en' ? 'fr' : 'en';
+            document.getElementById('langText').textContent = currentLang === 'en' ? 'Français' : 'EN';
             document.getElementById('langIcon').textContent = currentLang === 'en' ? '🌐' : '🌐';
-            document.title = currentLang === 'en' ? 'Chinese Apps Guide - 常见中文应用指南' : '常见中文应用指南 - Chinese Apps Guide';
+            document.title = currentLang === 'en' ? 'Chinese Apps Guide / Guide des Apps Chinoises' : 'Guide des Apps Chinoises / Chinese Apps Guide';
             renderApps();
+            renderTopApps();
         });
 
         document.getElementById('resetBtn').addEventListener('click', () => {
