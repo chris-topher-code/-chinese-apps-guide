@@ -151,20 +151,22 @@
                 <a href="#ranking" class="hover:underline" id="navRanking">Top 6</a>
                 <a href="#about" class="hover:underline" id="navAbout">About</a>
             </div>
-            <button id="langToggle" class="glass px-4 py-2 rounded-full text-sm font-medium hover:bg-white/20 transition flex items-center gap-2">
-                <span id="langIcon">🌐</span>
-                <span id="langText">Français</span>
-            </button>
         </nav>
         <div class="max-w-7xl mx-auto px-4 py-16 md:py-24 text-center relative z-10">
             <div class="inline-block mb-4 px-4 py-1 rounded-full glass text-sm" id="heroBadge">📱 Essential Apps for China</div>
             <h1 class="text-4xl md:text-6xl font-extrabold mb-4" id="heroTitle">🇨🇳 Chinese Apps Guide</h1>
             <p class="text-xl md:text-2xl opacity-90 mb-2" id="heroSubtitle">Discover the most popular apps in China</p>
-            <div class="flex justify-center gap-4 flex-wrap" id="heroBadges">
-                <div class="glass rounded-full px-6 py-2 text-sm font-medium">WeChat • 微信</div>
-                <div class="glass rounded-full px-6 py-2 text-sm font-medium">Alipay • 支付宝</div>
-                <div class="glass rounded-full px-6 py-2 text-sm font-medium">Douyin • 抖音</div>
-                <div class="glass rounded-full px-6 py-2 text-sm font-medium">Taobao • 淘宝</div>
+            <div class="flex flex-wrap justify-center gap-4" id="heroBadges">
+                <div class="glass rounded-full px-6 py-2 text-sm font-medium" id="heroApp1">WeChat</div>
+                <div class="glass rounded-full px-6 py-2 text-sm font-medium" id="heroApp2">Alipay</div>
+                <div class="glass rounded-full px-6 py-2 text-sm font-medium" id="heroApp3">Douyin</div>
+                <div class="glass rounded-full px-6 py-2 text-sm font-medium" id="heroApp4">Taobao</div>
+            </div>
+            <div class="flex justify-center mt-6">
+                <button id="langToggle" class="glass px-6 py-3 rounded-full text-base font-semibold hover:bg-white/30 transition flex items-center gap-2 border-2 border-white/30 hover:border-white/50">
+                    <span id="langIcon">🌐</span>
+                    <span id="langText">Français</span>
+                </button>
             </div>
         </div>
     </header>
@@ -625,7 +627,7 @@
               stats: "200+ million monthly active users",
               statsFr: "Plus de 200 millions d'utilisateurs mensuels actifs",
               availability: ["iOS", "Android"] },
-            { cn: "钉钉", en: "DingTalk", emoji: "📎", desc: "Enterprise communication and collaboration platform", descFr: "Plateforme de communication et collaboration d'entreprise", descCn: "企业通讯协作平台", category: "work", essential: false, similar: ["Slack", "Microsoft Teams"], tip: "Tip: Essential for working with Chinese companies", tipFr: "Conseil : essentiel pour travailler avec des entreprises chinoises", stores: ["both"],
+            { cn: "钉钉", en: "DingTalk", emoji: "💼", desc: "Enterprise communication and collaboration platform", descFr: "Plateforme de communication et collaboration d'entreprise", descCn: "企业通讯协作平台", category: "work", essential: false, similar: ["Slack", "Microsoft Teams"], tip: "Tip: Essential for working with Chinese companies", tipFr: "Conseil : essentiel pour travailler avec des entreprises chinoises", stores: ["both"],
               detail: "DingTalk is Alibaba's enterprise communication and collaboration platform, widely used by Chinese companies for messaging, video conferencing, task management, and HR workflows.",
               detailFr: "DingTalk est la plateforme de communication et collaboration d'entreprise d'Alibaba, largement utilisée par les entreprises chinoises pour la messagerie, visioconférence, gestion des tâches et workflows RH.",
               features: ["💬 Instant messaging and group chats", "📞 Video conferencing for remote teams", "📋 Task management and assignment tracking", "📄 Document collaboration and sharing", "🏢 Organization management features", "📊 Attendance and HR management tools"],
@@ -739,7 +741,7 @@
         let currentApp = null;
         let currentTab = 'overview';
 
-        const top6 = ['微信', '支付宝', '淘宝', '抖音', '美团'];
+        const top6 = ['微信', '支付宝', '淘宝', '抖音', '美团', '闲鱼'];
 
         function renderTopApps() {
             const grid = document.getElementById('topAppsGrid');
@@ -1054,8 +1056,13 @@
             document.getElementById('heroBadge').textContent = isFr ? '📱 Apps essentielles pour la Chine' : '📱 Essential Apps for China';
             document.getElementById('heroTitle').textContent = isFr ? '🇨🇳 Guide des Apps Chinoises' : '🇨🇳 Chinese Apps Guide';
             document.getElementById('heroSubtitle').textContent = isFr ? 'Découvrez les applications les plus populaires en Chine' : 'Discover the most popular apps in China';
-            document.getElementById('top6Badge').textContent = isFr ? '🔥 Top 5' : '🔥 Top 5';
-            document.getElementById('rankingTitle').textContent = isFr ? 'Top 5 Apps les plus populaires' : 'Top 5 Most Popular Apps';
+            document.getElementById('top6Badge').textContent = isFr ? '🔥 Top 6' : '🔥 Top 6';
+            document.getElementById('rankingTitle').textContent = isFr ? 'Top 6 Apps les plus populaires' : 'Top 6 Most Popular Apps';
+
+            document.getElementById('heroApp1').textContent = 'WeChat';
+            document.getElementById('heroApp2').textContent = 'Alipay';
+            document.getElementById('heroApp3').textContent = 'Douyin';
+            document.getElementById('heroApp4').textContent = 'Taobao';
             
             const searchInput = document.getElementById('searchInput');
             searchInput.placeholder = isFr ? 'Rechercher des apps...' : 'Search apps...';
