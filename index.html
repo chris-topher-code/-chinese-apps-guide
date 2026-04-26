@@ -142,14 +142,14 @@
             <div class="flex items-center gap-3">
                 <span class="text-3xl">🇨🇳</span>
                 <div>
-                    <span class="font-bold text-xl block">Chinese Apps Guide</span>
-                    <span class="text-xs text-white/70">Guide des Apps Chinoises</span>
+                    <span class="font-bold text-xl block" id="siteTitle">Chinese Apps Guide</span>
+                    <span class="text-xs text-white/70" id="siteSubtitle">Guide des Apps Chinoises</span>
                 </div>
             </div>
             <div class="hidden md:flex items-center gap-6 text-sm">
-                <a href="#apps" class="hover:underline">Apps</a>
-                <a href="#ranking" class="hover:underline">Top 6</a>
-                <a href="#about" class="hover:underline">About / À propos</a>
+                <a href="#apps" class="hover:underline" id="navApps">Apps</a>
+                <a href="#ranking" class="hover:underline" id="navRanking">Top 6</a>
+                <a href="#about" class="hover:underline" id="navAbout">About</a>
             </div>
             <button id="langToggle" class="glass px-4 py-2 rounded-full text-sm font-medium hover:bg-white/20 transition flex items-center gap-2">
                 <span id="langIcon">🌐</span>
@@ -157,11 +157,10 @@
             </button>
         </nav>
         <div class="max-w-7xl mx-auto px-4 py-16 md:py-24 text-center relative z-10">
-            <div class="inline-block mb-4 px-4 py-1 rounded-full glass text-sm">📱 Essential Apps for China / Apps essentielles pour la Chine</div>
-            <h1 class="text-4xl md:text-6xl font-extrabold mb-4">🇨🇳 Chinese Apps Guide</h1>
-            <p class="text-xl md:text-2xl opacity-90 mb-2">Discover the most popular apps in China</p>
-            <p class="text-lg opacity-80 mb-8">Découvrez les applications les plus populaires en Chine</p>
-            <div class="flex justify-center gap-4 flex-wrap">
+            <div class="inline-block mb-4 px-4 py-1 rounded-full glass text-sm" id="heroBadge">📱 Essential Apps for China</div>
+            <h1 class="text-4xl md:text-6xl font-extrabold mb-4" id="heroTitle">🇨🇳 Chinese Apps Guide</h1>
+            <p class="text-xl md:text-2xl opacity-90 mb-2" id="heroSubtitle">Discover the most popular apps in China</p>
+            <div class="flex justify-center gap-4 flex-wrap" id="heroBadges">
                 <div class="glass rounded-full px-6 py-2 text-sm font-medium">WeChat • 微信</div>
                 <div class="glass rounded-full px-6 py-2 text-sm font-medium">Alipay • 支付宝</div>
                 <div class="glass rounded-full px-6 py-2 text-sm font-medium">Douyin • 抖音</div>
@@ -173,8 +172,8 @@
     <main class="max-w-7xl mx-auto px-4 py-8" id="apps">
         <div id="ranking" class="mb-8">
             <h2 class="text-2xl font-bold mb-4 flex items-center gap-2">
-                <span class="bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-3 py-1 rounded-lg text-sm">🔥 Top 6</span>
-                <span id="rankingTitle">Most Popular Apps / Apps les plus populaires</span>
+                <span class="bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-3 py-1 rounded-lg text-sm" id="top6Badge">🔥 Top 6</span>
+                <span id="rankingTitle">Most Popular Apps</span>
             </h2>
             <div class="grid grid-cols-1 md:grid-cols-6 gap-4" id="topAppsGrid">
             </div>
@@ -182,29 +181,30 @@
 
         <div class="flex flex-col md:flex-row gap-4 mb-8 items-stretch">
             <div class="relative flex-1">
-                <input type="text" id="searchInput" placeholder="Search apps... / Rechercher..." class="w-full pl-12 pr-4 py-3.5 rounded-xl border border-gray-200 focus:border-red-400 focus:ring-4 focus:ring-red-100 outline-none transition shadow-sm" autocomplete="off">
+                <input type="text" id="searchInput" placeholder="Search apps..." class="w-full pl-12 pr-4 py-3.5 rounded-xl border border-gray-200 focus:border-red-400 focus:ring-4 focus:ring-red-100 outline-none transition shadow-sm" autocomplete="off" data-placeholder-en="Search apps..." data-placeholder-fr="Rechercher des apps...">
                 <span class="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 text-xl">🔍</span>
                 <div id="searchSuggestions" class="search-suggestions hidden absolute top-full left-0 right-0 mt-2 rounded-xl shadow-xl border border-gray-100 overflow-hidden z-50">
                 </div>
             </div>
-            <button id="resetBtn" class="px-6 py-3 bg-gray-900 hover:bg-gray-800 text-white rounded-xl font-medium transition shadow-sm">Reset / Réinitialiser</button>
+            <button id="resetBtn" class="px-6 py-3 bg-gray-900 hover:bg-gray-800 text-white rounded-xl font-medium transition shadow-sm">Reset</button>
         </div>
 
         <div class="sticky-filters py-4 -mx-4 px-4 md:static md:py-0 md:bg-transparent md:backdrop-filter-none md:border-0 md:shadow-none border-b border-gray-200 mb-6 md:mb-8">
             <div class="flex flex-wrap gap-2 justify-center md:justify-start" id="categoryFilters">
-                <button class="category-btn active px-4 py-2 rounded-full bg-gray-100 hover:bg-gray-200 font-medium transition text-sm" data-category="all">All / Tous</button>
-                <button class="category-btn px-4 py-2 rounded-full bg-gray-100 hover:bg-gray-200 font-medium transition text-sm" data-category="social">Social Media / Réseaux sociaux</button>
-                <button class="category-btn px-4 py-2 rounded-full bg-gray-100 hover:bg-gray-200 font-medium transition text-sm" data-category="payment">Payment / Paiement</button>
-                <button class="category-btn px-4 py-2 rounded-full bg-gray-100 hover:bg-gray-200 font-medium transition text-sm" data-category="shopping">Shopping</button>
-                <button class="category-btn px-4 py-2 rounded-full bg-gray-100 hover:bg-gray-200 font-medium transition text-sm" data-category="food">Food / Restauration</button>
-                <button class="category-btn px-4 py-2 rounded-full bg-gray-100 hover:bg-gray-200 font-medium transition text-sm" data-category="travel">Travel / Voyages</button>
-                <button class="category-btn px-4 py-2 rounded-full bg-gray-100 hover:bg-gray-200 font-medium transition text-sm" data-category="fitness">Fitness</button>
-                <button class="category-btn px-4 py-2 rounded-full bg-gray-100 hover:bg-gray-200 font-medium transition text-sm" data-category="education">Education / Éducation</button>
-                <button class="category-btn px-4 py-2 rounded-full bg-gray-100 hover:bg-gray-200 font-medium transition text-sm" data-category="realestate">Real Estate / Immobilier</button>
-                <button class="category-btn px-4 py-2 rounded-full bg-gray-100 hover:bg-gray-200 font-medium transition text-sm" data-category="transport">Transport</button>
-                <button class="category-btn px-4 py-2 rounded-full bg-gray-100 hover:bg-gray-200 font-medium transition text-sm" data-category="video">Video / Vidéo</button>
-                <button class="category-btn px-4 py-2 rounded-full bg-gray-100 hover:bg-gray-200 font-medium transition text-sm" data-category="music">Music / Musique</button>
-                <button class="category-btn px-4 py-2 rounded-full bg-gray-100 hover:bg-gray-200 font-medium transition text-sm" data-category="news">News / Actualités</button>
+                <button class="category-btn active px-4 py-2 rounded-full bg-gray-100 hover:bg-gray-200 font-medium transition text-sm" data-category="all" data-label-en="All" data-label-fr="Tous">All</button>
+                <button class="category-btn px-4 py-2 rounded-full bg-gray-100 hover:bg-gray-200 font-medium transition text-sm" data-category="social" data-label-en="Social Media" data-label-fr="Réseaux sociaux">Social Media</button>
+                <button class="category-btn px-4 py-2 rounded-full bg-gray-100 hover:bg-gray-200 font-medium transition text-sm" data-category="payment" data-label-en="Payment" data-label-fr="Paiement">Payment</button>
+                <button class="category-btn px-4 py-2 rounded-full bg-gray-100 hover:bg-gray-200 font-medium transition text-sm" data-category="shopping" data-label-en="Shopping" data-label-fr="Shopping">Shopping</button>
+                <button class="category-btn px-4 py-2 rounded-full bg-gray-100 hover:bg-gray-200 font-medium transition text-sm" data-category="food" data-label-en="Food" data-label-fr="Restauration">Food</button>
+                <button class="category-btn px-4 py-2 rounded-full bg-gray-100 hover:bg-gray-200 font-medium transition text-sm" data-category="travel" data-label-en="Travel" data-label-fr="Voyages">Travel</button>
+                <button class="category-btn px-4 py-2 rounded-full bg-gray-100 hover:bg-gray-200 font-medium transition text-sm" data-category="fitness" data-label-en="Fitness" data-label-fr="Fitness">Fitness</button>
+                <button class="category-btn px-4 py-2 rounded-full bg-gray-100 hover:bg-gray-200 font-medium transition text-sm" data-category="education" data-label-en="Education" data-label-fr="Éducation">Education</button>
+                <button class="category-btn px-4 py-2 rounded-full bg-gray-100 hover:bg-gray-200 font-medium transition text-sm" data-category="realestate" data-label-en="Real Estate" data-label-fr="Immobilier">Real Estate</button>
+                <button class="category-btn px-4 py-2 rounded-full bg-gray-100 hover:bg-gray-200 font-medium transition text-sm" data-category="transport" data-label-en="Transport" data-label-fr="Transport">Transport</button>
+                <button class="category-btn px-4 py-2 rounded-full bg-gray-100 hover:bg-gray-200 font-medium transition text-sm" data-category="video" data-label-en="Video" data-label-fr="Vidéo">Video</button>
+                <button class="category-btn px-4 py-2 rounded-full bg-gray-100 hover:bg-gray-200 font-medium transition text-sm" data-category="music" data-label-en="Music" data-label-fr="Musique">Music</button>
+                <button class="category-btn px-4 py-2 rounded-full bg-gray-100 hover:bg-gray-200 font-medium transition text-sm" data-category="news" data-label-en="News" data-label-fr="Actualités">News</button>
+                <button class="category-btn px-4 py-2 rounded-full bg-gray-100 hover:bg-gray-200 font-medium transition text-sm" data-category="work" data-label-en="Work" data-label-fr="Travail">Work</button>
             </div>
         </div>
 
@@ -213,21 +213,21 @@
 
         <div id="noResults" class="hidden text-center py-16">
             <p class="text-6xl mb-4">🔍</p>
-            <p class="text-gray-500 text-lg">Aucune application trouvée / No apps found</p>
-            <p class="text-gray-400 text-sm mt-2">Essayez d'autres mots-clés / Try different keywords</p>
+            <p class="text-gray-500 text-lg" id="noResultsText">No apps found</p>
+            <p class="text-gray-400 text-sm mt-2" id="noResultsHint">Try different keywords</p>
         </div>
     </main>
 
     <footer class="bg-gray-900 text-white py-12 mt-16" id="about">
         <div class="max-w-7xl mx-auto px-4 text-center">
-            <h2 class="text-2xl font-bold mb-4">About This Project</h2>
-            <p class="text-gray-400 max-w-2xl mx-auto mb-6">This guide helps foreigners quickly understand the most popular Chinese apps. Whether you're traveling to China, doing business, or exploring Chinese tech culture, this resource will help you navigate the digital landscape. / Ce guide aide les étrangers à comprendre rapidement les applications chinoises les plus populaires.</p>
+            <h2 class="text-2xl font-bold mb-4" id="footerTitle">About This Project</h2>
+            <p class="text-gray-400 max-w-2xl mx-auto mb-6" id="footerDesc">This guide helps foreigners quickly understand the most popular Chinese apps. Whether you're traveling to China, doing business, or exploring Chinese tech culture, this resource will help you navigate the digital landscape.</p>
             <div class="flex justify-center gap-4 flex-wrap">
-                <span class="bg-red-600 px-4 py-2 rounded-full text-sm">🇨🇳 Made for the World</span>
-                <span class="bg-orange-500 px-4 py-2 rounded-full text-sm">📱 Mobile First</span>
-                <span class="bg-yellow-500 text-gray-900 px-4 py-2 rounded-full text-sm">🆓 Free</span>
+                <span class="bg-red-600 px-4 py-2 rounded-full text-sm" id="footerBadge1">🇨🇳 Made for the World</span>
+                <span class="bg-orange-500 px-4 py-2 rounded-full text-sm" id="footerBadge2">📱 Mobile First</span>
+                <span class="bg-yellow-500 text-gray-900 px-4 py-2 rounded-full text-sm" id="footerBadge3">🆓 Free</span>
             </div>
-            <p class="text-gray-500 mt-8 text-sm">© 2026 Chinese Apps Guide / Guide des Apps Chinoises</p>
+            <p class="text-gray-500 mt-8 text-sm" id="footerCopyright">© 2026 Chinese Apps Guide</p>
         </div>
     </footer>
 
@@ -241,11 +241,11 @@
                     </button>
                     <div class="p-6 pb-0" id="modalHeader"></div>
                     <div class="flex gap-1 px-6 mt-4" id="modalTabs">
-                        <button class="tab-btn active px-4 py-2 text-sm font-medium transition" data-tab="overview">Overview / Aperçu</button>
-                        <button class="tab-btn px-4 py-2 text-sm font-medium text-gray-500 transition" data-tab="features">Features / Caractéristiques</button>
-                        <button class="tab-btn px-4 py-2 text-sm font-medium text-gray-500 transition" data-tab="howto">How to Use / Utiliser</button>
-                        <button class="tab-btn px-4 py-2 text-sm font-medium text-gray-500 transition" data-tab="tips">Tips / Conseils</button>
-                        <button class="tab-btn px-4 py-2 text-sm font-medium text-gray-500 transition" data-tab="similar">Similar / Similaires</button>
+                        <button class="tab-btn active px-4 py-2 text-sm font-medium transition" data-tab="overview" data-label-en="Overview" data-label-fr="Aperçu">Overview</button>
+                        <button class="tab-btn px-4 py-2 text-sm font-medium text-gray-500 transition" data-tab="features" data-label-en="Features" data-label-fr="Caractéristiques">Features</button>
+                        <button class="tab-btn px-4 py-2 text-sm font-medium text-gray-500 transition" data-tab="howto" data-label-en="How to Use" data-label-fr="Utiliser">How to Use</button>
+                        <button class="tab-btn px-4 py-2 text-sm font-medium text-gray-500 transition" data-tab="tips" data-label-en="Tips" data-label-fr="Conseils">Tips</button>
+                        <button class="tab-btn px-4 py-2 text-sm font-medium text-gray-500 transition" data-tab="similar" data-label-en="Similar" data-label-fr="Similaires">Similar</button>
                     </div>
                 </div>
                 <div class="p-6 overflow-y-auto max-h-[calc(90vh-200px)]" id="modalContent"></div>
@@ -613,18 +613,6 @@
               stats: "500+ million monthly active users",
               statsFr: "Plus de 500 millions d'utilisateurs mensuels actifs",
               availability: ["iOS", "Android", "Web"] },
-            { cn: "知乎", en: "Zhihu", emoji: "❓", desc: "China's leading Q&A platform for knowledge sharing", descFr: "Plateforme Q&A leader en Chine pour le partage de connaissances", descCn: "中国领先的问答知识分享平台", category: "social", essential: false, similar: ["Quora", "Reddit"], tip: "Tip: Search before asking - many topics already discussed", tipFr: "Conseil : recherchez avant de demander - beaucoup de sujets déjà discuss", stores: ["both"],
-              detail: "Zhihu (meaning 'Do you know?') is China's premier Q&A platform where users ask questions, share knowledge, and engage in thoughtful discussions on virtually any topic.",
-              detailFr: "Zhihu (signifiant 'Savez-vous ?') est la plateforme Q&A de premier plan en Chine où les utilisateurs posent des questions, partagent des connaissances et s'engagent dans des discussions approfondies sur pratiquement tout sujet.",
-              features: ["❓ Q&A format for knowledge questions", "📚 In-depth articles and analysis", "💬 Upvotes and downvotes for quality", "🏷️ Topics and categories for organization", "👤 Professional experts and verified accounts", "📱 Reading and listening modes"],
-              featuresFr: ["❓ Format Q&R pour questions de connaissances", "📚 Articles et analyses approfondis", "💬 Upvotes et downvotes pour qualité", "🏷️ Sujets et catégories pour organisation", "👤 Experts professionnels et comptes vérifiés", "📱 Modes lecture et écoute"],
-              steps: ["Download Zhihu and sign up with phone", "Browse topics of interest", "Ask questions or answer existing ones", "Follow topics and users for personalized feed"],
-              stepsFr: ["Téléchargez Zhihu et inscrivez-vous avec le téléphone", "Parcourez les sujets qui vous intéressent", "Posez des questions ou répondez aux existantes", "Suivez des sujets et utilisateurs pour flux personnalisé"],
-              tips: ["Search thoroughly before posting new questions", "Follow industry experts for professional insights", "Use the \"Zhihu Weekly\" for curated content", "Enable night mode for comfortable reading"],
-              tipsFr: ["Recherchez soigneusement avant de poster de nouvelles questions", "Suivez des experts de l'industrie pour des aperçus professionnels", "Utilisez \"Zhihu Weekly\" pour du contenu selectionné", "Activez le mode nuit pour une lecture confortable"],
-              stats: "100+ million monthly active users",
-              statsFr: "Plus de 100 millions d'utilisateurs mensuels actifs",
-              availability: ["iOS", "Android", "Web"] },
             { cn: "小红书", en: "Xiaohongshu", emoji: "📕", desc: "Lifestyle platform combining social media and e-commerce", descFr: "Plateforme lifestyle combinant réseaux sociaux et e-commerce", descCn: "生活方式社交电商平台", category: "social", essential: false, similar: ["Instagram", "Pinterest"], tip: "Tip: Great for product reviews and lifestyle tips in China", tipFr: "Conseil : idéal pour les avis produits et conseils lifestyle en Chine", stores: ["both"],
               detail: "Xiaohongshu (Little Red Book) is a unique lifestyle platform where users share authentic experiences about products, travel, beauty, and daily life through photos and notes.",
               detailFr: "Xiaohongshu (Petit Livre Rouge) est une plateforme lifestyle unique où les utilisateurs partagent des expériences authentiques sur les produits, voyages, beauté et vie quotidienne via photos et notes.",
@@ -637,7 +625,7 @@
               stats: "200+ million monthly active users",
               statsFr: "Plus de 200 millions d'utilisateurs mensuels actifs",
               availability: ["iOS", "Android"] },
-            { cn: "钉钉", en: "DingTalk", emoji: "📎", desc: "Enterprise communication and collaboration platform", descFr: "Plateforme de communication et collaboration d'entreprise", descCn: "企业通讯协作平台", category: "social", essential: false, similar: ["Slack", "Microsoft Teams"], tip: "Tip: Essential for working with Chinese companies", tipFr: "Conseil : essentiel pour travailler avec des entreprises chinoises", stores: ["both"],
+            { cn: "钉钉", en: "DingTalk", emoji: "📎", desc: "Enterprise communication and collaboration platform", descFr: "Plateforme de communication et collaboration d'entreprise", descCn: "企业通讯协作平台", category: "work", essential: false, similar: ["Slack", "Microsoft Teams"], tip: "Tip: Essential for working with Chinese companies", tipFr: "Conseil : essentiel pour travailler avec des entreprises chinoises", stores: ["both"],
               detail: "DingTalk is Alibaba's enterprise communication and collaboration platform, widely used by Chinese companies for messaging, video conferencing, task management, and HR workflows.",
               detailFr: "DingTalk est la plateforme de communication et collaboration d'entreprise d'Alibaba, largement utilisée par les entreprises chinoises pour la messagerie, visioconférence, gestion des tâches et workflows RH.",
               features: ["💬 Instant messaging and group chats", "📞 Video conferencing for remote teams", "📋 Task management and assignment tracking", "📄 Document collaboration and sharing", "🏢 Organization management features", "📊 Attendance and HR management tools"],
@@ -649,7 +637,7 @@
               stats: "500+ million users",
               statsFr: "Plus de 500 millions d'utilisateurs",
               availability: ["iOS", "Android", "Web"] },
-            { cn: "企业微信", en: "WeCom", emoji: "🏢", desc: "Enterprise WeChat for business communication", descFr: "WeChat d'entreprise pour communication professionnelle", descCn: "企业微信，商业通讯工具", category: "social", essential: false, similar: ["Slack", "WhatsApp Business"], tip: "Tip: Perfect for managing customer relationships in China", tipFr: "Conseil : parfait pour gérer les relations clients en Chine", stores: ["both"],
+            { cn: "企业微信", en: "WeCom", emoji: "🏢", desc: "Enterprise WeChat for business communication", descFr: "WeChat d'entreprise pour communication professionnelle", descCn: "企业微信，商业通讯工具", category: "work", essential: false, similar: ["Slack", "WhatsApp Business"], tip: "Tip: Perfect for managing customer relationships in China", tipFr: "Conseil : parfait pour gérer les relations clients en Chine", stores: ["both"],
               detail: "WeCom is Tencent's enterprise communication solution designed for business use, offering advanced customer management tools that extend WeChat's ecosystem to the corporate world.",
               detailFr: "WeCom est la solution de communication d'entreprise de Tencent, conçue pour un usage professionnel, offrant des outils avancés de gestion client qui étendent l'écosystème WeChat au monde corporatif.",
               features: ["🏢 Corporate account management", "👥 Customer contact management with rich profiles", "💬 Mass messaging and automated responses", "📊 Sales and marketing tools", "🔐 Enhanced security and admin controls", "🔄 Seamless migration from WeChat groups"],
@@ -661,7 +649,7 @@
               stats: "300+ million users",
               statsFr: "Plus de 300 millions d'utilisateurs",
               availability: ["iOS", "Android", "Web"] },
-            { cn: "飞书", en: "Feishu", emoji: "📨", desc: "ByteDance's all-in-one collaboration suite", descFr: "Suite de collaboration tout-en-un de ByteDance", descCn: "字节跳动的一站式协作平台", category: "social", essential: false, similar: ["Notion", "Slack", "Google Workspace"], tip: "Tip: Great alternative with modern design", tipFr: "Conseil : excellente alternative avec un design moderne", stores: ["both"],
+            { cn: "飞书", en: "Feishu", emoji: "📨", desc: "ByteDance's all-in-one collaboration suite", descFr: "Suite de collaboration tout-en-un de ByteDance", descCn: "字节跳动的一站式协作平台", category: "work", essential: false, similar: ["Notion", "Slack", "Google Workspace"], tip: "Tip: Great alternative with modern design", tipFr: "Conseil : excellente alternative avec un design moderne", stores: ["both"],
               detail: "Feishu is ByteDance's comprehensive collaboration platform that combines messaging, video conferencing, documents, and calendar into an integrated workspace.",
               detailFr: "Feishu est la plateforme de collaboration complète de ByteDance qui combine messagerie, visioconférence, documents et calendrier dans un espace de travail intégré.",
               features: ["📨 Messaging with channels and direct messages", "📞 Video conferencing with up to 1000 participants", "📄 Rich document creation and collaboration", "📅 Calendar integration for scheduling", "✅ Tasks and project management tools", "🔍 Powerful search across all content"],
@@ -677,19 +665,20 @@
         ];
 
         const categoryNames = {
-            social: "Social Media / Réseaux sociaux",
-            payment: "Payment / Paiement",
+            social: "Social Media",
+            payment: "Payment",
             shopping: "Shopping",
-            food: "Food / Restauration",
+            food: "Food",
             fitness: "Fitness",
             education: "Education",
-            realestate: "Real Estate / Immobilier",
+            realestate: "Real Estate",
             finance: "Finance",
             transport: "Transport",
-            video: "Video / Vidéo",
-            music: "Music / Musique",
-            news: "News / Actualités",
-            travel: "Travel / Voyages"
+            video: "Video",
+            music: "Music",
+            news: "News",
+            travel: "Travel",
+            work: "Work"
         };
 
         const categoryNamesEn = {
@@ -705,7 +694,8 @@
             video: "Video/Entertainment",
             music: "Music",
             news: "News",
-            travel: "Travel"
+            travel: "Travel",
+            work: "Work"
         };
 
         const categoryNamesFr = {
@@ -721,7 +711,8 @@
             video: "Vidéo",
             music: "Musique",
             news: "Actualités",
-            travel: "Voyages"
+            travel: "Voyages",
+            work: "Travail"
         };
 
         const categoryColors = {
@@ -738,7 +729,8 @@
             video: "from-violet-500 to-violet-600",
             music: "from-cyan-500 to-cyan-600",
             news: "from-slate-500 to-slate-600",
-            travel: "from-amber-500 to-amber-600"
+            travel: "from-amber-500 to-amber-600",
+            work: "from-indigo-500 to-indigo-600"
         };
 
         let currentLang = 'en';
@@ -747,7 +739,7 @@
         let currentApp = null;
         let currentTab = 'overview';
 
-        const top6 = ['微信', '支付宝', '淘宝', '抖音', '美团', '闲鱼'];
+        const top6 = ['微信', '支付宝', '淘宝', '抖音', '美团'];
 
         function renderTopApps() {
             const grid = document.getElementById('topAppsGrid');
@@ -797,7 +789,7 @@
                 grouped[app.category].push(app);
             });
 
-            const categoryOrder = ['social', 'payment', 'shopping', 'food', 'travel', 'fitness', 'education', 'realestate', 'finance', 'transport', 'video', 'music', 'news'];
+            const categoryOrder = ['social', 'payment', 'shopping', 'food', 'travel', 'fitness', 'education', 'realestate', 'finance', 'transport', 'video', 'music', 'news', 'work'];
 
             grid.innerHTML = Object.entries(grouped)
                 .sort(([a], [b]) => categoryOrder.indexOf(a) - categoryOrder.indexOf(b))
@@ -1050,11 +1042,58 @@
             renderApps();
         }
 
+        function updateUI() {
+            const isFr = currentLang === 'fr';
+            
+            document.getElementById('langText').textContent = isFr ? 'English' : 'Français';
+            document.getElementById('siteTitle').textContent = isFr ? 'Guide des Apps Chinoises' : 'Chinese Apps Guide';
+            document.getElementById('siteSubtitle').textContent = isFr ? 'Chinese Apps Guide' : 'Guide des Apps Chinoises';
+            document.getElementById('navApps').textContent = isFr ? 'Apps' : 'Apps';
+            document.getElementById('navRanking').textContent = isFr ? 'Top 6' : 'Top 6';
+            document.getElementById('navAbout').textContent = isFr ? 'À propos' : 'About';
+            document.getElementById('heroBadge').textContent = isFr ? '📱 Apps essentielles pour la Chine' : '📱 Essential Apps for China';
+            document.getElementById('heroTitle').textContent = isFr ? '🇨🇳 Guide des Apps Chinoises' : '🇨🇳 Chinese Apps Guide';
+            document.getElementById('heroSubtitle').textContent = isFr ? 'Découvrez les applications les plus populaires en Chine' : 'Discover the most popular apps in China';
+            document.getElementById('top6Badge').textContent = isFr ? '🔥 Top 5' : '🔥 Top 5';
+            document.getElementById('rankingTitle').textContent = isFr ? 'Top 5 Apps les plus populaires' : 'Top 5 Most Popular Apps';
+            
+            const searchInput = document.getElementById('searchInput');
+            searchInput.placeholder = isFr ? 'Rechercher des apps...' : 'Search apps...';
+            
+            document.getElementById('resetBtn').textContent = isFr ? 'Réinitialiser' : 'Reset';
+            
+            document.getElementById('noResultsText').textContent = isFr ? 'Aucune application trouvée' : 'No apps found';
+            document.getElementById('noResultsHint').textContent = isFr ? 'Essayez d\'autres mots-clés' : 'Try different keywords';
+            
+            document.getElementById('footerTitle').textContent = isFr ? 'À propos de ce projet' : 'About This Project';
+            document.getElementById('footerDesc').textContent = isFr ? 'Ce guide aide les étrangers à comprendre rapidement les applications chinoises les plus populaires. Que vous voyagez en Chine, fasse des affaires, ou exploriez la culture tech chinoise, cette ressource vous aidera à naviguer dans le paysage numérique.' : 'This guide helps foreigners quickly understand the most popular Chinese apps. Whether you\'re traveling to China, doing business, or exploring Chinese tech culture, this resource will help you navigate the digital landscape.';
+            document.getElementById('footerBadge1').textContent = isFr ? '🇨🇳 Fait pour le Monde' : '🇨🇳 Made for the World';
+            document.getElementById('footerBadge2').textContent = isFr ? '📱 Mobile d\'abord' : '📱 Mobile First';
+            document.getElementById('footerBadge3').textContent = isFr ? '🆓 Gratuit' : '🆓 Free';
+            document.getElementById('footerCopyright').textContent = isFr ? '© 2026 Guide des Apps Chinoises' : '© 2026 Chinese Apps Guide';
+            
+            document.querySelectorAll('.category-btn').forEach(btn => {
+                const labelEn = btn.dataset.labelEn;
+                const labelFr = btn.dataset.labelFr;
+                if (labelEn && labelFr) {
+                    btn.textContent = isFr ? labelFr : labelEn;
+                }
+            });
+            
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                const labelEn = btn.dataset.labelEn;
+                const labelFr = btn.dataset.labelFr;
+                if (labelEn && labelFr) {
+                    btn.textContent = isFr ? labelFr : labelEn;
+                }
+            });
+            
+            document.title = isFr ? 'Guide des Apps Chinoises' : 'Chinese Apps Guide';
+        }
+
         document.getElementById('langToggle').addEventListener('click', () => {
             currentLang = currentLang === 'en' ? 'fr' : 'en';
-            document.getElementById('langText').textContent = currentLang === 'en' ? 'Français' : 'EN';
-            document.getElementById('langIcon').textContent = currentLang === 'en' ? '🌐' : '🌐';
-            document.title = currentLang === 'en' ? 'Chinese Apps Guide / Guide des Apps Chinoises' : 'Guide des Apps Chinoises / Chinese Apps Guide';
+            updateUI();
             renderApps();
             renderTopApps();
         });
@@ -1073,7 +1112,8 @@
                 document.querySelectorAll('.category-btn').forEach(btn => btn.classList.remove('active'));
                 e.target.classList.add('active');
                 currentCategory = e.target.dataset.category;
-                renderApps();
+        renderApps();
+        updateUI();
             }
         });
 
