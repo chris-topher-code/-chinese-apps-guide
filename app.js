@@ -33,7 +33,7 @@ const translations = {
     watchOut: "Watch out",
     similar: "Similar to",
     openIos: "Open iOS App Store",
-    openAndroid: "Open Android listing",
+    openAndroid: "Open Google Play",
     openCoolapk: "Open CoolAPK",
     searchWeb: "Search web",
     starterCopy: "Open store searches for the first-week essentials.",
@@ -75,7 +75,7 @@ const translations = {
     watchOut: "Attention",
     similar: "Comparable à",
     openIos: "Ouvrir l'App Store iOS",
-    openAndroid: "Ouvrir la fiche Android",
+    openAndroid: "Ouvrir Google Play",
     openCoolapk: "Ouvrir CoolAPK",
     searchWeb: "Recherche web",
     starterCopy: "Ouvrir les recherches store pour les essentiels de la première semaine.",
@@ -775,7 +775,7 @@ const restoredOriginalApps = [
     icon: "词",
     color: "#1d9bf0",
     essential: false,
-    desc: { en: "Vocabulary learning app with visuals, spaced review, and English study tools.", fr: "App de vocabulaire avec visuels, révisions espacées et outils d'anglais." },
+    desc: { en: "Vocabulary learning app with visuals, spaced review, and Chinese study tools.", fr: "App de vocabulaire avec visuels, révisions espacées et outils d'anglais." },
     tags: ["Education", "Vocabulary"],
     badge: { en: "Learning", fr: "Apprentissage" },
     badgeType: "good",
@@ -879,139 +879,173 @@ apps.push(...restoredOriginalApps);
 const iconAssets = {
   wechat: {
     iconUrl: "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/8b/9f/53/8b9f534e-e826-d72a-f3ae-04231eef8ccf/AppIcon-0-0-1x_U007epad-0-1-0-sRGB-0-85-220.png/512x512bb.jpg",
-    iosUrl: "https://apps.apple.com/cn/app/%E5%BE%AE%E4%BF%A1/id414478124?uo=4"
+    iosUrl: "https://apps.apple.com/cn/app/%E5%BE%AE%E4%BF%A1/id414478124?uo=4",
+    androidUrl: "https://play.google.com/store/apps/details?id=com.tencent.mm"
   },
   alipay: {
     iconUrl: "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/c9/6a/b4/c96ab483-5589-1806-e7f7-97802455e6b3/AppIcon-0-0-1x_U007epad-0-1-0-85-220.png/512x512bb.jpg",
-    iosUrl: "https://apps.apple.com/cn/app/%E6%94%AF%E4%BB%98%E5%AE%9D-%E4%BE%BF%E6%8D%B7%E7%94%9F%E6%B4%BB-%E4%B8%80%E7%82%B9%E5%B0%B1%E5%A5%BD/id333206289?uo=4"
+    iosUrl: "https://apps.apple.com/cn/app/%E6%94%AF%E4%BB%98%E5%AE%9D-%E4%BE%BF%E6%8D%B7%E7%94%9F%E6%B4%BB-%E4%B8%80%E7%82%B9%E5%B0%B1%E5%A5%BD/id333206289?uo=4",
+    androidUrl: "https://play.google.com/store/apps/details?id=com.eg.android.AlipayGphone"
   },
   amap: {
     iconUrl: "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/15/09/a3/1509a39d-42f1-ee06-0653-9b5863c83819/AppIcon-0-0-1x_U007epad-0-1-0-85-220.png/512x512bb.jpg",
-    iosUrl: "https://apps.apple.com/cn/app/%E9%AB%98%E5%BE%B7%E5%9C%B0%E5%9B%BE-%E9%AB%98%E5%BE%B7%E6%89%93%E8%BD%A6-%E5%AF%BC%E8%88%AA%E5%85%AC%E4%BA%A4%E5%9C%B0%E9%93%81%E5%87%BA%E8%A1%8C/id461703208?uo=4"
+    iosUrl: "https://apps.apple.com/cn/app/%E9%AB%98%E5%BE%B7%E5%9C%B0%E5%9B%BE-%E9%AB%98%E5%BE%B7%E6%89%93%E8%BD%A6-%E5%AF%BC%E8%88%AA%E5%85%AC%E4%BA%A4%E5%9C%B0%E9%93%81%E5%87%BA%E8%A1%8C/id461703208?uo=4",
+    androidUrl: "https://play.google.com/store/apps/details?id=com.autonavi.minimap"
   },
   didi: {
     iconUrl: "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/36/2a/e6/362ae61e-3c63-f9ba-8ce9-7a4228457e53/AppIcon-0-0-1x_U007emarketing-0-6-0-85-220.png/512x512bb.jpg",
-    iosUrl: "https://apps.apple.com/cn/app/%E6%BB%B4%E6%BB%B4%E5%9B%BD%E9%99%85%E7%89%88-%E5%A2%83%E5%A4%96%E5%87%BA%E8%A1%8C-%E8%BD%BB%E6%9D%BE%E6%89%93%E8%BD%A6/id1362398401?uo=4"
+    iosUrl: "https://apps.apple.com/cn/app/%E6%BB%B4%E6%BB%B4%E5%9B%BD%E9%99%85%E7%89%88-%E5%A2%83%E5%A4%96%E5%87%BA%E8%A1%8C-%E8%BD%BB%E6%9D%BE%E6%89%93%E8%BD%A6/id1362398401?uo=4",
+    androidUrl: "https://play.google.com/store/apps/details?id=com.sdu.didi.psnger"
   },
   meituan: {
     iconUrl: "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/b6/4c/cf/b64ccfc6-6775-53aa-b46b-9def7004f84a/AppIcon-0-0-1x_U007emarketing-0-0-0-7-0-0-sRGB-85-220.png/512x512bb.jpg",
-    iosUrl: "https://apps.apple.com/cn/app/%E7%BE%8E%E5%9B%A2-%E9%97%AE%E7%BE%8E%E5%9B%A2-%E9%83%BD%E5%AE%89%E6%8E%92/id423084029?uo=4"
+    iosUrl: "https://apps.apple.com/cn/app/%E7%BE%8E%E5%9B%A2-%E9%97%AE%E7%BE%8E%E5%9B%A2-%E9%83%BD%E5%AE%89%E6%8E%92/id423084029?uo=4",
+    androidUrl: "https://play.google.com/store/apps/details?id=com.sankuai.meituan"
   },
   dianping: {
     iconUrl: "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/40/d8/8d/40d88d83-2390-6a4d-ae03-2db7fdf13463/AppIcon-0-0-1x_U007epad-0-1-0-sRGB-85-220.png/512x512bb.jpg",
-    iosUrl: "https://apps.apple.com/cn/app/%E5%A4%A7%E4%BC%97%E7%82%B9%E8%AF%84-%E5%90%83%E5%96%9D%E7%8E%A9%E4%B9%90%E6%8C%87%E5%8D%97/id351091731?uo=4"
+    iosUrl: "https://apps.apple.com/cn/app/%E5%A4%A7%E4%BC%97%E7%82%B9%E8%AF%84-%E5%90%83%E5%96%9D%E7%8E%A9%E4%B9%90%E6%8C%87%E5%8D%97/id351091731?uo=4",
+    androidUrl: "https://play.google.com/store/apps/details?id=com.dianping.v1"
   },
   taobao: {
     iconUrl: "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/4d/c4/26/4dc42695-c9b2-d11f-7e20-ec9e1f8d3cb0/AppIcon-0-0-1x_U007emarketing-0-10-0-85-220.png/512x512bb.jpg",
-    iosUrl: "https://apps.apple.com/cn/app/%E6%B7%98%E5%AE%9D-%E4%B8%87%E8%83%BD%E7%9A%84%E6%B7%98%E5%AE%9D/id387682726?uo=4"
+    iosUrl: "https://apps.apple.com/cn/app/%E6%B7%98%E5%AE%9D-%E4%B8%87%E8%83%BD%E7%9A%84%E6%B7%98%E5%AE%9D/id387682726?uo=4",
+    androidUrl: "https://play.google.com/store/apps/details?id=com.taobao.taobao"
   },
   pinduoduo: {
     iconUrl: "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/dc/2f/36/dc2f36d3-33d1-2acb-1464-0e19e7d82fd2/AppIcon-1x_U007emarketing-0-8-0-0-0-85-220-0.png/512x512bb.jpg",
-    iosUrl: "https://apps.apple.com/cn/app/%E6%8B%BC%E5%A4%9A%E5%A4%9A-%E5%A4%9A%E5%A4%9A%E4%B9%B0%E8%8F%9C-%E7%99%BE%E4%BA%BF%E8%A1%A5%E8%B4%B4/id1044283059?uo=4"
+    iosUrl: "https://apps.apple.com/cn/app/%E6%8B%BC%E5%A4%9A%E5%A4%9A-%E5%A4%9A%E5%A4%9A%E4%B9%B0%E8%8F%9C-%E7%99%BE%E4%BA%BF%E8%A1%A5%E8%B4%B4/id1044283059?uo=4",
+    androidUrl: "https://play.google.com/store/apps/details?id=com.xunmeng.pinduoduo"
   },
   xianyu: {
     iconUrl: "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/a5/71/8a/a5718a2e-61dc-f26e-d1a0-5250ea3dc0ef/AppIcon-0-0-1x_U007epad-0-1-0-sRGB-85-220.png/512x512bb.jpg",
-    iosUrl: "https://apps.apple.com/cn/app/%E9%97%B2%E9%B1%BC-%E4%B8%8A%E9%97%B2%E9%B1%BC-%E8%B5%9A%E4%B8%80%E7%AC%94/id510909506?uo=4"
+    iosUrl: "https://apps.apple.com/cn/app/%E9%97%B2%E9%B1%BC-%E4%B8%8A%E9%97%B2%E9%B1%BC-%E8%B5%9A%E4%B8%80%E7%AC%94/id510909506?uo=4",
+    androidUrl: "https://play.google.com/store/apps/details?id=com.taobao.idlefish"
   },
   beike: {
     iconUrl: "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/06/e9/9d/06e99d7e-95af-fb16-4c6d-d2408da8970c/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/512x512bb.jpg",
-    iosUrl: "https://apps.apple.com/cn/app/%E8%B4%9D%E5%A3%B3%E6%89%BE%E6%88%BF-%E4%B9%B0%E6%88%BF%E8%A3%85%E4%BF%AE%E6%96%B0%E6%88%BF%E4%BA%8C%E6%89%8B%E6%88%BF%E7%A7%9F%E6%88%BF%E5%B9%B3%E5%8F%B0/id1347663353?uo=4"
+    iosUrl: "https://apps.apple.com/cn/app/%E8%B4%9D%E5%A3%B3%E6%89%BE%E6%88%BF-%E4%B9%B0%E6%88%BF%E8%A3%85%E4%BF%AE%E6%96%B0%E6%88%BF%E4%BA%8C%E6%89%8B%E6%88%BF%E7%A7%9F%E6%88%BF%E5%B9%B3%E5%8F%B0/id1347663353?uo=4",
+    androidUrl: "https://play.google.com/store/apps/details?id=com.beike"
   },
   lianjia: {
     iconUrl: "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/12/02/c5/1202c54c-a228-20af-403f-b9538d23f3a1/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/512x512bb.jpg",
-    iosUrl: "https://apps.apple.com/cn/app/%E9%93%BE%E5%AE%B6/id405882753?uo=4"
+    iosUrl: "https://apps.apple.com/cn/app/%E9%93%BE%E5%AE%B6/id405882753?uo=4",
+    androidUrl: "https://play.google.com/store/apps/details?id=com.lianjia.beike"
   },
   eleme: {
     iconUrl: "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/60/54/6c/60546cf7-5d4a-e43f-9bd3-572ba5c624c4/AppIcon_new-0-0-1x_U007epad-0-1-0-85-220.png/512x512bb.jpg",
-    iosUrl: "https://apps.apple.com/cn/app/%E6%B7%98%E5%AE%9D%E9%97%AA%E8%B4%AD-%E7%82%B9%E5%A4%96%E5%8D%96%E6%9B%B4%E4%BC%98%E6%83%A0/id507161324?uo=4"
+    iosUrl: "https://apps.apple.com/cn/app/%E6%B7%98%E5%AE%9D%E9%97%AA%E8%B4%AD-%E7%82%B9%E5%A4%96%E5%8D%96%E6%9B%B4%E4%BC%98%E6%83%A0/id507161324?uo=4",
+    androidUrl: "https://play.google.com/store/apps/details?id=me.ele"
   },
   luckin: {
     iconUrl: "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/d2/d1/4d/d2d14d07-39b4-19b7-5406-fd4db8f4c0e6/AppIcon-0-0-1x_U007emarketing-0-6-0-85-220.png/512x512bb.jpg",
-    iosUrl: "https://apps.apple.com/cn/app/%E7%91%9E%E5%B9%B8%E5%92%96%E5%95%A1/id1296749505?uo=4"
+    iosUrl: "https://apps.apple.com/cn/app/%E7%91%9E%E5%B9%B8%E5%92%96%E5%95%A1/id1296749505?uo=4",
+    androidUrl: "https://play.google.com/store/apps/details?id=com.luckin.coffee"
   },
   mixue: {
     iconUrl: "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/fb/35/e9/fb35e921-e3b1-3b18-dbf5-a52027d759ac/AppIcon-0-0-1x_U007emarketing-0-8-0-0-sRGB-85-220.png/512x512bb.jpg",
-    iosUrl: "https://apps.apple.com/cn/app/%E8%9C%9C%E9%9B%AA%E5%86%B0%E5%9F%8E-%E9%AB%98%E8%B4%A8%E5%B9%B3%E4%BB%B7/id1504835619?uo=4"
+    iosUrl: "https://apps.apple.com/cn/app/%E8%9C%9C%E9%9B%AA%E5%86%B0%E5%9F%8E-%E9%AB%98%E8%B4%A8%E5%B9%B3%E4%BB%B7/id1504835619?uo=4",
+    androidUrl: "https://play.google.com/store/apps/details?id=com.mxbi"
   },
   baidumaps: {
     iconUrl: "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/7e/10/6c/7e106c65-fa75-a380-4f95-5fd556bd6100/appIconLiquid-0-0-1x_U007epad-0-1-0-0-sRGB-85-220.png/512x512bb.jpg",
-    iosUrl: "https://apps.apple.com/cn/app/%E7%99%BE%E5%BA%A6%E5%9C%B0%E5%9B%BE-%E6%99%BA%E8%83%BD%E5%AF%BC%E8%88%AA-%E6%89%93%E8%BD%A6%E5%9C%B0%E9%93%81%E5%85%AC%E4%BA%A4%E6%9B%B4%E5%BF%AB%E5%87%BA%E8%A1%8C/id452186370?uo=4"
+    iosUrl: "https://apps.apple.com/cn/app/%E7%99%BE%E5%BA%A6%E5%9C%B0%E5%9B%BE-%E6%99%BA%E8%83%BD%E5%AF%BC%E8%88%AA-%E6%89%93%E8%BD%A6%E5%9C%B0%E9%93%81%E5%85%AC%E4%BA%A4%E6%9B%B4%E5%BF%AB%E5%87%BA%E8%A1%8C/id452186370?uo=4",
+    androidUrl: "https://play.google.com/store/apps/details?id=com.baidu.BaiduMap"
   },
   kuaishou: {
     iconUrl: "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/a5/af/d5/a5afd547-1c9f-7683-83bd-cdfd5bdc878b/AppIcon-0-0-1x_U007emarketing-0-8-0-sRGB-85-220.png/512x512bb.jpg",
-    iosUrl: "https://apps.apple.com/cn/app/%E5%BF%AB%E6%89%8B/id440948110?uo=4"
+    iosUrl: "https://apps.apple.com/cn/app/%E5%BF%AB%E6%89%8B/id440948110?uo=4",
+    androidUrl: "https://play.google.com/store/apps/details?id=com.smile.gifmaker"
   },
   bilibili: {
     iconUrl: "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/7e/40/1c/7e401cc2-55e4-4ea5-e2ab-a56cf9269860/AppIcon-0-0-1x_U007epad-0-1-0-85-220.png/512x512bb.jpg",
-    iosUrl: "https://apps.apple.com/cn/app/%E5%93%94%E5%93%A9%E5%93%94%E5%93%A9-%E5%BC%B9%E5%B9%95%E7%95%AA%E5%89%A7%E7%9B%B4%E6%92%AD%E9%AB%98%E6%B8%85%E8%A7%86%E9%A2%91/id736536022?uo=4"
+    iosUrl: "https://apps.apple.com/cn/app/%E5%93%94%E5%93%A9%E5%93%94%E5%93%A9-%E5%BC%B9%E5%B9%95%E7%95%AA%E5%89%A7%E7%9B%B4%E6%92%AD%E9%AB%98%E6%B8%85%E8%A7%86%E9%A2%91/id736536022?uo=4",
+    androidUrl: "https://play.google.com/store/apps/details?id=com.bilibili.app.in"
   },
   wetv: {
     iconUrl: "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/d3/ef/99/d3ef9931-0ac0-2fe0-b16c-a3da95039855/AppIcon-0-0-1x_U007epad-0-1-0-0-sRGB-85-220.png/512x512bb.jpg",
-    iosUrl: "https://apps.apple.com/cn/app/%E8%85%BE%E8%AE%AF%E8%A7%86%E9%A2%91-%E7%88%B1%E6%83%85%E6%B2%A1%E6%9C%89%E7%A5%9E%E8%AF%9D-%E6%83%85%E6%84%9F%E5%9B%BE%E9%89%B4/id458318329?uo=4"
+    iosUrl: "https://apps.apple.com/cn/app/%E8%85%BE%E8%AE%AF%E8%A7%86%E9%A2%91-%E7%88%B1%E6%83%85%E6%B2%A1%E6%9C%89%E7%A5%9E%E8%AF%9D-%E6%83%85%E6%84%9F%E5%9B%BE%E9%89%B4/id458318329?uo=4",
+    androidUrl: "https://play.google.com/store/apps/details?id=com.tencent.qqlive"
   },
   iqiyi: {
     iconUrl: "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/eb/d3/6a/ebd36a36-1218-39e3-f60d-3f3008390b91/AppIcon-0-1x_U007ephone-0-0-0-1-0-0-sRGB-85-220-0.png/512x512bb.jpg",
-    iosUrl: "https://apps.apple.com/cn/app/%E7%88%B1%E5%A5%87%E8%89%BA-%E4%BD%8E%E6%99%BA%E5%95%86%E7%8A%AF%E7%BD%AA-%E8%8D%92%E8%AF%9E%E7%8A%AF%E7%BD%AA%E5%89%A7/id393765873?uo=4"
+    iosUrl: "https://apps.apple.com/cn/app/%E7%88%B1%E5%A5%87%E8%89%BA-%E4%BD%8E%E6%99%BA%E5%95%86%E7%8A%AF%E7%BD%AA-%E8%8D%92%E8%AF%9E%E7%8A%AF%E7%BD%AA%E5%89%A7/id393765873?uo=4",
+    androidUrl: "https://play.google.com/store/apps/details?id=com.qiyi.video"
   },
   neteasemusic: {
     iconUrl: "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/ce/13/bf/ce13bf37-551d-0c12-ad34-be4cb6738f5d/appIconNew-0-1x_U007epad-0-1-0-85-220-0.png/512x512bb.jpg",
-    iosUrl: "https://apps.apple.com/cn/app/%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90-%E6%95%B0%E4%BA%BF%E9%9F%B3%E4%B9%90%E7%95%85%E5%90%AC/id590338362?uo=4"
+    iosUrl: "https://apps.apple.com/cn/app/%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90-%E6%95%B0%E4%BA%BF%E9%9F%B3%E4%B9%90%E7%95%85%E5%90%AC/id590338362?uo=4",
+    androidUrl: "https://play.google.com/store/apps/details?id=com.netease.cloudmusic"
   },
   qqmusic: {
     iconUrl: "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/3a/1b/fe/3a1bfe67-1575-9821-d387-15d82a468efa/AppIcon-0-0-1x_U007ephone-0-0-0-1-0-0-sRGB-85-220.png/512x512bb.jpg",
-    iosUrl: "https://apps.apple.com/cn/app/qq%E9%9F%B3%E4%B9%90-%E5%90%AC%E6%88%91%E6%83%B3%E5%90%AC/id414603431?uo=4"
+    iosUrl: "https://apps.apple.com/cn/app/qq%E9%9F%B3%E4%B9%90-%E5%90%AC%E6%88%91%E6%83%B3%E5%90%AC/id414603431?uo=4",
+    androidUrl: "https://play.google.com/store/apps/details?id=com.tencent.qqmusic"
   },
   toutiao: {
     iconUrl: "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/4d/45/a5/4d45a590-4113-e454-d7a2-706cf3395024/AppIcon-News-0-0-1x_U007emarketing-0-8-0-sRGB-85-220.png/512x512bb.jpg",
-    iosUrl: "https://apps.apple.com/cn/app/%E4%BB%8A%E6%97%A5%E5%A4%B4%E6%9D%A1/id529092160?uo=4"
+    iosUrl: "https://apps.apple.com/cn/app/%E4%BB%8A%E6%97%A5%E5%A4%B4%E6%9D%A1/id529092160?uo=4",
+    androidUrl: "https://play.google.com/store/apps/details?id=com.ss.android.article.news"
   },
   tencentnews: {
     iconUrl: "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/f8/e9/73/f8e9734e-f3ab-dd0d-cef8-2a488e6a90c0/AppIconNew-0-0-1x_U007epad-0-9-0-85-220.png/512x512bb.jpg",
-    iosUrl: "https://apps.apple.com/cn/app/%E8%85%BE%E8%AE%AF%E6%96%B0%E9%97%BB/id399363156?uo=4"
+    iosUrl: "https://apps.apple.com/cn/app/%E8%85%BE%E8%AE%AF%E6%96%B0%E9%97%BB/id399363156?uo=4",
+    androidUrl: "https://play.google.com/store/apps/details?id=com.tencent.news"
   },
   baicizhan: {
     iconUrl: "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/ca/84/d2/ca84d278-4b4d-0f59-5c08-9934b803e8b2/AppIcon-0-0-1x_U007epad-0-1-0-85-220.png/512x512bb.jpg",
-    iosUrl: "https://apps.apple.com/cn/app/%E7%99%BE%E8%AF%8D%E6%96%A9-%E5%AD%A6%E5%A4%96%E8%AF%AD-%E8%83%8C%E5%8D%95%E8%AF%8D%E5%BF%85%E5%A4%87/id557545298?uo=4"
+    iosUrl: "https://apps.apple.com/cn/app/%E7%99%BE%E8%AF%8D%E6%96%A9-%E5%AD%A6%E5%A4%96%E8%AF%AD-%E8%83%8C%E5%8D%95%E8%AF%8D%E5%BF%85%E5%A4%87/id557545298?uo=4",
+    androidUrl: "https://play.google.com/store/apps/details?id=com.bci.android"
   },
   qunar: {
     iconUrl: "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/19/d9/41/19d941a2-ecf2-9ee7-8e0b-a8033e247e1d/AppIcon-0-0-1x_U007epad-0-1-85-220.png/512x512bb.jpg",
-    iosUrl: "https://apps.apple.com/cn/app/%E5%8E%BB%E5%93%AA%E5%84%BF%E6%97%85%E8%A1%8C-%E8%AE%A2%E9%85%92%E5%BA%97%E6%9C%BA%E7%A5%A8%E7%81%AB%E8%BD%A6%E7%A5%A8/id395096736?uo=4"
+    iosUrl: "https://apps.apple.com/cn/app/%E5%8E%BB%E5%93%AA%E5%84%BF%E6%97%85%E8%A1%8C-%E8%AE%A2%E9%85%92%E5%BA%97%E6%9C%BA%E7%A5%A8%E7%81%AB%E8%BD%A6%E7%A5%A8/id395096736?uo=4",
+    androidUrl: "https://play.google.com/store/apps/details?id=com.Qunar"
   },
   weibo: {
     iconUrl: "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/55/34/2c/55342c64-920b-b5c2-ac4c-1ce7080dc729/WeiboAppIcon-0-0-1x_U007epad-0-1-0-0-85-220.png/512x512bb.jpg",
-    iosUrl: "https://apps.apple.com/cn/app/%E5%BE%AE%E5%8D%9A/id350962117?uo=4"
+    iosUrl: "https://apps.apple.com/cn/app/%E5%BE%AE%E5%8D%9A/id350962117?uo=4",
+    androidUrl: "https://play.google.com/store/apps/details?id=com.sina.weibo"
   },
   wecom: {
     iconUrl: "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/6e/f3/e1/6ef3e177-d47c-f550-cd1d-2d68d7cac114/AppIcon-0-0-1x_U007epad-0-1-0-sRGB-85-220.png/512x512bb.jpg",
-    iosUrl: "https://apps.apple.com/cn/app/%E4%BC%81%E4%B8%9A%E5%BE%AE%E4%BF%A1/id1087897068?uo=4"
+    iosUrl: "https://apps.apple.com/cn/app/%E4%BC%81%E4%B8%9A%E5%BE%AE%E4%BF%A1/id1087897068?uo=4",
+    androidUrl: "https://play.google.com/store/apps/details?id=com.tencent.wework"
   },
   feishu: {
     iconUrl: "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/e9/35/43/e935432a-8826-425f-5944-3560230a999f/AppIcon-0-0-1x_U007epad-0-0-0-1-0-0-85-220.png/512x512bb.jpg",
-    iosUrl: "https://apps.apple.com/cn/app/%E9%A3%9E%E4%B9%A6-%E5%AD%97%E8%8A%82%E8%B7%B3%E5%8A%A8%E6%97%97%E4%B8%8B-ai-%E5%B7%A5%E4%BD%9C%E5%B9%B3%E5%8F%B0/id1401729613?uo=4"
+    iosUrl: "https://apps.apple.com/cn/app/%E9%A3%9E%E4%B9%A6-%E5%AD%97%E8%8A%82%E8%B7%B3%E5%8A%A8%E6%97%97%E4%B8%8B-ai-%E5%B7%A5%E4%BD%9C%E5%B9%B3%E5%8F%B0/id1401729613?uo=4",
+    androidUrl: "https://play.google.com/store/apps/details?id=com.ss.android.lark.feishu"
   },
   "12306": {
     iconUrl: "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/43/5e/ac/435eaceb-0c86-383c-c262-2e9a405c8ecf/AppIcon-0-0-1x_U007emarketing-0-9-0-0-85-220.png/512x512bb.jpg",
-    iosUrl: "https://apps.apple.com/cn/app/%E9%93%81%E8%B7%AF12306/id564818797?uo=4"
+    iosUrl: "https://apps.apple.com/cn/app/%E9%93%81%E8%B7%AF12306/id564818797?uo=4",
+    androidUrl: "https://play.google.com/store/apps/details?id=com.MobileTicket"
   },
   xiaohongshu: {
     iconUrl: "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/95/40/a2/9540a2d5-892d-713b-3bad-4d652b549af3/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/512x512bb.jpg",
-    iosUrl: "https://apps.apple.com/cn/app/%E5%B0%8F%E7%BA%A2%E4%B9%A6-%E4%BD%A0%E7%9A%84%E7%94%9F%E6%B4%BB%E5%85%B4%E8%B6%A3%E7%A4%BE%E5%8C%BA/id741292507?uo=4"
+    iosUrl: "https://apps.apple.com/cn/app/%E5%B0%8F%E7%BA%A2%E4%B9%A6-%E4%BD%A0%E7%9A%84%E7%94%9F%E6%B4%BB%E5%85%B4%E8%B6%A3%E7%A4%BE%E5%8C%BA/id741292507?uo=4",
+    androidUrl: "https://play.google.com/store/apps/details?id=com.xingin.xhs"
   },
   douyin: {
     iconUrl: "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/b6/12/37/b61237d2-7d27-d169-19b8-364daab2299f/AppIcon-0-0-1x_U007emarketing-0-0-0-7-0-0-85-220.png/512x512bb.jpg",
-    iosUrl: "https://apps.apple.com/cn/app/%E6%8A%96%E9%9F%B3/id1142110895?uo=4"
+    iosUrl: "https://apps.apple.com/cn/app/%E6%8A%96%E9%9F%B3/id1142110895?uo=4",
+    androidUrl: "https://play.google.com/store/apps/details?id=com.ss.android.ugc.aweme"
   },
   jd: {
     iconUrl: "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/00/12/27/0012274c-b0c0-7c23-b329-5225d93e7c3b/AppIcon-0-0-1x_U007epad-0-1-0-85-220.png/512x512bb.jpg",
-    iosUrl: "https://apps.apple.com/cn/app/%E4%BA%AC%E4%B8%9C-%E5%8F%88%E5%A5%BD%E5%8F%88%E4%BE%BF%E5%AE%9C/id414245413?uo=4"
+    iosUrl: "https://apps.apple.com/cn/app/%E4%BA%AC%E4%B8%9C-%E5%8F%88%E5%A5%BD%E5%8F%88%E4%BE%BF%E5%AE%9C/id414245413?uo=4",
+    androidUrl: "https://play.google.com/store/apps/details?id=com.jingdong.app.mall"
   },
   ctrip: {
     iconUrl: "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/61/f2/ff/61f2ff23-ae77-a3f1-1f2a-cb6fa5a7d5ca/AppIcon-0-0-1x_U007emarketing-0-5-0-85-220.png/512x512bb.jpg",
-    iosUrl: "https://apps.apple.com/cn/app/%E6%90%BA%E7%A8%8B%E6%97%85%E8%A1%8C-%E8%AE%A2%E9%85%92%E5%BA%97%E6%9C%BA%E7%A5%A8%E7%81%AB%E8%BD%A6%E7%A5%A8/id379395415?uo=4"
+    iosUrl: "https://apps.apple.com/cn/app/%E6%90%BA%E7%A8%8B%E6%97%85%E8%A1%8C-%E8%AE%A2%E9%85%92%E5%BA%97%E6%9C%BA%E7%A5%A8%E7%81%AB%E8%BD%A6%E7%A5%A8/id379395415?uo=4",
+    androidUrl: "https://play.google.com/store/apps/details?id=ctrip.android.view"
   },
   dingtalk: {
     iconUrl: "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/28/10/c8/2810c844-3cce-03d3-403f-c09570ed501a/AppIcon-0-0-1x_U007epad-0-0-0-1-0-0-sRGB-85-220.png/512x512bb.jpg",
-    iosUrl: "https://apps.apple.com/cn/app/%E9%92%89%E9%92%89/id930368978?uo=4"
+    iosUrl: "https://apps.apple.com/cn/app/%E9%92%89%E9%92%89/id930368978?uo=4",
+    androidUrl: "https://play.google.com/store/apps/details?id=com.alibaba.android.rimet"
   }
 };
 
@@ -1220,11 +1254,11 @@ function openStoreDialog(appsToShow) {
 
   els.storeActions.innerHTML = appList.flatMap((app) => {
     const appStore = iconAssets[app.id]?.iosUrl || `https://apps.apple.com/search?term=${encodeURIComponent(app.store || app.en)}`;
-    const coolapk = `https://www.coolapk.com/search?q=${encodeURIComponent(app.cn || app.en)}`;
+    const androidStore = iconAssets[app.id]?.androidUrl || `https://play.google.com/store/search?q=${encodeURIComponent(app.store || app.en)}`;
     const web = `https://www.google.com/search?q=${encodeURIComponent(`${app.en} ${app.cn} official app`)}`;
     return [
       `<a href="${appStore}" target="_blank" rel="noopener">${iconSvg("apple")}<span>${t("openIos")} · ${app.en}</span></a>`,
-      `<a href="${coolapk}" target="_blank" rel="noopener">${iconSvg("android")}<span>${t("openAndroid")} · ${app.en}</span></a>`,
+      `<a href="${androidStore}" target="_blank" rel="noopener">${iconSvg("android")}<span>${t("openAndroid")} · ${app.en}</span></a>`,
       `<a class="secondary" href="${web}" target="_blank" rel="noopener">${iconSvg("search")}<span>${t("searchWeb")} · ${app.en}</span></a>`
     ];
   }).join("");
