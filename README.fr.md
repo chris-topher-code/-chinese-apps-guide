@@ -22,7 +22,7 @@ Elle inclut :
 - Les concepts en doublon sont regroupés quand c'est plus clair : WeChat Pay est couvert dans WeChat au lieu d'apparaître comme une deuxième carte WeChat.
 - Cartes pratiques avec vraies icônes distantes, badges de configuration et initiales de secours.
 - Dialogues de détail avec étapes de configuration, avertissements, équivalents occidentaux et cas d'usage.
-- Choix de plateforme pour ouvrir une recherche App Store iOS, CoolAPK ou web.
+- Choix de plateforme pour ouvrir une page App Store iOS directe, une fiche/recherche Android ou une recherche web.
 - Animations discrètes de page, cartes et packs de départ avec support de `prefers-reduced-motion`.
 - Aucun build et aucune dépendance.
 
@@ -69,10 +69,10 @@ Principes :
 L'action « Obtenir l'app » demande à l'utilisateur de choisir une plateforme :
 
 - Page App Store iOS directe quand une correspondance publique est disponible.
-- Recherche CoolAPK Android.
+- Fiche ou recherche Android.
 - Recherche web de secours.
 
-Les actions Android et web ouvrent volontairement des recherches plutôt que de supposer que chaque fiche directe restera permanente. La disponibilité, les régions et les règles de téléchargement peuvent changer.
+Les actions Android et web évitent volontairement les fichiers APK directs. Les fiches de store et recherches officielles sont plus sûres pour un guide public, car la disponibilité, les régions et les règles de téléchargement peuvent changer.
 
 ## Icônes des apps
 

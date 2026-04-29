@@ -33,6 +33,7 @@ const translations = {
     watchOut: "Watch out",
     similar: "Similar to",
     openIos: "Open iOS App Store",
+    openAndroid: "Open Android listing",
     openCoolapk: "Open CoolAPK",
     searchWeb: "Search web",
     starterCopy: "Open store searches for the first-week essentials.",
@@ -74,6 +75,7 @@ const translations = {
     watchOut: "Attention",
     similar: "Comparable à",
     openIos: "Ouvrir l'App Store iOS",
+    openAndroid: "Ouvrir la fiche Android",
     openCoolapk: "Ouvrir CoolAPK",
     searchWeb: "Recherche web",
     starterCopy: "Ouvrir les recherches store pour les essentiels de la première semaine.",
@@ -84,13 +86,13 @@ const translations = {
 };
 
 const packs = [
-  { id: "arrival", icon: "✈", color: "#f3ead7", label: { en: "Arrival Basics", fr: "Arrivée" }, desc: { en: "Install before landing", fr: "Avant d'arriver" }, appIds: ["wechat", "alipay", "amap", "didi", "ctrip", "12306"] },
-  { id: "payments", icon: "▰", color: "#e5efd9", label: { en: "Pay in China", fr: "Payer" }, desc: { en: "QR payments and setup", fr: "Paiement QR" }, appIds: ["wechat", "alipay"] },
-  { id: "transport", icon: "▣", color: "#f5e9c9", label: { en: "Move Around", fr: "Se déplacer" }, desc: { en: "Maps, rides, trains", fr: "Cartes, VTC, trains" }, appIds: ["amap", "didi", "12306", "ctrip", "qunar", "baidumaps"] },
-  { id: "food", icon: "☕", color: "#f3ded3", label: { en: "Eat & Drink", fr: "Manger" }, desc: { en: "Delivery and local finds", fr: "Livraison et adresses" }, appIds: ["meituan", "dianping", "eleme", "luckin", "mixue"] },
-  { id: "shopping", icon: "▤", color: "#f6ecd7", label: { en: "Shop Smart", fr: "Shopping" }, desc: { en: "Marketplaces and deals", fr: "Marchés et promos" }, appIds: ["taobao", "jd", "pinduoduo", "xianyu"] },
-  { id: "student", icon: "✎", color: "#e7edf8", label: { en: "Student Life", fr: "Étudiant" }, desc: { en: "Study, food, socials", fr: "Études et quotidien" }, appIds: ["wechat", "alipay", "meituan", "bilibili", "baicizhan", "xiaohongshu", "neteasemusic"] },
-  { id: "longstay", icon: "⌂", color: "#e5ecd9", label: { en: "Long Stay", fr: "Long séjour" }, desc: { en: "Housing, work, services", fr: "Logement et travail" }, appIds: ["wechat", "alipay", "beike", "lianjia", "dingtalk", "wecom", "feishu"] }
+  { id: "arrival", icon: "plane", color: "#f3ead7", label: { en: "Arrival Basics", fr: "Arrivée" }, desc: { en: "Install before landing", fr: "Avant d'arriver" }, appIds: ["wechat", "alipay", "amap", "didi", "ctrip", "12306"] },
+  { id: "payments", icon: "credit-card", color: "#e5efd9", label: { en: "Pay in China", fr: "Payer" }, desc: { en: "QR payments and setup", fr: "Paiement QR" }, appIds: ["wechat", "alipay"] },
+  { id: "transport", icon: "route", color: "#f5e9c9", label: { en: "Move Around", fr: "Se déplacer" }, desc: { en: "Maps, rides, trains", fr: "Cartes, VTC, trains" }, appIds: ["amap", "didi", "12306", "ctrip", "qunar", "baidumaps"] },
+  { id: "food", icon: "utensils", color: "#f3ded3", label: { en: "Eat & Drink", fr: "Manger" }, desc: { en: "Delivery and local finds", fr: "Livraison et adresses" }, appIds: ["meituan", "dianping", "eleme", "luckin", "mixue"] },
+  { id: "shopping", icon: "shopping-bag", color: "#f6ecd7", label: { en: "Shop Smart", fr: "Shopping" }, desc: { en: "Marketplaces and deals", fr: "Marchés et promos" }, appIds: ["taobao", "jd", "pinduoduo", "xianyu"] },
+  { id: "student", icon: "graduation-cap", color: "#e7edf8", label: { en: "Student Life", fr: "Étudiant" }, desc: { en: "Study, food, socials", fr: "Études et quotidien" }, appIds: ["wechat", "alipay", "meituan", "bilibili", "baicizhan", "xiaohongshu", "neteasemusic"] },
+  { id: "longstay", icon: "home", color: "#e5ecd9", label: { en: "Long Stay", fr: "Long séjour" }, desc: { en: "Housing, work, services", fr: "Logement et travail" }, appIds: ["wechat", "alipay", "beike", "lianjia", "dingtalk", "wecom", "feishu"] }
 ];
 
 const categories = [
@@ -1054,6 +1056,22 @@ function getAppCategories(app) {
   return app.categories || [app.category];
 }
 
+function iconSvg(name) {
+  const icons = {
+    "plane": '<path d="M16 3 9.5 9.5 3 8l-1 2 5.5 3L5 18l2 1 3.5-4.5 3 5.5 2-1-1.5-6.5L21 6l-5-3Z"/>',
+    "credit-card": '<rect x="3" y="6" width="18" height="12" rx="2"/><path d="M3 10h18"/><path d="M7 15h3"/>',
+    "route": '<circle cx="6" cy="6" r="2"/><circle cx="18" cy="18" r="2"/><path d="M8 6h3a3 3 0 0 1 0 6h2a3 3 0 0 1 3 3v1"/>',
+    "utensils": '<path d="M7 3v8"/><path d="M4 3v4a3 3 0 0 0 6 0V3"/><path d="M7 11v10"/><path d="M17 3v18"/><path d="M14 3h4a3 3 0 0 1 0 6h-1"/>',
+    "shopping-bag": '<path d="M6 8h12l-1 13H7L6 8Z"/><path d="M9 8a3 3 0 0 1 6 0"/>',
+    "graduation-cap": '<path d="m3 8 9-4 9 4-9 4-9-4Z"/><path d="M7 10v5c3 2 7 2 10 0v-5"/><path d="M21 8v6"/>',
+    "home": '<path d="m3 11 9-8 9 8"/><path d="M5 10v10h14V10"/><path d="M9 20v-6h6v6"/>',
+    "apple": '<path d="M15.5 4.5c-.8.9-1.8 1.4-3 1.3-.1-1.1.4-2.2 1.1-2.9.8-.8 2-1.4 3-1.4.1 1.1-.3 2.2-1.1 3Z"/><path d="M19 15.8c-.5 1.2-.8 1.7-1.5 2.8-1 1.5-2.3 3.4-4 3.4-1.5 0-1.9-1-3.9-1s-2.5 1-3.9 1c-1.7 0-3-1.8-4-3.3-2.7-4.1-3-8.9-1.3-11.4 1.2-1.8 3-2.8 4.7-2.8 1.8 0 2.9 1 4.4 1 1.4 0 2.3-1 4.4-1 1.6 0 3.3.9 4.5 2.4-4 2.2-3.4 7.8.6 8.9Z"/>',
+    "android": '<path d="M7 9h10v8a2 2 0 0 1-2 2H9a2 2 0 0 1-2-2V9Z"/><path d="M9 9 7 5"/><path d="m15 9 2-4"/><path d="M8 5h8"/><path d="M5 10v5"/><path d="M19 10v5"/><path d="M10 13h.01"/><path d="M14 13h.01"/>',
+    "search": '<circle cx="11" cy="11" r="6"/><path d="m16 16 4 4"/>'
+  };
+  return `<svg class="ui-icon" aria-hidden="true" viewBox="0 0 24 24">${icons[name] || icons.search}</svg>`;
+}
+
 function countAppsForCategory(categoryId) {
   if (categoryId === "all") return apps.length;
   return apps.filter((app) => getAppCategories(app).includes(categoryId)).length;
@@ -1088,7 +1106,7 @@ function renderI18n() {
 function renderStarters() {
   els.starterGrid.innerHTML = packs.map((pack) => `
     <button class="starter-card ${state.pack === pack.id ? "active" : ""}" type="button" data-pack="${pack.id}" style="--starter-bg: ${pack.color}">
-      <span>${pack.icon}</span>
+      <span class="starter-icon">${iconSvg(pack.icon)}</span>
       <strong>${local(pack.label)}</strong>
       <small>${local(pack.desc)} · ${pack.appIds.length}</small>
     </button>
@@ -1205,9 +1223,9 @@ function openStoreDialog(appsToShow) {
     const coolapk = `https://www.coolapk.com/search?q=${encodeURIComponent(app.cn || app.en)}`;
     const web = `https://www.google.com/search?q=${encodeURIComponent(`${app.en} ${app.cn} official app`)}`;
     return [
-      `<a href="${appStore}" target="_blank" rel="noopener">${t("openIos")} · ${app.en}</a>`,
-      `<a href="${coolapk}" target="_blank" rel="noopener">${t("openCoolapk")} · ${app.en}</a>`,
-      `<a class="secondary" href="${web}" target="_blank" rel="noopener">${t("searchWeb")} · ${app.en}</a>`
+      `<a href="${appStore}" target="_blank" rel="noopener">${iconSvg("apple")}<span>${t("openIos")} · ${app.en}</span></a>`,
+      `<a href="${coolapk}" target="_blank" rel="noopener">${iconSvg("android")}<span>${t("openAndroid")} · ${app.en}</span></a>`,
+      `<a class="secondary" href="${web}" target="_blank" rel="noopener">${iconSvg("search")}<span>${t("searchWeb")} · ${app.en}</span></a>`
     ];
   }).join("");
 

@@ -22,7 +22,7 @@ It includes:
 - Duplicate concepts are folded together where it helps users: WeChat Pay is covered inside WeChat instead of appearing as a second WeChat card.
 - Practical app cards with real remote app icons, setup badges, and fallback initials.
 - Detail dialogs with setup steps, cautions, similar Western apps, and use cases.
-- Platform prompt for opening iOS App Store search, CoolAPK search, or a web search.
+- Platform prompt for opening direct iOS App Store pages, Android listing/search pages, or a web search.
 - Soft page, card, and starter-pack animations with reduced-motion support.
 - No build step and no dependencies.
 
@@ -69,10 +69,10 @@ Core design ideas:
 The "Get app" action prompts the user to choose a platform:
 
 - Direct iOS App Store page when a public App Store match is available.
-- CoolAPK Android search.
+- Android listing/search page.
 - Web search fallback.
 
-Android and web actions intentionally open searches instead of pretending every direct listing is permanent. App store availability, regional access, and download rules can change.
+Android and web actions intentionally avoid raw APK file downloads. Store listings and official search results are safer for a public guide because app availability, regional access, and download rules can change.
 
 ## App Icons
 
