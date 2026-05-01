@@ -101,6 +101,7 @@ const categories = [
   { id: "payment", label: { en: "Payments", fr: "Paiement" } },
   { id: "transport", label: { en: "Transport", fr: "Transport" } },
   { id: "bike", label: { en: "Bike", fr: "Vélo" } },
+  { id: "subway", label: { en: "Subway", fr: "Métro" } },
   { id: "travel", label: { en: "Travel", fr: "Voyage" } },
   { id: "food", label: { en: "Food", fr: "Repas" } },
   { id: "shopping", label: { en: "Shopping", fr: "Shopping" } },
@@ -118,7 +119,7 @@ const apps = [
     cn: "微信",
     en: "WeChat",
     category: "social",
-    categories: ["social", "payment"],
+    categories: ["social", "payment", "subway"],
     icon: "微",
     color: "#16b84e",
     essential: true,
@@ -127,12 +128,17 @@ const apps = [
     badge: { en: "Foreigner-friendly", fr: "Assez accessible" },
     badgeType: "good",
     note: { en: "Set up first", fr: "À configurer tôt" },
+    subwayNote: { en: "Click Transport, find Metro, activate", fr: "Cliquez sur Transport, trouvez Metro, activez" },
     setup: { en: "Medium", fr: "Moyenne" },
     foreigner: { en: "Works well after phone verification", fr: "Fonctionne après vérification téléphone" },
     bestFor: { en: "Everyone in China", fr: "Tout le monde en Chine" },
     steps: {
       en: ["Install before arrival if possible.", "Register with a phone number.", "Ask contacts to share QR codes.", "Verify payment options before relying on WeChat Pay."],
       fr: ["Installez avant l'arrivée si possible.", "Inscrivez-vous avec un numéro de téléphone.", "Ajoutez les contacts par QR code.", "Vérifiez les options de paiement avant d'en dépendre."]
+    },
+    subwaySteps: {
+      en: ["Open the app.", "Click Transport.", "Find Metro.", "Activate."],
+      fr: ["Ouvrez l'app.", "Cliquez sur Transport.", "Trouvez Metro.", "Activez."]
     },
     caution: { en: "Payment features may require extra identity or card verification.", fr: "Les paiements peuvent demander une vérification d'identité ou de carte." },
     similar: "WhatsApp + PayPal + app store",
@@ -143,7 +149,7 @@ const apps = [
     cn: "支付宝",
     en: "Alipay",
     category: "payment",
-    categories: ["payment", "bike"],
+    categories: ["payment", "bike", "subway"],
     icon: "支",
     color: "#1677ff",
     essential: true,
@@ -152,12 +158,22 @@ const apps = [
     badge: { en: "Passport setup", fr: "Passeport utile" },
     badgeType: "good",
     note: { en: "Best for daily use", fr: "Très utile au quotidien" },
+    bikeNote: { en: "Click Scan, activate bike", fr: "Cliquez sur Scan, activez le vélo" },
+    subwayNote: { en: "Click Transport, find Metro, activate", fr: "Cliquez sur Transport, trouvez Metro, activez" },
     setup: { en: "Medium", fr: "Moyenne" },
     foreigner: { en: "Often the easiest payment start", fr: "Souvent le paiement le plus simple au début" },
     bestFor: { en: "Tourists and residents", fr: "Touristes et résidents" },
     steps: {
       en: ["Install Alipay.", "Add your passport details if requested.", "Try linking an international card.", "Test a small QR payment before depending on it."],
       fr: ["Installez Alipay.", "Ajoutez le passeport si demandé.", "Essayez de lier une carte internationale.", "Testez un petit paiement QR avant d'en dépendre."]
+    },
+    bikeSteps: {
+      en: ["Open the app.", "Click Scan.", "Activate the bike."],
+      fr: ["Ouvrez l'app.", "Cliquez sur Scan.", "Activez le vélo."]
+    },
+    subwaySteps: {
+      en: ["Open the app.", "Click Transport.", "Find Metro.", "Activate."],
+      fr: ["Ouvrez l'app.", "Cliquez sur Transport.", "Trouvez Metro.", "Activez."]
     },
     caution: { en: "Foreign card support can vary by card, merchant, and policy changes.", fr: "Les cartes étrangères peuvent dépendre de la carte, du commerçant et des règles du moment." },
     similar: "Apple Pay + PayPal + local services",
@@ -1198,7 +1214,7 @@ function renderApps() {
       </span>
       <span class="app-side">
         <span class="badge ${app.badgeType === "caution" ? "caution" : ""}">◆ ${local(app.badge)}</span>
-        <span class="app-note">${local(app.note)}</span>
+        <span class="app-note">${local((app.categories || []).includes("bike") && state.category === "bike" && app.bikeNote ? app.bikeNote : (app.categories || []).includes("subway") && state.category === "subway" && app.subwayNote ? app.subwayNote : app.note)}</span>
         <span class="arrow">›</span>
       </span>
     </button>
@@ -1232,7 +1248,7 @@ function openAppDialog(app) {
     <div class="detail-grid">
       <section class="detail-box">
         <h3>${t("howToStart")}</h3>
-        <ul>${local(app.steps).map((step) => `<li>${step}</li>`).join("")}</ul>
+        <ul>${(state.category === "bike" && app.bikeSteps ? app.bikeSteps : state.category === "subway" && app.subwaySteps ? app.subwaySteps : app.steps)[state.lang].map((step) => `<li>${step}</li>`).join("")}</ul>
       </section>
       <section class="detail-box">
         <h3>${t("watchOut")}</h3>
