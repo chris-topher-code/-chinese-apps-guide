@@ -18,8 +18,15 @@ https://github.com/chris-topher-code/-chinese-apps-guide
 - 入门套装：到达、支付、交通、吃喝、购物、学生生活和长期居住。
 - 支持按应用名、中文名、任务、分类或设置提示搜索。
 - 分类筛选。
-- 保留上游原项目的完整应用覆盖，并新增 Dianping。
+- 支持 `#basics`、`#payments`、`#transport`、`#tips` 等可分享的区块和筛选深链接。
+- 宽屏双列应用网格、可滚动的入门套装和第一周提示区块。
+- 保留上游原项目的完整应用覆盖，并新增 Dianping 和 TenPayGo。
+- AI 与搜索精选：腾讯元宝（混元 + DeepSeek，实时翻译）、DeepSeek、Kimi、豆包，以及作为 Google 替代的 Bing。
+- 租房与出行新增：自如、Wellcee、Trip.com 和哈啰单车（也可在支付宝内使用）。到达基础包现在用元宝替代 12306，并用 Trip.com 替代携程。
+- 2026 年 VPN 推荐：Mullvad（技术上最好，但对非技术用户较难）、Astrill（稳定但有时较慢，适合大多数人）和 Surfshark（简单便宜，需要 No Border 模式，并非 100% 可用）。
+- 充电宝警告：没有 CCC 认证的充电宝不得带上中国航班，并会在机场被永久没收。
 - 对容易重复的概念做合并：WeChat Pay 放进 WeChat 说明里，不再作为第二张 WeChat 卡片展示。
+- 在支付区域用醒目样式强烈建议在微信支付和支付宝中绑定 Wise 或 Revolut 卡。
 - 应用卡片使用真实远程应用图标，并保留本地首字 fallback。
 - 详情弹窗展示设置步骤、注意事项、类似西方应用和使用场景。
 - 获取应用时提示选择直接 iOS App Store 页面、安卓应用页面/搜索或网页搜索。
@@ -80,4 +87,4 @@ http://localhost:8080
 
 ## 与原项目兼容
 
-应用列表保留了原项目的全部应用，而不是缩小范围。同时新增 Dianping，将 WeChat 同时归入社交和支付相关场景，把 WeChat Pay 合并到 WeChat 中避免重复卡片，并把 携程 标注为更符合中国语境的 Ctrip。
+应用列表保留了原项目的全部应用，而不是缩小范围。同时新增 Dianping 和 TenPayGo，将 WeChat 同时归入社交和支付相关场景，把 WeChat Pay 合并到 WeChat 中避免重复卡片，并把 携程 标注为更符合中国语境的 Ctrip。

@@ -12,13 +12,43 @@ const translations = {
     downloadStack: "Get starter stack",
     quickComparisons: "Quick comparisons",
     whichOne: "Which one should I use?",
-    paymentCompare: "Use both if possible. WeChat Pay is everywhere socially; Alipay is often smoother for travel, utilities, and foreign card setup.",
+    paymentCalloutLabel: "Strong payment recommendation",
+    paymentCalloutTitle: "Link a Wise or Revolut card to both WeChat and Alipay before you arrive.",
+    paymentCalloutBody: "This is the single most important payment step for foreigners. A Wise or Revolut card lets you spend directly from your foreign account at QR payment terminals across China. Link the same card in WeChat Pay AND Alipay so you can pay almost anywhere — even at shops that accept only one of them. Test a small payment before you rely on it.",
+    paymentCompare: "Use WeChat Pay and Alipay together if possible: WeChat Pay is everywhere socially, while Alipay is often smoother for travel, utilities, and foreign card setup. TenPayGo is the new Tencent option for visitors who want to pay without a WeChat account.",
     shoppingCompare: "Taobao has everything, JD is stronger for reliable electronics and delivery, Pinduoduo is deal-heavy but harder for beginners.",
     transportCompare: "Amap is the map and transit brain. Didi is the ride-hailing backup when public transport is not enough.",
     navHome: "Home",
-    navPacks: "Packs",
+    navBasics: "Basics",
     navCompare: "Compare",
     navTips: "Tips",
+    skipToGuide: "Skip to the app guide",
+    menuEyebrow: "Guide sections",
+    menuTitle: "Jump to",
+    menuBasics: "Basics",
+    menuBasicsNote: "Starter packs",
+    menuApps: "All apps",
+    menuAppsNote: "Full list",
+    menuPayments: "Payments",
+    menuPaymentsNote: "WeChat Pay, Alipay, TenPayGo",
+    menuTransport: "Transport",
+    menuTransportNote: "Maps, rides, trains",
+    menuFood: "Food",
+    menuFoodNote: "Delivery and local finds",
+    menuShopping: "Shopping",
+    menuShoppingNote: "Marketplaces and deals",
+    menuAi: "AI & search",
+    menuAiNote: "Yuanbao, DeepSeek, Kimi + more",
+    menuVpn: "VPN",
+    menuVpnNote: "Mullvad, Astrill, Surfshark",
+    menuStudent: "Student life",
+    menuStudentNote: "Study and social",
+    menuLongstay: "Long stay",
+    menuLongstayNote: "Housing and work",
+    menuCompare: "Compare apps",
+    menuCompareNote: "Which one to use",
+    menuTips: "First-week tips",
+    menuTipsNote: "Before you land",
     emptyTitle: "No apps found",
     emptyCopy: "Try another task, app name, or category.",
     choosePlatform: "Choose platform",
@@ -38,8 +68,29 @@ const translations = {
     searchWeb: "Search web",
     starterCopy: "Open store searches for the first-week essentials.",
     appStoreCopy: (name) => `Choose where to search for ${name}.`,
-    tipsTitle: "First-week tip",
-    tipsBody: "Install WeChat, Alipay, a map app, and a translation app before landing. Payment and identity rules change, so verify setup requirements in the app before relying on it."
+    tipsEyebrow: "Before you land",
+    tipsTitle: "First-week tips",
+    tipsBody: "Install WeChat, Alipay, a map app, and a translation app before landing. Payment and identity rules change, so verify setup requirements in the app before relying on it.",
+    vpnEyebrow: "Connectivity",
+    vpnTitle: "VPNs that work in China (2026)",
+    vpnBody: "Install and test a paid VPN before you fly. App stores and VPN sites are often blocked inside China. Mullvad is technically the best but harder for non-tech users; Astrill is reliable and stable but sometimes slow; Surfshark is the easiest and cheapest, though it needs No Border mode and is not 100% reliable. For most users, Astrill or Surfshark are the practical recommendations.",
+    vpnMullvadTitle: "Mullvad — best but technical",
+    vpnMullvadBody: "Technically the strongest option, but setup is more complicated for non-technical users.",
+    vpnAstrillTitle: "Astrill — recommended for most",
+    vpnAstrillBody: "Reliable and stable, with occasional slow speeds.",
+    vpnSurfsharkTitle: "Surfshark — easiest + cheapest",
+    vpnSurfsharkBody: "Easy and cheap, but needs No Border mode and is not 100% reliable.",
+    vpnLegal: "VPN use is legally restricted in China; check current rules and use responsibly.",
+    tipInstallTitle: "Install before landing",
+    tipInstallBody: "Download WeChat, Alipay, Amap, and a translation app while you still have fast, unrestricted Wi-Fi.",
+    tipPayTitle: "Set up payments early",
+    tipPayBody: "Link a Wise or Revolut card in both WeChat Pay and Alipay, then test a small QR payment before depending on it.",
+    tipAddressTitle: "Save addresses in Chinese",
+    tipAddressBody: "Keep your hotel, school, or apartment address in Chinese so taxi drivers and delivery couriers can find you.",
+    tipDataTitle: "Stay connected",
+    tipDataBody: "Arrange roaming or a China eSIM before you fly, and carry a power bank for long days out.",
+    tipPowerBankTitle: "Power bank warning",
+    tipPowerBankBody: "Power banks without CCC certification are not allowed on flights in China. Airport security confiscates them permanently — even expensive ones. Check for the CCC mark before you fly."
   },
   fr: {
     eyebrow: "Guide de survie pour la première semaine",
@@ -54,13 +105,43 @@ const translations = {
     downloadStack: "Obtenir le pack essentiel",
     quickComparisons: "Comparaisons rapides",
     whichOne: "Laquelle utiliser ?",
-    paymentCompare: "Utilisez les deux si possible. WeChat Pay est partout dans les usages sociaux ; Alipay est souvent plus pratique pour le voyage, les services et les cartes étrangères.",
+    paymentCalloutLabel: "Recommandation forte — paiement",
+    paymentCalloutTitle: "Liez une carte Wise ou Revolut à WeChat ET à Alipay avant d'arriver.",
+    paymentCalloutBody: "C'est l'étape de paiement la plus importante pour un étranger. Une carte Wise ou Revolut vous permet de dépenser directement depuis votre compte étranger sur les terminaux de paiement QR partout en Chine. Liez la même carte dans WeChat Pay ET dans Alipay pour payer presque partout, même chez les commerçants qui n'acceptent qu'un seul des deux. Testez un petit paiement avant d'en dépendre.",
+    paymentCompare: "Utilisez WeChat Pay et Alipay ensemble si possible : WeChat Pay est partout dans les usages sociaux, tandis qu'Alipay est souvent plus pratique pour le voyage, les services et les cartes étrangères. TenPayGo est la nouvelle option de Tencent pour les visiteurs qui veulent payer sans compte WeChat.",
     shoppingCompare: "Taobao a presque tout, JD est plus fiable pour l'électronique et la livraison, Pinduoduo est très orienté promotions mais moins simple pour débuter.",
     transportCompare: "Amap est le cerveau pour cartes et transports. Didi sert de solution de secours pour les taxis et voitures privées.",
     navHome: "Accueil",
-    navPacks: "Packs",
+    navBasics: "Bases",
     navCompare: "Comparer",
     navTips: "Conseils",
+    skipToGuide: "Aller au guide des apps",
+    menuEyebrow: "Sections du guide",
+    menuTitle: "Aller à",
+    menuBasics: "Bases",
+    menuBasicsNote: "Packs de départ",
+    menuApps: "Toutes les apps",
+    menuAppsNote: "Liste complète",
+    menuPayments: "Paiement",
+    menuPaymentsNote: "WeChat Pay, Alipay, TenPayGo",
+    menuTransport: "Transport",
+    menuTransportNote: "Cartes, VTC, trains",
+    menuFood: "Manger",
+    menuFoodNote: "Livraison et adresses",
+    menuShopping: "Shopping",
+    menuShoppingNote: "Marchés et promos",
+    menuAi: "IA et recherche",
+    menuAiNote: "Yuanbao, DeepSeek, Kimi + autres",
+    menuVpn: "VPN",
+    menuVpnNote: "Mullvad, Astrill, Surfshark",
+    menuStudent: "Vie étudiante",
+    menuStudentNote: "Études et sorties",
+    menuLongstay: "Long séjour",
+    menuLongstayNote: "Logement et travail",
+    menuCompare: "Comparer les apps",
+    menuCompareNote: "Laquelle choisir",
+    menuTips: "Conseils première semaine",
+    menuTipsNote: "Avant d'arriver",
     emptyTitle: "Aucune app trouvée",
     emptyCopy: "Essayez un autre besoin, nom d'app ou catégorie.",
     choosePlatform: "Choisir la plateforme",
@@ -80,19 +161,40 @@ const translations = {
     searchWeb: "Recherche web",
     starterCopy: "Ouvrir les recherches store pour les essentiels de la première semaine.",
     appStoreCopy: (name) => `Choisissez où rechercher ${name}.`,
-    tipsTitle: "Conseil première semaine",
-    tipsBody: "Installez WeChat, Alipay, une app de cartes et une app de traduction avant d'arriver. Les règles de paiement et d'identité changent souvent, donc vérifiez les exigences dans l'app."
+    tipsEyebrow: "Avant d'arriver",
+    tipsTitle: "Conseils première semaine",
+    tipsBody: "Installez WeChat, Alipay, une app de cartes et une app de traduction avant d'arriver. Les règles de paiement et d'identité changent souvent, donc vérifiez les exigences dans l'app.",
+    vpnEyebrow: "Connectivité",
+    vpnTitle: "VPN qui fonctionnent en Chine (2026)",
+    vpnBody: "Installez et testez un VPN payant avant de partir. Les stores et les sites de VPN sont souvent bloqués en Chine. Mullvad est techniquement le meilleur mais plus difficile pour les non-techniciens ; Astrill est fiable et stable mais parfois lent ; Surfshark est le plus simple et le moins cher, mais nécessite le mode No Border et n'est pas fiable à 100 %. Pour la plupart des utilisateurs, Astrill ou Surfshark sont les recommandations pratiques.",
+    vpnMullvadTitle: "Mullvad — meilleur mais technique",
+    vpnMullvadBody: "Techniquement le plus solide, mais la configuration est plus compliquée pour les non-techniciens.",
+    vpnAstrillTitle: "Astrill — recommandé pour la plupart",
+    vpnAstrillBody: "Fiable et stable, avec des ralentissements occasionnels.",
+    vpnSurfsharkTitle: "Surfshark — le plus simple et économique",
+    vpnSurfsharkBody: "Simple et bon marché, mais nécessite le mode No Border et n'est pas fiable à 100 %.",
+    vpnLegal: "L'usage d'un VPN est juridiquement encadré en Chine ; vérifiez les règles et utilisez-le de façon responsable.",
+    tipInstallTitle: "Installez avant le départ",
+    tipInstallBody: "Téléchargez WeChat, Alipay, Amap et une app de traduction avec un Wi-Fi rapide et sans restrictions.",
+    tipPayTitle: "Préparez les paiements tôt",
+    tipPayBody: "Liez une carte Wise ou Revolut à WeChat Pay et à Alipay, puis testez un petit paiement QR avant d'en dépendre.",
+    tipAddressTitle: "Gardez les adresses en chinois",
+    tipAddressBody: "Conservez l'adresse de votre hôtel, école ou appartement en chinois pour les taxis et les livreurs.",
+    tipDataTitle: "Restez connecté",
+    tipDataBody: "Activez l'itinérance ou une eSIM Chine avant le départ, et emportez une batterie externe pour les longues journées.",
+    tipPowerBankTitle: "Avertissement batterie externe",
+    tipPowerBankBody: "Les batteries externes sans certification CCC ne sont pas autorisées à bord des vols en Chine. La sécurité de l'aéroport les confisque définitivement — même si elles sont chères. Vérifiez le marquage CCC avant de prendre l'avion."
   }
 };
 
 const packs = [
-  { id: "arrival", icon: "plane", color: "#f3ead7", label: { en: "Arrival Basics", fr: "Arrivée" }, desc: { en: "Install before landing", fr: "Avant d'arriver" }, appIds: ["wechat", "alipay", "amap", "didi", "ctrip", "12306"] },
-  { id: "payments", icon: "credit-card", color: "#e5efd9", label: { en: "Pay in China", fr: "Payer" }, desc: { en: "QR payments and setup", fr: "Paiement QR" }, appIds: ["wechat", "alipay"] },
-  { id: "transport", icon: "route", color: "#f5e9c9", label: { en: "Move Around", fr: "Se déplacer" }, desc: { en: "Maps, rides, trains", fr: "Cartes, VTC, trains" }, appIds: ["amap", "didi", "12306", "ctrip", "qunar", "baidumaps"] },
+  { id: "arrival", icon: "plane", color: "#f3ead7", label: { en: "Arrival Basics", fr: "Arrivée" }, desc: { en: "Install before landing", fr: "Avant d'arriver" }, appIds: ["wechat", "alipay", "yuanbao", "amap", "didi", "tripcom"] },
+  { id: "payments", icon: "credit-card", color: "#e5efd9", label: { en: "Pay in China", fr: "Payer" }, desc: { en: "QR payments and setup", fr: "Paiement QR" }, appIds: ["wechat", "alipay", "tenpaygo"] },
+  { id: "transport", icon: "route", color: "#f5e9c9", label: { en: "Move Around", fr: "Se déplacer" }, desc: { en: "Maps, rides, trains", fr: "Cartes, VTC, trains" }, appIds: ["amap", "didi", "hellobike", "12306", "ctrip", "tripcom", "qunar", "baidumaps"] },
   { id: "food", icon: "utensils", color: "#f3ded3", label: { en: "Eat & Drink", fr: "Manger" }, desc: { en: "Delivery and local finds", fr: "Livraison et adresses" }, appIds: ["meituan", "dianping", "eleme", "luckin", "mixue"] },
   { id: "shopping", icon: "shopping-bag", color: "#f6ecd7", label: { en: "Shop Smart", fr: "Shopping" }, desc: { en: "Marketplaces and deals", fr: "Marchés et promos" }, appIds: ["taobao", "jd", "pinduoduo", "xianyu"] },
   { id: "student", icon: "graduation-cap", color: "#e7edf8", label: { en: "Student Life", fr: "Étudiant" }, desc: { en: "Study, food, socials", fr: "Études et quotidien" }, appIds: ["wechat", "alipay", "meituan", "bilibili", "baicizhan", "xiaohongshu", "neteasemusic"] },
-  { id: "longstay", icon: "home", color: "#e5ecd9", label: { en: "Long Stay", fr: "Long séjour" }, desc: { en: "Housing, work, services", fr: "Logement et travail" }, appIds: ["wechat", "alipay", "beike", "lianjia", "dingtalk", "wecom", "feishu"] }
+  { id: "longstay", icon: "home", color: "#e5ecd9", label: { en: "Long Stay", fr: "Long séjour" }, desc: { en: "Housing, work, services", fr: "Logement et travail" }, appIds: ["wechat", "alipay", "beike", "lianjia", "ziroom", "wellcee", "dingtalk", "wecom", "feishu"] }
 ];
 
 const categories = [
@@ -108,6 +210,8 @@ const categories = [
   { id: "video", label: { en: "Video", fr: "Vidéo" } },
   { id: "music", label: { en: "Music", fr: "Musique" } },
   { id: "news", label: { en: "News", fr: "Actualités" } },
+  { id: "ai", label: { en: "AI & Search", fr: "IA et recherche" } },
+  { id: "vpn", label: { en: "VPN", fr: "VPN" } },
   { id: "education", label: { en: "Education", fr: "Éducation" } },
   { id: "realestate", label: { en: "Real Estate", fr: "Immobilier" } },
   { id: "work", label: { en: "Work", fr: "Travail" } }
@@ -180,6 +284,232 @@ const apps = [
     store: "Alipay"
   },
   {
+    id: "tenpaygo",
+    cn: "腾讯支付",
+    en: "TenPayGo",
+    aliases: ["TencentPay", "Tencent Pay", "Weixin Pay"],
+    category: "payment",
+    categories: ["payment", "travel"],
+    icon: "腾",
+    color: "#07c160",
+    essential: false,
+    desc: { en: "Tencent's new payment app for overseas visitors: pay at any Weixin Pay merchant with an international card or Apple Pay, no WeChat account required.", fr: "La nouvelle app de paiement de Tencent pour les visiteurs étrangers : payez chez tout commerçant Weixin Pay avec une carte internationale ou Apple Pay, sans compte WeChat." },
+    tags: ["Payments", "Travel", "No WeChat needed"],
+    badge: { en: "New for visitors", fr: "Nouveau pour visiteurs" },
+    badgeType: "good",
+    note: { en: "Tencent's new visitor app", fr: "La nouvelle app visiteurs de Tencent" },
+    setup: { en: "Easy", fr: "Facile" },
+    foreigner: { en: "Built for overseas visitors", fr: "Pensé pour les visiteurs étrangers" },
+    bestFor: { en: "Tourists without WeChat", fr: "Touristes sans WeChat" },
+    steps: {
+      en: ["Install TenPayGo before you travel.", "Register with an email address.", "Link an international card or Apple Pay.", "Scan Weixin Pay QR codes to pay."],
+      fr: ["Installez TenPayGo avant le départ.", "Inscrivez-vous avec une adresse email.", "Liez une carte internationale ou Apple Pay.", "Scannez les QR Weixin Pay pour payer."]
+    },
+    caution: { en: "TenPayGo is a standalone app, separate from WeChat Pay. It only works at Weixin Pay merchants in mainland China, not Alipay; card or currency conversion fees may apply.", fr: "TenPayGo est une app autonome, distincte de WeChat Pay. Elle fonctionne seulement chez les commerçants Weixin Pay en Chine continentale, pas Alipay ; des frais de carte ou de change peuvent s'appliquer." },
+    similar: "WeChat Pay without a WeChat account",
+    store: "TenPayGo"
+  },
+  {
+    id: "yuanbao",
+    cn: "腾讯元宝",
+    en: "Tencent Yuanbao",
+    category: "ai",
+    categories: ["ai"],
+    icon: "元",
+    color: "#2f6fde",
+    essential: false,
+    desc: { en: "Tencent's free AI assistant with Hunyuan and DeepSeek models, plus a live English–Chinese translation mode that is especially useful for travel.", fr: "L'assistant IA gratuit de Tencent avec les modèles Hunyuan et DeepSeek, et un mode de traduction anglais–chinois en direct particulièrement utile en voyage." },
+    tags: ["AI", "Translation", "Free"],
+    badge: { en: "Best live translator", fr: "Meilleur traducteur live" },
+    badgeType: "good",
+    note: { en: "Live English–Chinese translation", fr: "Traduction anglais–chinois en direct" },
+    setup: { en: "Easy", fr: "Facile" },
+    foreigner: { en: "Chinese-first, English replies work", fr: "Interface chinoise, réponses en anglais possibles" },
+    bestFor: { en: "Live translation and free AI", fr: "Traduction en direct et IA gratuite" },
+    steps: {
+      en: ["Install Tencent Yuanbao.", "Sign in with WeChat or QQ if possible.", "Switch between Hunyuan and DeepSeek models.", "Open translation mode for live conversations."],
+      fr: ["Installez Tencent Yuanbao.", "Connectez-vous avec WeChat ou QQ si possible.", "Passez d'un modèle Hunyuan à DeepSeek.", "Ouvrez le mode traduction pour les conversations en direct."]
+    },
+    caution: { en: "The interface is Chinese-first; ask for English answers when needed.", fr: "L'interface est d'abord en chinois ; demandez des réponses en anglais au besoin." },
+    similar: "ChatGPT + Google Translate",
+    store: "Tencent Yuanbao"
+  },
+  {
+    id: "deepseek",
+    cn: "深度求索",
+    en: "DeepSeek",
+    category: "ai",
+    categories: ["ai"],
+    icon: "深",
+    color: "#4d6bfe",
+    essential: false,
+    desc: { en: "Free Chinese AI assistant from DeepSeek, strong at reasoning, coding, and writing, with reliable access in China.", fr: "Assistant IA chinois gratuit de DeepSeek, fort en raisonnement, code et rédaction, avec un accès fiable en Chine." },
+    tags: ["AI", "Free", "Reasoning"],
+    badge: { en: "Free AI", fr: "IA gratuite" },
+    badgeType: "good",
+    note: { en: "Great in China", fr: "Très utile en Chine" },
+    setup: { en: "Easy", fr: "Facile" },
+    foreigner: { en: "English interface available", fr: "Interface anglaise disponible" },
+    bestFor: { en: "Reasoning, coding, and writing", fr: "Raisonnement, code et rédaction" },
+    steps: {
+      en: ["Install the official DeepSeek app.", "Create an account with email or phone.", "Use chat or reasoning mode for hard questions.", "Ask for English answers when needed."],
+      fr: ["Installez l'app officielle DeepSeek.", "Créez un compte avec email ou téléphone.", "Utilisez le mode raisonnement pour les questions difficiles.", "Demandez des réponses en anglais au besoin."]
+    },
+    caution: { en: "The free service can be busy at peak times; verify important answers.", fr: "Le service gratuit peut être saturé aux heures de pointe ; vérifiez les réponses importantes." },
+    similar: "ChatGPT",
+    store: "DeepSeek"
+  },
+  {
+    id: "kimi",
+    cn: "Kimi",
+    en: "Kimi",
+    category: "ai",
+    categories: ["ai"],
+    icon: "K",
+    color: "#181818",
+    essential: false,
+    desc: { en: "Moonshot AI's premium Chinese assistant, the strongest pick for long documents, research, and polished writing.", fr: "L'assistant chinois premium de Moonshot AI, le meilleur choix pour les documents longs, la recherche et la rédaction soignée." },
+    tags: ["AI", "Premium", "Long context"],
+    badge: { en: "Best premium", fr: "Meilleur premium" },
+    badgeType: "good",
+    note: { en: "Premium Chinese AI", fr: "IA chinoise premium" },
+    setup: { en: "Medium", fr: "Moyenne" },
+    foreigner: { en: "Chinese-first, strong for documents", fr: "Interface chinoise, fort pour les documents" },
+    bestFor: { en: "Long documents and polished writing", fr: "Documents longs et rédaction soignée" },
+    steps: {
+      en: ["Install Kimi and create an account.", "Upload long documents or research material.", "Ask for summaries, analysis, or drafts.", "Check subscription options for heavier use."],
+      fr: ["Installez Kimi et créez un compte.", "Importez des documents longs ou des sources.", "Demandez résumés, analyses ou brouillons.", "Vérifiez les options d'abonnement pour un usage intensif."]
+    },
+    caution: { en: "Many premium features require a subscription, and the free tier can be rate-limited.", fr: "De nombreuses fonctions premium demandent un abonnement, et le niveau gratuit peut être limité." },
+    similar: "Claude + ChatGPT",
+    store: "Kimi"
+  },
+  {
+    id: "doubao",
+    cn: "豆包",
+    en: "Doubao",
+    category: "ai",
+    categories: ["ai"],
+    icon: "豆",
+    color: "#2f9e44",
+    essential: false,
+    desc: { en: "ByteDance's fast, simple AI assistant for quick answers, summaries, and everyday tasks.", fr: "L'assistant IA rapide et simple de ByteDance pour les réponses, résumés et tâches du quotidien." },
+    tags: ["AI", "Fast", "Everyday"],
+    badge: { en: "Fast but basic", fr: "Rapide mais basique" },
+    badgeType: "caution",
+    note: { en: "Quick answers, not deep work", fr: "Réponses rapides, pas de travail profond" },
+    setup: { en: "Easy", fr: "Facile" },
+    foreigner: { en: "Simple, Chinese-first", fr: "Simple, interface chinoise" },
+    bestFor: { en: "Fast everyday answers", fr: "Réponses rapides du quotidien" },
+    steps: {
+      en: ["Install Doubao and open the chat.", "Ask a quick question or upload a photo.", "Use it for summaries and everyday tasks.", "Switch apps for deeper reasoning."],
+      fr: ["Installez Doubao et ouvrez le chat.", "Posez une question rapide ou importez une photo.", "Utilisez-le pour les résumés et tâches simples.", "Changez d'app pour un raisonnement plus profond."]
+    },
+    caution: { en: "Fast but less reliable for complex reasoning or important facts.", fr: "Rapide mais moins fiable pour le raisonnement complexe ou les faits importants." },
+    similar: "ChatGPT quick answers",
+    store: "Doubao"
+  },
+  {
+    id: "bing",
+    cn: "必应",
+    en: "Bing",
+    category: "ai",
+    categories: ["ai"],
+    icon: "必",
+    color: "#0078d4",
+    essential: false,
+    desc: { en: "Microsoft's search engine, accessible in China and the easiest Google replacement for web, image, and map searches.", fr: "Le moteur de recherche de Microsoft, accessible en Chine et le remplacement le plus simple de Google pour le web, les images et les cartes." },
+    tags: ["Search", "Google alternative"],
+    badge: { en: "Google replacement", fr: "Alternative à Google" },
+    badgeType: "good",
+    note: { en: "Use for web search", fr: "Pour la recherche web" },
+    setup: { en: "Easy", fr: "Facile" },
+    foreigner: { en: "English results available", fr: "Résultats en anglais disponibles" },
+    bestFor: { en: "Searching the web in China", fr: "Recherche web en Chine" },
+    steps: {
+      en: ["Install Bing or open cn.bing.com.", "Set Bing as your default search engine.", "Use image and map search as needed.", "Check local availability for some results."],
+      fr: ["Installez Bing ou ouvrez cn.bing.com.", "Définissez Bing comme moteur par défaut.", "Utilisez la recherche d'images et de cartes selon besoin.", "Vérifiez la disponibilité locale de certains résultats."]
+    },
+    caution: { en: "Some results and Microsoft services may be limited or redirected in mainland China.", fr: "Certains résultats et services Microsoft peuvent être limités ou redirigés en Chine continentale." },
+    similar: "Google Search",
+    store: "Bing"
+  },
+  {
+    id: "mullvad",
+    cn: "Mullvad VPN",
+    en: "Mullvad VPN",
+    category: "vpn",
+    categories: ["vpn"],
+    icon: "M",
+    color: "#d64545",
+    essential: false,
+    desc: { en: "Technically the strongest VPN pick for China in 2026, but setup can be complicated for non-technical users.", fr: "Techniquement le meilleur VPN pour la Chine en 2026, mais sa configuration peut être compliquée pour les non-techniciens." },
+    tags: ["VPN", "Privacy", "Advanced"],
+    badge: { en: "Best but technical", fr: "Meilleur mais technique" },
+    badgeType: "caution",
+    note: { en: "Harder for non-tech users", fr: "Plus difficile pour les non-techniciens" },
+    setup: { en: "Hard", fr: "Difficile" },
+    foreigner: { en: "Buy and install before arrival", fr: "À acheter et installer avant l'arrivée" },
+    bestFor: { en: "Technical users who want the best", fr: "Utilisateurs techniques exigeants" },
+    steps: {
+      en: ["Subscribe before you travel.", "Install it on every device you will bring.", "Save your account details offline.", "Test the connection before you fly."],
+      fr: ["Abonnez-vous avant le voyage.", "Installez-le sur tous vos appareils.", "Gardez vos identifiants hors ligne.", "Testez la connexion avant de partir."]
+    },
+    caution: { en: "VPN use is legally restricted in China; check current rules and keep a backup connection.", fr: "L'usage d'un VPN est juridiquement encadré en Chine ; vérifiez les règles et gardez une connexion de secours." },
+    similar: "Proton VPN",
+    store: "Mullvad VPN"
+  },
+  {
+    id: "astrill",
+    cn: "Astrill VPN",
+    en: "Astrill VPN",
+    category: "vpn",
+    categories: ["vpn"],
+    icon: "A",
+    color: "#f59f00",
+    essential: false,
+    desc: { en: "Reliable and stable China-focused VPN; recommended for most users, though speeds can occasionally drop.", fr: "VPN fiable et stable axé sur la Chine ; recommandé pour la plupart des utilisateurs, même si les vitesses baissent parfois." },
+    tags: ["VPN", "China-focused", "Stable"],
+    badge: { en: "Recommended for most", fr: "Recommandé pour la plupart" },
+    badgeType: "good",
+    note: { en: "Stable, sometimes slow", fr: "Stable, parfois lent" },
+    setup: { en: "Medium", fr: "Moyenne" },
+    foreigner: { en: "Buy before arrival", fr: "À acheter avant l'arrivée" },
+    bestFor: { en: "Most users wanting stability", fr: "La plupart des utilisateurs" },
+    steps: {
+      en: ["Choose a plan before travel.", "Install the app and test it.", "Keep a second VPN as backup.", "Contact support if the connection drops."],
+      fr: ["Choisissez un forfait avant le voyage.", "Installez l'app et testez-la.", "Gardez un second VPN en secours.", "Contactez le support en cas de coupure."]
+    },
+    caution: { en: "Expensive plans and slow speeds are common; legal risk applies.", fr: "Les forfaits chers et les vitesses lentes sont courants ; le risque juridique s'applique." },
+    similar: "ExpressVPN",
+    store: "Astrill VPN"
+  },
+  {
+    id: "surfshark",
+    cn: "Surfshark VPN",
+    en: "Surfshark VPN",
+    category: "vpn",
+    categories: ["vpn"],
+    icon: "S",
+    color: "#1fc8db",
+    essential: false,
+    desc: { en: "Easy and cheap VPN; recommended for beginners if No Border mode is enabled, though it is not 100% reliable.", fr: "VPN simple et bon marché ; recommandé pour les débutants si le mode No Border est activé, mais pas fiable à 100 %." },
+    tags: ["VPN", "No Border mode", "Budget"],
+    badge: { en: "Easiest + cheapest", fr: "Le plus simple et économique" },
+    badgeType: "caution",
+    note: { en: "Enable No Border mode", fr: "Activez le mode No Border" },
+    setup: { en: "Easy", fr: "Facile" },
+    foreigner: { en: "Install before arrival", fr: "À installer avant l'arrivée" },
+    bestFor: { en: "Non-technical users on a budget", fr: "Utilisateurs non techniques" },
+    steps: {
+      en: ["Subscribe and install before you fly.", "Turn on No Border mode.", "Connect to a nearby server.", "Test it before relying on it."],
+      fr: ["Abonnez-vous et installez avant le départ.", "Activez le mode No Border.", "Connectez-vous à un serveur proche.", "Testez avant d'en dépendre."]
+    },
+    caution: { en: "Enable No Border mode; connection reliability varies and it is not 100% working.", fr: "Activez le mode No Border ; la fiabilité varie et il ne fonctionne pas à 100 %." },
+    similar: "NordVPN",
+    store: "Surfshark VPN"
+  },
+  {
     id: "amap",
     cn: "高德地图",
     en: "Amap",
@@ -226,6 +556,31 @@ const apps = [
     caution: { en: "Airport pickup zones can be confusing; follow in-app instructions carefully.", fr: "Les zones de prise en charge à l'aéroport peuvent être complexes." },
     similar: "Uber",
     store: "DiDi"
+  },
+  {
+    id: "hellobike",
+    cn: "哈啰单车",
+    en: "HelloBike",
+    category: "bike",
+    categories: ["bike"],
+    icon: "哈",
+    color: "#00a1e9",
+    essential: false,
+    desc: { en: "Hello's shared-bike app for unlocking bikes by QR code; also available inside Alipay.", fr: "L'app de vélos partagés Hello pour déverrouiller un vélo par QR code ; aussi disponible dans Alipay." },
+    tags: ["Bike", "QR unlock"],
+    badge: { en: "In Alipay too", fr: "Aussi dans Alipay" },
+    badgeType: "good",
+    note: { en: "Can use inside Alipay", fr: "Utilisable dans Alipay" },
+    setup: { en: "Easy", fr: "Facile" },
+    foreigner: { en: "Use Alipay if the app asks for Chinese ID", fr: "Utilisez Alipay si l'app demande un ID chinois" },
+    bestFor: { en: "Short city rides", fr: "Trajets courts en ville" },
+    steps: {
+      en: ["Open HelloBike or the Alipay mini app.", "Scan the bike QR code.", "Confirm unlock and price.", "Park in a marked area and lock the bike."],
+      fr: ["Ouvrez HelloBike ou la mini-app Alipay.", "Scannez le QR du vélo.", "Confirmez le déverrouillage et le prix.", "Garez-vous dans une zone autorisée et verrouillez."]
+    },
+    caution: { en: "The standalone app may ask for Chinese verification; the Alipay mini app is often easier.", fr: "L'app autonome peut demander une vérification chinoise ; la mini-app Alipay est souvent plus simple." },
+    similar: "Lime + Citi Bike",
+    store: "HelloBike"
   },
   {
     id: "meituan",
@@ -445,6 +800,31 @@ const apps = [
     store: "Ctrip"
   },
   {
+    id: "tripcom",
+    cn: "携程国际版",
+    en: "Trip.com",
+    category: "transport",
+    categories: ["transport", "travel"],
+    icon: "Trip",
+    color: "#287dfa",
+    essential: false,
+    desc: { en: "International booking app for flights, hotels, trains, and attractions in China and abroad, with an English-first interface.", fr: "App de réservation internationale pour vols, hôtels, trains et attractions en Chine et à l'étranger, avec interface anglaise." },
+    tags: ["Travel", "Flights", "English"],
+    badge: { en: "English-first", fr: "Interface anglaise" },
+    badgeType: "good",
+    note: { en: "Easier than 12306", fr: "Plus simple que 12306" },
+    setup: { en: "Easy", fr: "Facile" },
+    foreigner: { en: "Built for international travelers", fr: "Pensé pour les voyageurs internationaux" },
+    bestFor: { en: "Flights, hotels, and trains", fr: "Vols, hôtels et trains" },
+    steps: {
+      en: ["Install Trip.com.", "Search flights, hotels, or trains.", "Pay with an international card.", "Save booking confirmations offline."],
+      fr: ["Installez Trip.com.", "Recherchez vols, hôtels ou trains.", "Payez avec une carte internationale.", "Gardez les confirmations hors ligne."]
+    },
+    caution: { en: "Some rail tickets may still require passport verification; check booking terms.", fr: "Certains billets de train peuvent demander une vérification du passeport ; vérifiez les conditions." },
+    similar: "Booking.com + Expedia",
+    store: "Trip.com"
+  },
+  {
     id: "dingtalk",
     cn: "钉钉",
     en: "DingTalk",
@@ -533,6 +913,56 @@ const restoredOriginalApps = [
     caution: { en: "Listings can move quickly in major cities.", fr: "Les annonces partent vite dans les grandes villes." },
     similar: "Real estate agency app",
     store: "Lianjia"
+  },
+  {
+    id: "ziroom",
+    cn: "自如",
+    en: "Ziroom",
+    category: "realestate",
+    categories: ["realestate", "longstay"],
+    icon: "自",
+    color: "#00a870",
+    essential: false,
+    desc: { en: "Long-term apartment rentals with furnished rooms and roommate-friendly listings, popular with young professionals in major cities.", fr: "Locations de longue durée avec chambres meublées et colocations, populaires auprès des jeunes actifs des grandes villes." },
+    tags: ["Housing", "Rentals", "Long stay"],
+    badge: { en: "Long-stay rentals", fr: "Locations longue durée" },
+    badgeType: "good",
+    note: { en: "Furnished apartments", fr: "Appartements meublés" },
+    setup: { en: "Medium", fr: "Moyenne" },
+    foreigner: { en: "Chinese-first; use with local help", fr: "Interface chinoise ; avec aide locale" },
+    bestFor: { en: "Furnished long-term rentals", fr: "Locations meublées longue durée" },
+    steps: {
+      en: ["Browse by city and neighborhood.", "Filter by budget and room type.", "Ask about deposits and contract terms.", "Visit before signing or paying."],
+      fr: ["Explorez par ville et quartier.", "Filtrez par budget et type de chambre.", "Renseignez-vous sur les dépôts et le bail.", "Visitez avant de signer ou payer."]
+    },
+    caution: { en: "Contracts, deposits, and roommate rules need local review.", fr: "Contrats, dépôts et règles de colocation doivent être vérifiés localement." },
+    similar: "Zillow + Airbnb long stays",
+    store: "Ziroom"
+  },
+  {
+    id: "wellcee",
+    cn: "唯心所寓",
+    en: "Wellcee",
+    category: "realestate",
+    categories: ["realestate", "longstay"],
+    icon: "W",
+    color: "#e94b6b",
+    essential: false,
+    desc: { en: "English-friendly housing platform for apartments and shared flats, popular with foreigners and international students.", fr: "Plateforme de logement en anglais pour appartements et colocations, populaire auprès des étrangers et étudiants internationaux." },
+    tags: ["Housing", "English-friendly", "Long stay"],
+    badge: { en: "English-friendly", fr: "Adaptée aux étrangers" },
+    badgeType: "good",
+    note: { en: "Good for foreigners", fr: "Bien pour les étrangers" },
+    setup: { en: "Easy", fr: "Facile" },
+    foreigner: { en: "English interface and international community", fr: "Interface anglaise et communauté internationale" },
+    bestFor: { en: "Apartments and shared flats", fr: "Appartements et colocations" },
+    steps: {
+      en: ["Browse city and neighborhood listings.", "Filter by budget and room type.", "Message landlords or roommates.", "Visit and verify the contract before paying."],
+      fr: ["Parcourez les annonces par ville et quartier.", "Filtrez par budget et type de chambre.", "Contactez propriétaires ou colocataires.", "Visitez et vérifiez le contrat avant de payer."]
+    },
+    caution: { en: "Verify listings and never pay a deposit before viewing.", fr: "Vérifiez les annonces et ne payez jamais de dépôt avant une visite." },
+    similar: "SpareRoom + Zillow",
+    store: "Wellcee"
   },
   {
     id: "eleme",
@@ -906,6 +1336,48 @@ const iconAssets = {
     iosUrl: "https://apps.apple.com/cn/app/%E6%94%AF%E4%BB%98%E5%AE%9D-%E4%BE%BF%E6%8D%B7%E7%94%9F%E6%B4%BB-%E4%B8%80%E7%82%B9%E5%B0%B1%E5%A5%BD/id333206289?uo=4",
     androidUrl: "https://play.google.com/store/apps/details?id=com.eg.android.AlipayGphone"
   },
+  tenpaygo: {
+    iconUrl: "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/6d/5d/c9/6d5dc9e6-0d75-4a7e-67be-e7466f1fa44a/AppIcon-0-0-1x_U007ephone-0-1-0-0-85-220.jpeg/512x512bb.jpg",
+    iosUrl: "https://apps.apple.com/us/app/tenpaygo/id6778755338?uo=4",
+    androidUrl: "https://play.google.com/store/apps/details?id=com.tencent.wxpai"
+  },
+  yuanbao: {
+    iconUrl: "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/81/54/e9/8154e998-73d2-d1ec-9ed0-b383f2e445e7/AppIcon-0-0-1x_U007epad-0-1-0-sRGB-85-220.png/512x512bb.jpg",
+    iosUrl: "https://apps.apple.com/cn/app/id6480446430?uo=4",
+    androidUrl: "https://play.google.com/store/apps/details?id=com.tencent.hunyuan.app.chat"
+  },
+  deepseek: {
+    iconUrl: "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/cb/38/c4/cb38c4e2-3a04-5f92-eb04-67a943c32ed1/AppIcon-0-0-1x_U007epad-0-1-0-sRGB-85-220.png/512x512bb.jpg",
+    iosUrl: "https://apps.apple.com/cn/app/id6737597349?uo=4",
+    androidUrl: "https://play.google.com/store/apps/details?id=com.deepseek.chat"
+  },
+  kimi: {
+    iconUrl: "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/5e/7d/2d/5e7d2db4-8e41-cde1-bfd4-d8ad108ea342/AppIcon26-0-0-1x_U007epad-0-1-0-85-220.png/512x512bb.jpg",
+    iosUrl: "https://apps.apple.com/cn/app/id6474233312?uo=4",
+    androidUrl: "https://play.google.com/store/apps/details?id=com.moonshot.kimichat"
+  },
+  doubao: {
+    iconUrl: "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/76/97/22/769722f0-2b89-f875-278d-25f78101f454/AppIcon-0-0-1x_U007epad-0-8-0-sRGB-85-220.png/512x512bb.jpg",
+    iosUrl: "https://apps.apple.com/cn/app/id6459478672?uo=4",
+    androidUrl: "https://play.google.com/store/apps/details?id=com.larus.nova"
+  },
+  bing: {
+    iconUrl: "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/13/f6/f2/13f6f204-d41c-e87e-9f2d-6763eed5c453/AppIcon-0-1x_U007epad-0-1-0-0-85-220-0.png/512x512bb.jpg",
+    iosUrl: "https://apps.apple.com/cn/app/id1114765817?uo=4",
+    androidUrl: "https://play.google.com/store/apps/details?id=com.microsoft.bing"
+  },
+  mullvad: {
+    iconUrl: "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/23/88/3d/23883d39-03ab-6b8a-8afc-cdd40c6031f4/AppIcon-0-0-1x_U007epad-0-1-0-0-85-220.png/512x512bb.jpg",
+    iosUrl: "https://apps.apple.com/us/app/mullvad-vpn/id1488466513?uo=4"
+  },
+  astrill: {
+    iconUrl: "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/9d/d3/07/9dd307f7-7975-4d5f-ab59-d7c51ed55a65/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/512x512bb.jpg",
+    iosUrl: "https://apps.apple.com/us/app/astrill-vpn-client/id572953702?uo=4"
+  },
+  surfshark: {
+    iconUrl: "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/7b/23/74/7b23743b-c69f-faaa-cc8e-1fc0a1b8fcd6/iOS_AppIcon-0-0-1x_U007epad-0-0-0-1-0-85-220.png/512x512bb.jpg",
+    iosUrl: "https://apps.apple.com/us/app/surfshark-vpn-fast-private/id1391782046?uo=4"
+  },
   amap: {
     iconUrl: "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/15/09/a3/1509a39d-42f1-ee06-0653-9b5863c83819/AppIcon-0-0-1x_U007epad-0-1-0-85-220.png/512x512bb.jpg",
     iosUrl: "https://apps.apple.com/cn/app/%E9%AB%98%E5%BE%B7%E5%9C%B0%E5%9B%BE-%E9%AB%98%E5%BE%B7%E6%89%93%E8%BD%A6-%E5%AF%BC%E8%88%AA%E5%85%AC%E4%BA%A4%E5%9C%B0%E9%93%81%E5%87%BA%E8%A1%8C/id461703208?uo=4",
@@ -915,6 +1387,10 @@ const iconAssets = {
     iconUrl: "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/36/2a/e6/362ae61e-3c63-f9ba-8ce9-7a4228457e53/AppIcon-0-0-1x_U007emarketing-0-6-0-85-220.png/512x512bb.jpg",
     iosUrl: "https://apps.apple.com/cn/app/%E6%BB%B4%E6%BB%B4%E5%9B%BD%E9%99%85%E7%89%88-%E5%A2%83%E5%A4%96%E5%87%BA%E8%A1%8C-%E8%BD%BB%E6%9D%BE%E6%89%93%E8%BD%A6/id1362398401?uo=4",
     androidUrl: "https://play.google.com/store/apps/details?id=com.sdu.didi.psnger"
+  },
+  hellobike: {
+    iconUrl: "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/c7/9b/f0/c79bf015-e491-9666-bccd-9b9ba44061f3/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/512x512bb.jpg",
+    iosUrl: "https://apps.apple.com/cn/app/id1165227346?uo=4"
   },
   meituan: {
     iconUrl: "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/b6/4c/cf/b64ccfc6-6775-53aa-b46b-9def7004f84a/AppIcon-0-0-1x_U007emarketing-0-0-0-7-0-0-sRGB-85-220.png/512x512bb.jpg",
@@ -950,6 +1426,14 @@ const iconAssets = {
     iconUrl: "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/12/02/c5/1202c54c-a228-20af-403f-b9538d23f3a1/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/512x512bb.jpg",
     iosUrl: "https://apps.apple.com/cn/app/%E9%93%BE%E5%AE%B6/id405882753?uo=4",
     androidUrl: "https://play.google.com/store/apps/details?id=com.lianjia.beike"
+  },
+  ziroom: {
+    iconUrl: "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/bf/fb/cf/bffbcf17-2ec6-144d-d53f-817f99a75f1b/AppIcon-1x_U007emarketing-0-6-0-85-220-0.png/512x512bb.jpg",
+    iosUrl: "https://apps.apple.com/cn/app/id685872176?uo=4"
+  },
+  wellcee: {
+    iconUrl: "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/ae/f2/2d/aef22daa-e2ce-258b-99ed-8c7f188bd2e5/AppIcon-0-0-1x_U007ephone-0-1-0-85-220.png/512x512bb.jpg",
+    iosUrl: "https://apps.apple.com/cn/app/id1323479370?uo=4"
   },
   eleme: {
     iconUrl: "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/60/54/6c/60546cf7-5d4a-e43f-9bd3-572ba5c624c4/AppIcon_new-0-0-1x_U007epad-0-1-0-85-220.png/512x512bb.jpg",
@@ -1061,6 +1545,10 @@ const iconAssets = {
     iosUrl: "https://apps.apple.com/cn/app/%E6%90%BA%E7%A8%8B%E6%97%85%E8%A1%8C-%E8%AE%A2%E9%85%92%E5%BA%97%E6%9C%BA%E7%A5%A8%E7%81%AB%E8%BD%A6%E7%A5%A8/id379395415?uo=4",
     androidUrl: "https://play.google.com/store/apps/details?id=ctrip.android.view"
   },
+  tripcom: {
+    iconUrl: "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/56/f9/fe/56f9fe7f-36ad-50d2-9ef8-8e40537ed0c2/AppIcon-0-0-1x_U007epad-0-1-0-0-85-220.png/512x512bb.jpg",
+    iosUrl: "https://apps.apple.com/us/app/trip-com-book-flights-hotels/id681752345?uo=4"
+  },
   dingtalk: {
     iconUrl: "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/28/10/c8/2810c844-3cce-03d3-403f-c09570ed501a/AppIcon-0-0-1x_U007epad-0-0-0-1-0-0-sRGB-85-220.png/512x512bb.jpg",
     iosUrl: "https://apps.apple.com/cn/app/%E9%92%89%E9%92%89/id930368978?uo=4",
@@ -1092,7 +1580,9 @@ const els = {
   storeCopy: document.querySelector("#storeCopy"),
   storeActions: document.querySelector("#storeActions"),
   downloadStack: document.querySelector("#downloadStackButton"),
-  tipsButton: document.querySelector("#tipsButton")
+  menuButton: document.querySelector("#menuButton"),
+  guideMenu: document.querySelector("#guideMenu"),
+  closeMenu: document.querySelector("#closeMenu")
 };
 
 function t(key, ...args) {
@@ -1103,6 +1593,88 @@ function t(key, ...args) {
 function local(value) {
   if (typeof value === "string") return value;
   return value[state.lang] || value.en || "";
+}
+
+const sectionAnchors = new Set(["top", "basics", "apps", "compare", "tips"]);
+const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+const hashFilterMap = {
+  payments: { category: "payment", pack: "payments" },
+  transport: { pack: "transport" },
+  food: { category: "food", pack: "food" },
+  shopping: { category: "shopping", pack: "shopping" },
+  student: { pack: "student" },
+  longstay: { pack: "longstay" }
+};
+
+function applyFilterState(key) {
+  const explicit = hashFilterMap[key];
+  if (explicit) {
+    state.category = explicit.category || "all";
+    state.pack = explicit.pack || "all";
+    state.query = "";
+    return true;
+  }
+
+  const category = categories.find((item) => item.id === key && item.id !== "all");
+  if (category) {
+    state.category = category.id;
+    state.pack = "all";
+    state.query = "";
+    return true;
+  }
+
+  const pack = packs.find((item) => item.id === key);
+  if (pack) {
+    state.pack = pack.id;
+    state.category = "all";
+    state.query = "";
+    return true;
+  }
+
+  if (key === "all") {
+    state.category = "all";
+    state.pack = "all";
+    state.query = "";
+    return true;
+  }
+
+  return false;
+}
+
+function scrollToId(id, smooth = true) {
+  const target = document.getElementById(id);
+  if (!target) return;
+  target.scrollIntoView({
+    behavior: smooth && !prefersReducedMotion ? "smooth" : "auto",
+    block: "start"
+  });
+}
+
+function updateHash(key) {
+  const nextHash = key ? `#${key}` : "";
+  history.replaceState(null, "", `${location.pathname}${location.search}${nextHash}`);
+}
+
+function setActiveNav(id) {
+  document.querySelectorAll(".bottom-nav a[data-nav]").forEach((link) => {
+    const isActive = link.dataset.nav === id;
+    link.classList.toggle("active", isActive);
+    if (isActive) {
+      link.setAttribute("aria-current", "location");
+    } else {
+      link.removeAttribute("aria-current");
+    }
+  });
+}
+
+function openMenu() {
+  if (!els.guideMenu.open) els.guideMenu.showModal();
+  els.menuButton.setAttribute("aria-expanded", "true");
+}
+
+function closeMenu() {
+  if (els.guideMenu.open) els.guideMenu.close();
+  els.menuButton.setAttribute("aria-expanded", "false");
 }
 
 function getAppCategories(app) {
@@ -1158,7 +1730,7 @@ function renderI18n() {
 
 function renderStarters() {
   els.starterGrid.innerHTML = packs.map((pack) => `
-    <button class="starter-card ${state.pack === pack.id ? "active" : ""}" type="button" data-pack="${pack.id}" style="--starter-bg: ${pack.color}">
+    <button id="${pack.id}" class="starter-card ${state.pack === pack.id ? "active" : ""}" type="button" data-pack="${pack.id}" style="--starter-bg: ${pack.color}">
       <span class="starter-icon">${iconSvg(pack.icon)}</span>
       <strong>${local(pack.label)}</strong>
       <small>${local(pack.desc)} · ${pack.appIds.length}</small>
@@ -1186,6 +1758,7 @@ function getFilteredApps() {
     const haystack = [
       app.cn,
       app.en,
+      ...(app.aliases || []),
       appCategories.join(" "),
       local(app.desc),
       local(app.note),
@@ -1200,7 +1773,10 @@ function getFilteredApps() {
 
 function renderApps() {
   const filtered = getFilteredApps();
-  els.resultsNote.textContent = t("results", filtered.length);
+  const activePack = packs.find((pack) => pack.id === state.pack);
+  els.resultsNote.textContent = activePack
+    ? `${local(activePack.label)} · ${t("results", filtered.length)}`
+    : t("results", filtered.length);
   els.emptyState.classList.toggle("hidden", filtered.length > 0);
   els.appList.innerHTML = filtered.map((app, index) => `
     <button class="app-card" type="button" data-app="${app.id}" aria-label="${t("viewDetails")}: ${app.en}" style="--reveal-delay: ${Math.min(index * 35, 420)}ms">
@@ -1290,6 +1866,27 @@ function closeDialog(dialog) {
 }
 
 document.addEventListener("click", (event) => {
+  const anchor = event.target.closest('a[href^="#"]');
+  if (anchor) {
+    const key = decodeURIComponent(anchor.getAttribute("href").slice(1));
+    if (sectionAnchors.has(key)) {
+      event.preventDefault();
+      history.pushState(null, "", `#${key}`);
+      setActiveNav(key === "apps" ? "basics" : key);
+      scrollToId(key);
+      if (anchor.closest("#guideMenu")) closeMenu();
+      return;
+    }
+    if (applyFilterState(key)) {
+      event.preventDefault();
+      history.pushState(null, "", `#${key}`);
+      renderAll();
+      requestAnimationFrame(() => scrollToId("apps"));
+      if (anchor.closest("#guideMenu")) closeMenu();
+      return;
+    }
+  }
+
   const langButton = event.target.closest(".lang-button");
   if (langButton) {
     state.lang = langButton.dataset.lang;
@@ -1302,7 +1899,10 @@ document.addEventListener("click", (event) => {
   if (starter) {
     state.pack = starter.dataset.pack;
     state.category = "all";
+    state.query = "";
     renderAll();
+    updateHash(state.pack === "all" ? "apps" : state.pack);
+    setActiveNav("basics");
     return;
   }
 
@@ -1310,7 +1910,9 @@ document.addEventListener("click", (event) => {
   if (filter) {
     state.category = filter.dataset.category;
     state.pack = "all";
+    state.query = "";
     renderAll();
+    updateHash(state.category === "all" ? "apps" : state.category);
     return;
   }
 
@@ -1345,11 +1947,50 @@ els.downloadStack.addEventListener("click", () => {
   const activePack = packs.find((pack) => pack.id === state.pack) || packs.find((pack) => pack.id === "arrival");
   openStoreDialog(apps.filter((app) => activePack.appIds.includes(app.id)));
 });
-els.tipsButton.addEventListener("click", () => {
-  els.storeTitle.textContent = t("tipsTitle");
-  els.storeCopy.textContent = t("tipsBody");
-  els.storeActions.innerHTML = "";
-  els.storeDialog.showModal();
+els.menuButton.addEventListener("click", () => {
+  if (els.guideMenu.open) {
+    closeMenu();
+  } else {
+    openMenu();
+  }
+});
+els.closeMenu.addEventListener("click", closeMenu);
+els.guideMenu.addEventListener("click", (event) => {
+  if (event.target === els.guideMenu) closeMenu();
+});
+els.guideMenu.addEventListener("close", () => els.menuButton.setAttribute("aria-expanded", "false"));
+
+window.addEventListener("hashchange", () => {
+  const key = decodeURIComponent(location.hash.replace(/^#/, ""));
+  if (sectionAnchors.has(key)) {
+    setActiveNav(key === "apps" ? "basics" : key);
+    scrollToId(key);
+    return;
+  }
+  if (key && applyFilterState(key)) {
+    renderAll();
+    requestAnimationFrame(() => scrollToId("apps"));
+  }
 });
 
+const initialHash = decodeURIComponent(location.hash.replace(/^#/, ""));
+const hasInitialFilter = initialHash ? applyFilterState(initialHash) : false;
 renderAll();
+if (hasInitialFilter) {
+  const scrollToFilteredApps = () => scrollToId("apps", false);
+  window.addEventListener("load", scrollToFilteredApps, { once: true });
+  if (document.readyState === "complete") scrollToFilteredApps();
+}
+
+if ("IntersectionObserver" in window) {
+  const navObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) setActiveNav(entry.target.id);
+    });
+  }, { rootMargin: "-45% 0px -50% 0px", threshold: 0 });
+
+  ["top", "basics", "compare", "tips"].forEach((id) => {
+    const section = document.getElementById(id);
+    if (section) navObserver.observe(section);
+  });
+}
